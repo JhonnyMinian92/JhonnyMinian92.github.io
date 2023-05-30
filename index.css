@@ -1,8 +1,8 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #0b0f1b;
-    color: #fff;
+    background-color: var(--colorfondo);
+    color: var(--colorblanco);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     -webkit-touch-callout: none;
@@ -42,8 +42,8 @@ a { text-decoration: none; }
 }
 
 .imguser > div {
-    border: 1px solid #fff;
-    box-shadow: 1px 1px 1px #0b0f1b;
+    border: 1px solid var(--colorblanco);
+    box-shadow: 1px 1px 1px var(--colorfondo);
     border-radius: 20px;
     width: 40px;
     height: 40px;
@@ -86,7 +86,6 @@ a { text-decoration: none; }
 }
 
 .barra > a > article > div:nth-child(1) {
-    border: 1px solid #12182b;
     width: 40px;
     height: 40px;
     border-radius: 8px;
@@ -106,7 +105,7 @@ a { text-decoration: none; }
 
 .barra > a > article > div:nth-child(2) {
     height: 0px;
-    color: #0b0f1b;
+    color: var(--colorfondo);
     text-align: center;
     font-size: 8px;
     font-weight: bold;
@@ -115,7 +114,7 @@ a { text-decoration: none; }
 
 .barra > a > article > div:nth-child(1):hover ~ div:nth-child(2) {
     height: 10px;
-    color: #fff;
+    color: var(--colorblanco);
 }
 
 .imglinkedin { background-image: var(--imglinkedin); }
@@ -125,20 +124,31 @@ a { text-decoration: none; }
 
 /* cuerpo de la pagina */
 
-.cuerpo{
+.cuerpo {
     margin: 20px;
+    margin-top: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto;
+    height: auto;
+}
+
+.cuerpo > article {
+    border: 1px solid var(--colorlinea);
+    padding: 10px;
 }
 
 /* footer de la pagina */
 footer{
     margin: 20px;
     text-align: center;
-    border-top: 3px solid #141e3d;
+    border-top: 5px solid var(--colorlinea);
     padding-top: 10px;
 }
 
 h1::before{ content: var(--footertitle); }
 
+h2 { opacity: 0.3; }
 h2::before{ content: var(--footersubtitle); }
 
 .descrip{ 
@@ -178,6 +188,7 @@ h2::before{ content: var(--footersubtitle); }
 .iconcode > div:nth-child(7){ background-image: var(--imgpostgres); opacity: 0.3; }
 .iconcode > div:nth-child(8){ background-image: var(--imgmongo); opacity: 0.3; }
 
+.linkcontac > a > div{ cursor: pointer; }
 .linkcontac > a:nth-child(1) > div{ background-image: var(--imglinkedin); opacity: 0.7; }
 .linkcontac > a:nth-child(2) > div{ background-image: var(--imgyotube); opacity: 0.7; }
 .linkcontac > a:nth-child(3) > div{ background-image: var(--imgplatzi); opacity: 0.7; }
