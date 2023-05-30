@@ -6,6 +6,10 @@
     --imgyotube: "";
     --imgplatzi: "";
     --imggithub: "";
+    --footertitle: "Full Stack Junior Developer";
+    --footersubtitle: "Lenguajes Utilizados";
+    --descripcion: "Soy un apasionado desarrollador junior full stack con un sólido conocimiento en varios lenguajes de programación, frameworks y bases de datos. Mi pasión por la programación comenzó desde temprana edad y me he dedicado a aprender y crecer en esta fascinante disciplina, tengo experiencia trabajando con  varios lenguajes y bases de datos, experiencia en desarrollo web como en apirest y soap server enfocada en microservicios. Diseño de interfaz e implementacion de UX, Sistemas Operativos Linux entre otros conocimientos basicos e intermedios. Aunque soy un desarrollador junior, tengo una mentalidad de aprendizaje constante y siempre estoy buscando oportunidades para ampliar mis conocimientos y habilidades. Me emociona trabajar en equipo, colaborar con profesionales experimentados y aprender de su experiencia para mejorar mis habilidades de desarrollo.";
+    --tags: "#php, #java, #csharp, #javascript, #html, #css, #mysql, #postgres, #docker, #git, #nodejs";
 }
 
 body {
@@ -94,7 +98,7 @@ nav {
 }
 
 .barra > article > div:nth-child(1) {
-    border: 1px solid #fff;
+    border: 1px solid #12182b;
     width: 40px;
     height: 40px;
     border-radius: 8px;
@@ -131,3 +135,31 @@ nav {
 .imggithub{ background-image: var(--imggithub); }
 
 /* cuerpo de la pagina */
+
+.cuerpo{
+    margin: 20px;
+}
+
+/* footer de la pagina */
+footer{
+    margin: 20px;
+    text-align: center;
+    border-top: 3px solid #141e3d;
+    padding-top: 10px;
+}
+
+h1::before{ content: var(--footertitle); }
+
+h2::before{ content: var(--footersubtitle); }
+
+.descrip{ 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: justify;
+}
+.lbdescrip::before{ content: var(--descripcion); }
+
+.tags{ margin-top: 10px; }
+.tags::before{ content: var(--tags); }
