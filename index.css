@@ -181,7 +181,7 @@ a { text-decoration: none; }
 }
 
 .boxdata {
-    width: 350px;
+    width: 250px;
     height: 200px;
     padding: 5px;
 }
@@ -204,13 +204,23 @@ a { text-decoration: none; }
 }
 
 .subcaja{
-    border: 1px solid #fff;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .subcaja > div{
-    margin: 2px;
-    border: 1px solid #fff;
+    margin-top: 5px;
+    padding: 5px;
+    width: 50%;
+    box-sizing: border-box;
 }
+
+.subcaja > div:nth-child(1)::before{ content: var(--ttpais); }
+.subcaja > div:nth-child(2)::before{ content: var(--bodypais); }
+.subcaja > div:nth-child(3)::before{ content: var(--trabajo); }
+.subcaja > div:nth-child(4)::before{ content: var(--bodytrabajo); }
+.subcaja > div:nth-child(5)::before{ content: var(--ttarea); }
+.subcaja > div:nth-child(6)::before{ content: var(--bodyarea); }
 
 .btncontacts {
     display: flex;
@@ -220,14 +230,28 @@ a { text-decoration: none; }
 }
 
 .btncontacts > div {
-    width: 100px;
-    margin: 7px;
-    padding: 10px;
+    width: 70px;
+    padding: 7px;
+    margin-top: 10px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
     border-radius: 10px;
-    border: 1px solid #fff;
+    border: 1px solid var(--colorlinea);
+    background-color: var(--colorbtn);
     transition: all .9s ease;
+}
+
+.btncontacts > div:nth-child(1){
+    margin-right: 10px;
+}
+
+.btncontacts > div:nth-child(1)::before{
+    content: var(--ws);
+}
+
+.btncontacts > div:nth-child(2)::before{
+    content: var(--mail);
 }
 
 .btncontacts > div:hover {
