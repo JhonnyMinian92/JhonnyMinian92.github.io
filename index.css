@@ -134,12 +134,105 @@ a { text-decoration: none; }
 }
 
 .cuerpo > article {
-    border: 1px solid var(--colorlinea);
     padding: 10px;
+    margin-bottom: 20px;
 }
 
 .cjcontacto {
-    
+    display: block;
+    position: relative;
+}
+
+.cjcontacto > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fotoperfil {
+    width: auto;
+    height: auto;
+    position: relative;
+}
+
+.fotoperfil > div{
+    width: 120px;
+    height: 200px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.fotoperfil > div:nth-child(1){
+    border: 5px solid #ebef6f;
+    border-radius: 5px;
+    margin-right: 25px;
+}
+
+.fotoperfil > div:nth-child(2){
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    height: 180px;
+    background-image: var(--imgftperfil);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+.boxdata {
+    width: 350px;
+    height: 200px;
+    padding: 5px;
+}
+
+.boxdata > div {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2px;
+}
+
+.boxdata > div:nth-child(1)::before{
+    content: var(--nombres);
+}
+
+.boxdata > div:nth-child(2)::before{
+    content: var(--titulo);
+}
+
+.boxdata > div:nth-child(3)::before{
+    content: var(--direccion);
+}
+
+.subcaja{
+    border: 1px solid #fff;
+}
+
+.subcaja > div{
+    margin: 2px;
+    border: 1px solid #fff;
+}
+
+.btncontacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.btncontacts > div {
+    width: 100px;
+    margin: 7px;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    transition: all .9s ease;
+}
+
+.btncontacts > div:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 /* footer de la pagina */
