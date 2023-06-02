@@ -1,3 +1,5 @@
+window.history.pushState({},"","#/perfil/");
+
 //Deshabilitar opciones de teclas
 document.onkeydown = function(e) {
     // impedir la tecla F12
