@@ -1,178 +1,377 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <title>@JhonnyMinian92</title>
-    <!-- meta -->
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/6840/6840478.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portafolio digital para mostrar la trayectoria y conocimientos del desarrollador de software" />
-    <meta name="keywords"
-        content="ingeniero, desarrollador, software, programador, machala, ecuador, el oro, full stack, developer, java, javascript, php, mysql, postgres" />
-    <meta name="author" content="Jhonny Miñan" />
-    <meta name="copyright" content="Jhonny Miñan © 2023" />
+  <head>
+    <title>Jhonny Mi&ntilde;an | Full Stack & IA</title>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/6840/6840478.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Perfil profesional de Jhonny Mi&ntilde;an, desarrollador Full Stack con m&aacute;s de 8 a&ntilde;os de trayectoria y Maestr&iacute;a en Inteligencia Artificial" />
+    <meta name="keywords" content="Jhonny Minian, desarrollador full stack, inteligencia artificial, frontend, backend, Java, PHP, JavaScript, Ecuador, Machala" />
+    <meta name="author" content="Jhonny Mi&ntilde;an" />
+    <meta name="copyright" content="Jhonny Mi&ntilde;an &copy; 2026" />
     <meta name="robots" content="index" />
-    <!-- archivos -->
-    <script src="index.js"></script>
-    <link href="properties.css" rel="stylesheet" type="text/css">
-    <link href="index.css" rel="stylesheet" type="text/css">
-</head>
+    <link href="properties.css" rel="stylesheet" type="text/css" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script src="index.js" defer></script>
+  </head>
 
-<body>
-    <header>
-        <nav>
-            <!-- CAJA PARA MOSTRAR FOTO PERFIL -->
-            <article class="cajita">
-                <!-- foto perfil -->
-                <div class="imguser">
-                    <div></div>
-                </div>
-                <!-- nombre de usuario -->
-                <div class="iduser"></div>
-                <!-- cargo -->
-                <div class="cargouser"></div>
-                <!-- ciudad -->
-                <div class="ciudaduser"></div>
-            </article>
-            <!-- BOTONERA DE REDES SOCIALES -->
-            <section class="barra">
-                <!-- BOTONERA DE LINKEDIN -->
-                <a href="https://www.linkedin.com/in/jhonnyminian/" target="_blank" rel="noopener noreferrer">
-                    <article>
-                        <div class="imglinkedin"></div>
-                        <div>LINKEDIN</div>
-                    </article>
-                </a>
-                <!-- BOTONERA DE YOUTUBE -->
-                <a href="https://www.youtube.com/@fullstackecuador" target="_blank" rel="noopener noreferrer">
-                    <article>
-                        <div class="imgyoutube"></div>
-                        <div>YOUTUBE</div>
-                    </article>
-                </a>
-                <!-- BOTONERA DE PLATZI -->
-                <a href="https://platzi.com/p/JhonnyMinian92/" target="_blank" rel="noopener noreferrer">
-                    <article>
-                        <div class="imgplatzi"></div>
-                        <div>PLATZI</div>
-                    </article>
-                </a>
-                <!-- BOTONERA DE GITHUB -->
-                <a href="https://github.com/JhonnyMinian92" target="_blank" rel="noopener noreferrer">
-                    <article>
-                        <div class="imggithub"></div>
-                        <div>GITHUB</div>
-                    </article>
-                </a>
-            </section>
-        </nav>
+  <body>
+    <header class="site-header" data-header>
+      <nav class="site-nav" aria-label="Navegaci&oacute;n principal">
+        <a class="profile-brand" href="#inicio" aria-label="Ir al inicio">
+          <span class="imguser" aria-hidden="true">
+            <span></span>
+          </span>
+          <span class="brand-copy">
+            <span class="iduser"></span>
+            <span class="cargouser"></span>
+            <span class="ciudaduser"></span>
+          </span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-actions" id="primary-menu">
+          <a class="nav-link" href="#perfil">Perfil</a>
+          <a class="nav-link" href="#especialidades">Especialidades</a>
+          <a class="nav-link" href="#experiencia">Experiencia</a>
+          <a class="nav-link" href="#proyectos">Proyectos</a>
+          <a class="nav-link" href="#planes">Planes</a>
+          <a class="nav-link nav-link-cta" href="#contacto">Contacto</a>
+        </div>
+
+        <section class="barra" aria-label="Redes sociales">
+          <a class="social-link" href="https://www.linkedin.com/in/jhonnyminian/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Jhonny Mi&ntilde;an">
+            <span class="imglinkedin" aria-hidden="true"></span>
+            <span>LinkedIn</span>
+          </a>
+          <a class="social-link" href="https://www.youtube.com/@fullstackecuador" target="_blank" rel="noopener noreferrer" aria-label="Canal de YouTube Full Stack Ecuador">
+            <span class="imgyoutube" aria-hidden="true"></span>
+            <span>YouTube</span>
+          </a>
+          <a class="social-link" href="https://platzi.com/p/JhonnyMinian92/" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Platzi">
+            <span class="imgplatzi" aria-hidden="true"></span>
+            <span>Platzi</span>
+          </a>
+          <a class="social-link" href="https://github.com/JhonnyMinian92" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Jhonny Mi&ntilde;an">
+            <span class="imggithub" aria-hidden="true"></span>
+            <span>GitHub</span>
+          </a>
+        </section>
+      </nav>
     </header>
-    <!-- BODY DE LA PAGINA-->
-    <section class="cuerpo">
-        <!-- suscripciones -->
-        <div class="hero-section">
-            <div class="contact-info">
-              <p>¡Hablemos!</p>
-              <p class="subheadline">¿Listo para llevar tu proyecto al siguiente nivel?</p>
-              <a href="https://mail.google.com/mail/?view=cm&to=jhonnyminian@gmail.com&su=Consulta%20de%20suscripción&body=Hola%20Jhonny,%20quiero%20más%20información%20sobre%20tus%20planes..."
-              target="_blank" class="contact-button">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mail-icon">
-                  <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
-                  <path fill-rule="evenodd" d="M20.25 4.5a.75.75 0 01.75.75v1.5h-16.5v-1.5a.75.75 0 01.75-.75h15zm-16.5 7.75v6.25a1.5 1.5 0 001.5 1.5h15a1.5 1.5 0 001.5-1.5v-6.25l-8.25 5a.75.75 0 01-.75 0l-8.25-5z" clip-rule="evenodd" />
-                </svg>
-                Contáctame por correo
-              </a>
-            </div>
+
+    <main class="cuerpo">
+      <section class="hero-section section-shell" id="inicio">
+        <div class="hero-content">
+          <p class="eyebrow">Perfil profesional</p>
+          <h1>Jhonny Mi&ntilde;an Gir&oacute;n</h1>
+          <p class="hero-title">Desarrollador Full Stack con Maestr&iacute;a en Inteligencia Artificial</p>
+          <p class="hero-copy">Profesional con m&aacute;s de 8 a&ntilde;os creando soluciones web, APIs, microservicios e interfaces enfocadas en rendimiento, claridad operativa y experiencia de usuario.</p>
+
+          <div class="hero-actions">
+            <a class="contact-button primary-action" href="https://mail.google.com/mail/?view=cm&to=jhonnyminian@gmail.com&su=Consulta%20profesional&body=Hola%20Jhonny,%20quiero%20conversar%20sobre%20un%20proyecto..." target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mail-icon" aria-hidden="true">
+                <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                <path fill-rule="evenodd" d="M20.25 4.5a.75.75 0 01.75.75v1.5h-16.5v-1.5a.75.75 0 01.75-.75h15zm-16.5 7.75v6.25a1.5 1.5 0 001.5 1.5h15a1.5 1.5 0 001.5-1.5v-6.25l-8.25 5a.75.75 0 01-.75 0l-8.25-5z" clip-rule="evenodd" />
+              </svg>
+              Contactar por correo
+            </a>
+            <a class="contact-button secondary-action" href="https://wa.me/593987654321" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
 
-        <article class="planes-suscripcion">
-            <p>Planes de Suscripción</p>
-            <div class="planes-container">
-                <div class="plan">
-                    <h3>Plan Básic</h3>
-                    <p class="precio">$100/mes</p>
-                    <ul>
-                        <li>20 Horas</li>
-                        <li>Soporte por WhatsApp</li>
-                        <li>Desarrollo de software</li>
-                        <li>Correcciones menores</li>
-                    </ul>
-                    <a href="https://wa.me/593981100645/?text=Hola,%20estoy%20interesado%20en%20suscribirme%20al%20Plan%20Básico." target="_blank" class="btn">Suscribirse</a>
-                </div>
-                <div class="plan">
-                    <h3>Plan Medium</h3>
-                    <p class="precio">$200/mes</p>
-                    <ul>
-                        <li>40 Horas</li>
-                        <li>Soporte Prioritario</li>
-                        <li>Desarrollo de aplicaciones</li>
-                        <li>Consultoría y seguimiento</li>
-                    </ul>
-                    <a href="https://wa.me/593981100645/?text=Hola,%20estoy%20interesado%20en%20suscribirme%20al%20Plan%20Medio." target="_blank" class="btn">Suscribirse</a>
-                </div>
-                <div class="plan">
-                    <h3>Plan Premier</h3>
-                    <p class="precio">$300/mes</p>
-                    <ul>
-                        <li>60 Horas</li>
-                        <li>Soporte 24/7</li>
-                        <li>Desarrollo y control de aplicaciones</li>
-                        <li>Consultoría y optimización</li>
-                    </ul>
-                    <a href="https://wa.me/593981100645/?text=Hola,%20estoy%20interesado%20en%20suscribirme%20al%20Plan%20Premium." target="_blank" class="btn">Suscribirse</a>
-                </div>
-            </div>
-        </article>
-
-        <!-- educacion -->
-        <article></article>
-        <!-- experiencia -->
-        <article></article>
-        <!-- proyectos -->
-        <article></article>
-    </section>
-    <!-- FOOTER DE LA PAGINA-->
-    <footer>
-        <div>
-            <h1></h1>
-        </div>
-        <div>
-            <div class="descrip">
-                <div class="lbdescrip"></div>
-                <div class="tags"></div>
-            </div>
+          <div class="hero-metrics" aria-label="Resumen profesional">
             <article>
-                <h2></h2>
-                <div class="iconcode">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
+              <strong class="metric-value">8+</strong>
+              <span>A&ntilde;os de experiencia</span>
             </article>
+            <article>
+              <strong>MAESTRIA</strong>
+              <span>Maestr&iacute;a en IA</span>
+            </article>
+            <article>
+              <strong>Full Stack</strong>
+              <span>Web, APIs y datos</span>
+            </article>
+          </div>
         </div>
-        <article class="linkcontac">
-            <a href="https://www.linkedin.com/in/jhonnyminian/" target="_blank" rel="noopener noreferrer">
-                <div></div>
-            </a>
-            <a href="https://www.youtube.com/@fullstackecuador" target="_blank" rel="noopener noreferrer">
-                <div></div>
-            </a>
-            <a href="https://platzi.com/p/JhonnyMinian92/" target="_blank" rel="noopener noreferrer">
-                <div></div>
-            </a>
-            <a href="https://github.com/JhonnyMinian92" target="_blank" rel="noopener noreferrer">
-                <div></div>
-            </a>
-        </article>
-    </footer>
-</body>
 
+        <aside class="hero-card" aria-label="Tarjeta de identidad profesional">
+          <div class="hero-photo" aria-hidden="true"></div>
+          <div class="hero-card-content">
+            <span class="status-pill">Disponible para consultor&iacute;a</span>
+            <h2>Software con criterio de producto</h2>
+            <p>Combina desarrollo frontend, backend, integraci&oacute;n de servicios y visi&oacute;n de IA para convertir necesidades reales en productos mantenibles.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section-shell about-section reveal" id="perfil">
+        <div class="section-heading">
+          <p class="eyebrow">Sobre el perfil</p>
+          <h2>Trayectoria t&eacute;cnica con enfoque humano</h2>
+        </div>
+        <div class="about-grid">
+          <article class="about-card large-card">
+            <h3>Base profesional</h3>
+            <p>Jhonny trabaja en el ciclo completo de desarrollo: levantamiento funcional, dise&ntilde;o de experiencia, frontend, backend, integraciones, bases de datos y despliegue. Su perfil une ejecuci&oacute;n pr&aacute;ctica con criterio arquitect&oacute;nico.</p>
+            <div class="profile-tags">
+              <span>Java</span>
+              <span>PHP</span>
+              <span>JavaScript</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+              <span>MySQL</span>
+              <span>Docker</span>
+            </div>
+          </article>
+          <article class="about-card">
+            <h3>Ubicaci&oacute;n</h3>
+            <p>Machala, Ecuador. Trabajo remoto y colaboraci&oacute;n con equipos multidisciplinarios.</p>
+          </article>
+          <article class="about-card">
+            <h3>Foco actual</h3>
+            <p>Aplicaciones web modernas, automatizaci&oacute;n, APIs, microservicios e IA aplicada a procesos.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell specialties-section reveal" id="especialidades">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Especialidades</p>
+          <h2>Capacidades para construir y mejorar productos digitales</h2>
+        </div>
+
+        <div class="tabs" data-tabs>
+          <div class="tab-list" role="tablist" aria-label="Areas de especialidad">
+            <button class="tab-button is-active" type="button" role="tab" id="tab-frontend" aria-selected="true" aria-controls="panel-frontend">Frontend</button>
+            <button class="tab-button" type="button" role="tab" id="tab-backend" aria-selected="false" aria-controls="panel-backend">Backend</button>
+            <button class="tab-button" type="button" role="tab" id="tab-data" aria-selected="false" aria-controls="panel-data">Datos e IA</button>
+            <button class="tab-button" type="button" role="tab" id="tab-delivery" aria-selected="false" aria-controls="panel-delivery">Delivery</button>
+          </div>
+
+          <article class="tab-panel is-active" role="tabpanel" id="panel-frontend" aria-labelledby="tab-frontend">
+            <h3>Interfaces claras, responsive y usables</h3>
+            <p>Construcci&oacute;n de experiencias web con HTML, CSS, JavaScript y frameworks modernos, cuidando rendimiento visual, accesibilidad, estados interactivos y consistencia responsive.</p>
+          </article>
+          <article class="tab-panel" role="tabpanel" id="panel-backend" aria-labelledby="tab-backend" hidden>
+            <h3>Servicios, APIs e integraciones</h3>
+            <p>Dise&ntilde;o de endpoints REST, servicios SOAP, integraci&oacute;n con sistemas internos, microservicios y reglas de negocio sostenibles para entornos empresariales.</p>
+          </article>
+          <article class="tab-panel" role="tabpanel" id="panel-data" aria-labelledby="tab-data" hidden>
+            <h3>Datos con mirada de Inteligencia Artificial</h3>
+            <p>Manejo de bases de datos relacionales y NoSQL, modelado de informaci&oacute;n y aplicaci&oacute;n de fundamentos de IA para optimizar procesos, an&aacute;lisis y automatizaciones.</p>
+          </article>
+          <article class="tab-panel" role="tabpanel" id="panel-delivery" aria-labelledby="tab-delivery" hidden>
+            <h3>Entrega responsable y mantenible</h3>
+            <p>Versionamiento con Git, contenedores Docker, documentaci&oacute;n, soporte t&eacute;cnico y mejora continua para reducir fricci&oacute;n en equipos de producto.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell experience-section reveal" id="experiencia">
+        <div class="section-heading">
+          <p class="eyebrow">Experiencia</p>
+          <h2>M&aacute;s de 8 a&ntilde;os resolviendo problemas con software</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-marker"></span>
+            <div>
+              <p class="timeline-date">Actualidad</p>
+              <h3>Desarrollo Full Stack y sistemas empresariales</h3>
+              <p>Desarrollo de aplicaciones, integraciones, soporte evolutivo y mejora de soluciones internas con foco en estabilidad, trazabilidad y valor para el negocio.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-marker"></span>
+            <div>
+              <p class="timeline-date">Trayectoria profesional</p>
+              <h3>APIs, microservicios y plataformas web</h3>
+              <p>Implementaci&oacute;n de servicios REST/SOAP, bases de datos y experiencias web para automatizar flujos, conectar sistemas y mejorar la operaci&oacute;n diaria.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-marker"></span>
+            <div>
+              <p class="timeline-date">Formaci&oacute;n continua</p>
+              <h3>Especializaci&oacute;n en Inteligencia Artificial</h3>
+              <p>Maestr&iacute;a certificada, integrando fundamentos de IA con experiencia pr&aacute;ctica en desarrollo de software.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell education-section reveal" id="educacion">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Formaci&oacute;n</p>
+          <h2>Base acad&eacute;mica y aprendizaje continuo</h2>
+        </div>
+        <div class="education-grid">
+          <article class="credential-card featured">
+            <span>Maestr&iacute;a</span>
+            <h3>Inteligencia Artificial</h3>
+            <p>Formaci&oacute;n certificada para aplicar IA con criterio t&eacute;cnico y de negocio.</p>
+          </article>
+          <article class="credential-card">
+            <span>Ingenier&iacute;a</span>
+            <h3>Sistemas</h3>
+            <p>Base en desarrollo, arquitectura de software, bases de datos y resoluci&oacute;n de problemas.</p>
+          </article>
+          <article class="credential-card">
+            <span>Comunidad</span>
+            <h3>Full Stack Ecuador</h3>
+            <p>Contenido, aprendizaje compartido y presencia profesional en canales t&eacute;cnicos.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell projects-section reveal" id="proyectos">
+        <div class="section-heading">
+          <p class="eyebrow">Proyectos</p>
+          <h2>Trabajo visible y repositorios destacados</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Java / Angular</span>
+              <a href="https://github.com/JhonnyMinian92/SignExtension" target="_blank" rel="noopener noreferrer">Repositorio</a>
+            </div>
+            <h3>SignExtension</h3>
+            <p>Extensi&oacute;n para Chrome que permite la firma electr&oacute;nica de documentos directamente desde el navegador, compatible con el est&aacute;ndar ecuatoriano.</p>
+          </article>
+          <article class="project-card">
+            <div class="project-meta">
+              <span>PHP</span>
+              <a href="https://github.com/JhonnyMinian92/EcuApi" target="_blank" rel="noopener noreferrer">Repositorio</a>
+            </div>
+            <h3>EcuApi</h3>
+            <p>Backend con microservicios orientado a integraciones y consumo de datos.</p>
+          </article>
+          <article class="project-card">
+            <div class="project-meta">
+              <span>PHP</span>
+              <a href="https://github.com/JhonnyMinian92/cuspide" target="_blank" rel="noopener noreferrer">Repositorio</a>
+            </div>
+            <h3>C&uacute;spide</h3>
+            <p>Sistema de control educativo para gestionar clases, pagos, estudiantes y docentes. Desarrollado con PHP, Composer y Twig.</p>
+          </article>
+          <article class="project-card">
+            <div class="project-meta">
+              <span>Python / IA</span>
+              <a href="https://github.com/JhonnyMinian92/fidelia" target="_blank" rel="noopener noreferrer">Repositorio</a>
+            </div>
+            <h3>Fidelia</h3>
+            <p>API con algoritmo XGBoost para predecir la intenci&oacute;n de fidelizaci&oacute;n, analizando datos multimodales (categ&oacute;ricos y texto natural).</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell planes-suscripcion reveal" id="planes">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Servicios</p>
+          <h2>Planes de suscripci&oacute;n</h2>
+          <p class="section-copy">Paquetes mensuales para soporte, desarrollo, consultor&iacute;a y mejora continua de productos digitales.</p>
+        </div>
+        <div class="planes-container">
+          <article class="plan">
+            <div class="plan-header">
+              <h3>Plan Basic</h3>
+              <p class="precio">$400/mes</p>
+            </div>
+            <ul>
+              <li>20 horas mensuales</li>
+              <li>Soporte por WhatsApp</li>
+              <li>Desarrollo de software</li>
+              <li>Correcciones menores</li>
+            </ul>
+            <a href="https://wa.me/593987654321/?text=Hola,%20estoy%20interesado%20en%20suscribirme%20al%20Plan%20Basico." target="_blank" rel="noopener noreferrer" class="btn">Suscribirse</a>
+          </article>
+          <article class="plan is-featured">
+            <div class="plan-badge">Recomendado</div>
+            <div class="plan-header">
+              <h3>Plan Medium</h3>
+              <p class="precio">$800/mes</p>
+            </div>
+            <ul>
+              <li>40 horas mensuales</li>
+              <li>Soporte prioritario</li>
+              <li>Desarrollo de aplicaciones</li>
+              <li>Consultor&iacute;a y seguimiento</li>
+            </ul>
+            <a href="https://wa.me/593987654321/?text=Hola,%20estoy%20interesado%20en%20suscribirme%20al%20Plan%20Medio." target="_blank" rel="noopener noreferrer" class="btn">Suscribirse</a>
+          </article>
+          <article class="plan">
+            <div class="plan-header">
+              <h3>Plan Premier</h3>
+              <p class="precio">$1200/mes</p>
+            </div>
+            <ul>
+              <li>60 horas mensuales</li>
+              <li>Soporte 24/7</li>
+              <li>Desarrollo y control de aplicaciones</li>
+              <li>Consultor&iacute;a y optimizaci&oacute;n</li>
+            </ul>
+            <a href="https://wa.me/593987654321/?text=Hola,%20estoy%20interesado%20en%20suscribirme%20al%20Plan%20Premium." target="_blank" rel="noopener noreferrer" class="btn">Suscribirse</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell contact-section reveal" id="contacto">
+        <div class="contact-panel">
+          <div>
+            <p class="eyebrow">Contacto</p>
+            <h2>Conversemos sobre tu proyecto o mejora t&eacute;cnica</h2>
+            <p>Puedes escribir por correo o WhatsApp para revisar necesidades, alcance y la mejor forma de avanzar.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="contact-button primary-action" href="https://mail.google.com/mail/?view=cm&to=jhonnyminian@gmail.com&su=Consulta%20profesional&body=Hola%20Jhonny,%20quiero%20conversar%20sobre%20un%20proyecto..." target="_blank" rel="noopener noreferrer">Correo</a>
+            <a class="contact-button secondary-action" href="https://wa.me/593987654321" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <h2>Full Stack Middle Level</h2>
+          <p>Perfil profesional orientado a desarrollo web, integraciones, microservicios e Inteligencia Artificial aplicada.</p>
+        </div>
+        <article>
+          <h3>Base de conocimiento</h3>
+          <div class="iconcode" aria-label="Tecnologias principales">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </article>
+      </div>
+
+      <article class="linkcontac" aria-label="Redes sociales">
+        <a href="https://www.linkedin.com/in/jhonnyminian/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <div></div>
+        </a>
+        <a href="https://www.youtube.com/@fullstackecuador" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <div></div>
+        </a>
+        <a href="https://platzi.com/p/JhonnyMinian92/" target="_blank" rel="noopener noreferrer" aria-label="Platzi">
+          <div></div>
+        </a>
+        <a href="https://github.com/JhonnyMinian92" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <div></div>
+        </a>
+      </article>
+    </footer>
+  </body>
 </html>
