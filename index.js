@@ -108,165 +108,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* Self-contained production portfolio: local assets only, no screenshot service. */
+  // The carousel markup is intentionally static in index.html so it is visible
+  // in View Source and works without JavaScript for its first project card.
   const projectGrid = document.querySelector("#proyectos .project-grid");
-  if (!projectGrid) return;
+  const track = projectGrid?.querySelector(".production-track");
+  const cards = projectGrid ? [...projectGrid.querySelectorAll(".production-card")] : [];
+  const dots = projectGrid ? [...projectGrid.querySelectorAll(".production-dot")] : [];
+  const counter = projectGrid?.querySelector(".production-counter");
+  const viewport = projectGrid?.querySelector(".production-viewport");
 
-  const projects = [
-    {
-      title: "Cúspide",
-      type: "Gestión educativa",
-      description: "Plataforma de gestión educativa para administrar estudiantes, docentes, clases, pagos y operación académica.",
-      tags: ["PHP", "Gestión", "Web"],
-      url: "https://operacionadmin.com/",
-      image: "assets/projects/cuspide-preview.svg"
-    },
-    {
-      title: "Clinical Admin",
-      type: "Gestión clínica",
-      description: "Sistema de gestión para clínicas y centros de especialidades, orientado a organizar la operación y atención.",
-      tags: ["PHP", "Salud", "Web"],
-      url: "https://clinical-admin.xo.je/",
-      image: "assets/projects/clinical-admin-preview.svg"
-    },
-    {
-      title: "Próximo proyecto",
-      type: "Próximamente",
-      description: "Espacio preparado para incorporar el próximo proyecto vendido y publicado en producción.",
-      tags: ["Próximamente"],
-      url: null,
-      image: null
-    },
-    {
-      title: "Próximo proyecto",
-      type: "Próximamente",
-      description: "Segundo espacio preparado para incorporar la siguiente solución destacada.",
-      tags: ["Próximamente"],
-      url: null,
-      image: null
-    }
-  ];
+  if (!projectGrid || !track || cards.length === 0 || !viewport) return;
 
-  projectGrid.classList.add("production-project-grid");
-  projectGrid.setAttribute("aria-label", "Proyectos destacados en producción");
-  projectGrid.innerHTML = `
-    <div class="production-carousel-head">
-      <div>
-        <span class="production-kicker">PROYECTOS EN PRODUCCIÓN</span>
-        <h3>Soluciones reales, vendidas y en funcionamiento</h3>
-        <p>Explora algunos de los sistemas que he desarrollado y llevado a producción.</p>
-      </div>
-      <div class="production-controls">
-        <button type="button" class="production-arrow" data-production-prev aria-label="Proyecto anterior">←</button>
-        <button type="button" class="production-arrow" data-production-next aria-label="Siguiente proyecto">→</button>
-      </div>
-    </div>
-    <div class="production-viewport" tabindex="0" aria-label="Carrusel de proyectos">
-      <div class="production-track">
-        ${projects.map((project, index) => `
-          <article class="production-card${index === 0 ? " is-active" : ""}" data-index="${index}">
-            ${project.url ? `
-              <a class="production-thumb" href="${project.url}" target="_blank" rel="noopener noreferrer" aria-label="Visitar ${project.title}">
-                <img src="${project.image}" alt="Miniatura de ${project.title}" loading="${index === 0 ? "eager" : "lazy"}" decoding="async">
-                <span class="production-thumb-label">VISITAR PROYECTO ↗</span>
-                <span class="production-live">● PRODUCCIÓN</span>
-              </a>
-            ` : `
-              <div class="production-thumb production-placeholder">
-                <span class="placeholder-number">0${index + 1}</span>
-                <strong>PRÓXIMO PROYECTO</strong>
-                <small>Miniatura próximamente</small>
-              </div>
-            `}
-            <div class="production-card-body">
-              <div class="production-meta"><span>0${index + 1}</span><small>${project.type}</small></div>
-              <h4>${project.title}</h4>
-              <p>${project.description}</p>
-              <div class="production-tags">${project.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
-              ${project.url ? `<a class="production-visit" href="${project.url}" target="_blank" rel="noopener noreferrer">Ver proyecto <span>→</span></a>` : ""}
-            </div>
-          </article>
-        `).join("")}
-      </div>
-    </div>
-    <div class="production-footer"><div class="production-dots"></div><span class="production-counter">01 / 04</span></div>
-  `;
-
-  const style = document.createElement("style");
-  style.textContent = `
-    .production-project-grid{display:block!important;position:relative;margin-top:1.5rem}
-    .production-carousel-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;margin-bottom:1.25rem}
-    .production-kicker{display:block;margin-bottom:.55rem;color:#66e3c4;font-size:.72rem;font-weight:900;letter-spacing:.18em}
-    .production-carousel-head h3{margin:0;font-size:clamp(1.35rem,2.5vw,2rem);line-height:1.1}
-    .production-carousel-head p{margin:.55rem 0 0;color:rgba(255,255,255,.65)}
-    .production-controls{display:flex;gap:.55rem;flex-shrink:0}
-    .production-arrow{width:46px;height:46px;border:1px solid rgba(255,255,255,.14);border-radius:50%;background:rgba(255,255,255,.06);color:inherit;font-size:1.2rem;cursor:pointer;transition:transform .25s ease,background .25s ease}
-    .production-arrow:hover{transform:translateY(-2px);background:rgba(102,227,196,.13)}
-    .production-viewport{overflow:hidden;border-radius:22px;outline:none}
-    .production-track{display:flex;gap:1rem;transition:transform .6s cubic-bezier(.22,1,.36,1);will-change:transform}
-    .production-card{flex:0 0 min(82vw,430px);overflow:hidden;border:1px solid rgba(255,255,255,.1);border-radius:24px;background:linear-gradient(150deg,rgba(255,255,255,.08),rgba(255,255,255,.035));opacity:.72;transform:scale(.97);transition:opacity .45s ease,transform .45s ease,border-color .45s ease}
-    .production-card.is-active{opacity:1;transform:scale(1);border-color:rgba(102,227,196,.35)}
-    .production-thumb{position:relative;display:block;height:250px;overflow:hidden;background:#10192d;text-decoration:none}
-    .production-thumb img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform .65s ease}
-    .production-thumb:hover img{transform:scale(1.04)}
-    .production-thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 42%,rgba(4,8,18,.78));pointer-events:none}
-    .production-thumb-label{position:absolute;z-index:2;inset:0;display:grid;place-items:center;color:#fff;font-weight:900;opacity:0;transition:opacity .25s ease}
-    .production-thumb:hover .production-thumb-label{opacity:1}
-    .production-live{position:absolute;z-index:3;left:1rem;bottom:.85rem;padding:.4rem .65rem;border:1px solid rgba(102,227,196,.3);border-radius:999px;background:rgba(4,8,18,.72);color:#66e3c4;font-size:.66rem;font-weight:900;letter-spacing:.08em}
-    .production-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.45rem;background:radial-gradient(circle at 25% 20%,rgba(124,108,255,.25),transparent 35%),radial-gradient(circle at 75% 75%,rgba(102,227,196,.14),transparent 35%),#10192d;color:rgba(255,255,255,.65)}
-    .production-placeholder::after{display:none}.placeholder-number{font-size:3rem;line-height:1;font-weight:900;color:rgba(255,255,255,.12)}
-    .production-placeholder strong{color:#66e3c4;font-size:.72rem;letter-spacing:.14em}.production-placeholder small{color:rgba(255,255,255,.4)}
-    .production-card-body{padding:1.2rem}.production-meta{display:flex;justify-content:space-between;gap:1rem;margin-bottom:.6rem}
-    .production-meta span{color:#66e3c4;font-size:.74rem;font-weight:900;letter-spacing:.12em}.production-meta small{color:rgba(255,255,255,.5);font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
-    .production-card h4{margin:0;font-size:1.5rem}.production-card-body p{min-height:72px;margin:.55rem 0 1rem;color:rgba(255,255,255,.66);line-height:1.6;font-size:.93rem}
-    .production-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}.production-tags span{padding:.35rem .6rem;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(255,255,255,.045);color:rgba(255,255,255,.7);font-size:.68rem;font-weight:800}
-    .production-visit{color:#fff;font-weight:900;text-decoration:none}.production-visit:hover{color:#66e3c4}.production-visit span{margin-left:.35rem}
-    .production-footer{display:flex;align-items:center;justify-content:space-between;margin-top:1rem}.production-dots{display:flex;gap:.4rem}.production-dot{width:8px;height:8px;padding:0;border:0;border-radius:999px;background:rgba(255,255,255,.22);cursor:pointer;transition:width .25s ease,background .25s ease}.production-dot.is-active{width:25px;background:#66e3c4}.production-counter{color:rgba(255,255,255,.45);font-size:.7rem;font-weight:900;letter-spacing:.12em}
-    @media(max-width:760px){.production-carousel-head{align-items:flex-start;flex-direction:column}.production-controls{align-self:flex-end}.production-card{flex-basis:min(84vw,360px)}.production-thumb{height:215px}.production-card-body p{min-height:0}}
-    @media(prefers-reduced-motion:reduce){.production-track,.production-card,.production-thumb img{transition:none!important}}
-  `;
-  document.head.appendChild(style);
-
-  const track = projectGrid.querySelector(".production-track");
-  const cards = [...projectGrid.querySelectorAll(".production-card")];
-  const dots = projectGrid.querySelector(".production-dots");
-  const counter = projectGrid.querySelector(".production-counter");
-  const viewport = projectGrid.querySelector(".production-viewport");
   let current = 0;
-  let timer;
+  let timer = null;
   let startX = 0;
 
-  projects.forEach((_, index) => {
-    const dot = document.createElement("button");
-    dot.type = "button";
-    dot.className = `production-dot${index === 0 ? " is-active" : ""}`;
-    dot.setAttribute("aria-label", `Mostrar proyecto ${index + 1}`);
-    dot.addEventListener("click", () => goTo(index, true));
-    dots.appendChild(dot);
-  });
-
   const update = () => {
-    const cardWidth = cards[0].getBoundingClientRect().width + 16;
+    const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || "16") || 16;
+    const cardWidth = cards[0].getBoundingClientRect().width + gap;
     const maxOffset = Math.max(0, track.scrollWidth - viewport.clientWidth);
     const offset = Math.min(current * cardWidth, maxOffset);
     track.style.transform = `translate3d(${-offset}px,0,0)`;
     cards.forEach((card, index) => card.classList.toggle("is-active", index === current));
-    [...dots.children].forEach((dot, index) => dot.classList.toggle("is-active", index === current));
-    counter.textContent = `${String(current + 1).padStart(2, "0")} / ${String(projects.length).padStart(2, "0")}`;
+    dots.forEach((dot, index) => dot.classList.toggle("is-active", index === current));
+    if (counter) counter.textContent = `${String(current + 1).padStart(2, "0")} / ${String(cards.length).padStart(2, "0")}`;
   };
 
-  const goTo = (index, manual = false) => {
-    current = (index + projects.length) % projects.length;
-    update();
-    if (manual) restart();
-  };
   const restart = () => {
     clearInterval(timer);
     if (!prefersReducedMotion) timer = setInterval(() => goTo(current + 1), 5200);
   };
 
-  projectGrid.querySelector("[data-production-prev]").addEventListener("click", () => goTo(current - 1, true));
-  projectGrid.querySelector("[data-production-next]").addEventListener("click", () => goTo(current + 1, true));
+  const goTo = (index, manual = false) => {
+    current = (index + cards.length) % cards.length;
+    update();
+    if (manual) restart();
+  };
+
+  projectGrid.querySelector("[data-production-prev]")?.addEventListener("click", () => goTo(current - 1, true));
+  projectGrid.querySelector("[data-production-next]")?.addEventListener("click", () => goTo(current + 1, true));
+  dots.forEach((dot) => dot.addEventListener("click", () => goTo(Number(dot.dataset.index), true)));
   viewport.addEventListener("mouseenter", () => clearInterval(timer));
   viewport.addEventListener("mouseleave", restart);
   viewport.addEventListener("touchstart", (event) => { startX = event.touches[0].clientX; }, { passive: true });
@@ -278,6 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.key === "ArrowLeft") goTo(current - 1, true);
     if (event.key === "ArrowRight") goTo(current + 1, true);
   });
+
   window.addEventListener("resize", update);
   update();
   restart();
