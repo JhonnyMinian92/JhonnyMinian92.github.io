@@ -1,5 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 547" role="img" aria-labelledby="title desc">
-<title id="title">Clinical Admin / Sur Salud</title>
-<desc id="desc">Vista previa del proyecto de gestión clínica.</desc>
-<image href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAP//////////////////////////////////////////////////////////////////////////////////////2wBDAf//////////////////////////////////////////////////////////////////////////////////////wAARCAIvBLADASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAF//8QAFBABAAAAAAAAAAAAAAAAAAAAAP/aAAgBAQABBQJ//8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAgBAwEBPwF//8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAgBAgEBPwF//8QAFBABAAAAAAAAAAAAAAAAAAAAAP/aAAgBAQAGPwJ//8QAFBABAAAAAAAAAAAAAAAAAAAAAP/aAAgBAQABPyF//9k=" width="1200" height="547" preserveAspectRatio="xMidYMid slice"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">Clinical Admin — Sur Salud</title>
+<desc id="desc">Vista previa ilustrada de una plataforma de gestión clínica.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07152f"/><stop offset="1" stop-color="#16385c"/></linearGradient>
+ <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#55d6be"/><stop offset="1" stop-color="#72a7ff"/></linearGradient>
+ <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000" flood-opacity=".28"/></filter>
+</defs>
+<rect width="1200" height="680" fill="url(#bg)"/>
+<rect x="34" y="34" width="1132" height="612" rx="28" fill="#f6f9fc" filter="url(#shadow)"/>
+<rect x="34" y="34" width="1132" height="76" rx="28" fill="#0c2340"/><rect x="34" y="82" width="1132" height="28" fill="#0c2340"/>
+<circle cx="77" cy="72" r="18" fill="#55d6be"/><path d="M68 72h18M77 63v18" stroke="#09213a" stroke-width="4" stroke-linecap="round"/>
+<text x="108" y="79" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="800">SUR SALUD</text>
+<text x="302" y="79" fill="#9db0d0" font-family="Inter,Arial,sans-serif" font-size="15">Clinical Admin</text>
+<rect x="948" y="52" width="180" height="40" rx="20" fill="#173250"/><circle cx="970" cy="72" r="7" fill="#55d6be"/><text x="1018" y="78" text-anchor="middle" fill="#b9c7de" font-family="Inter,Arial,sans-serif" font-size="13">Sistema operativo</text>
+<rect x="56" y="132" width="190" height="492" rx="18" fill="#0d2948"/>
+<text x="82" y="175" fill="#8198b7" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="700">GESTIÓN CLÍNICA</text>
+<g font-family="Inter,Arial,sans-serif" font-size="15">
+ <rect x="74" y="198" width="154" height="44" rx="12" fill="#55d6be"/><text x="98" y="226" fill="#072039" font-weight="800">Inicio</text>
+ <text x="98" y="284" fill="#c2d0e2">Pacientes</text><text x="98" y="332" fill="#c2d0e2">Citas</text><text x="98" y="380" fill="#c2d0e2">Especialidades</text><text x="98" y="428" fill="#c2d0e2">Médicos</text><text x="98" y="476" fill="#c2d0e2">Reportes</text>
+</g>
+<text x="280" y="178" fill="#14223a" font-family="Inter,Arial,sans-serif" font-size="27" font-weight="800">Panel de atención</text>
+<text x="280" y="205" fill="#718096" font-family="Inter,Arial,sans-serif" font-size="14">Resumen de pacientes, agenda y actividad clínica</text>
+<g>
+ <rect x="280" y="232" width="196" height="126" rx="18" fill="#fff" stroke="#e1e8f0"/><text x="304" y="264" fill="#718096" font-family="Inter,Arial,sans-serif" font-size="13">Pacientes</text><text x="304" y="312" fill="#132542" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="800">2,486</text><text x="304" y="337" fill="#2ba98f" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="700">+12.6% registrados</text>
+ <rect x="494" y="232" width="196" height="126" rx="18" fill="#fff" stroke="#e1e8f0"/><text x="518" y="264" fill="#718096" font-family="Inter,Arial,sans-serif" font-size="13">Citas hoy</text><text x="518" y="312" fill="#132542" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="800">48</text><text x="518" y="337" fill="#6d78d8" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="700">6 especialidades</text>
+ <rect x="708" y="232" width="196" height="126" rx="18" fill="#fff" stroke="#e1e8f0"/><text x="732" y="264" fill="#718096" font-family="Inter,Arial,sans-serif" font-size="13">Atenciones</text><text x="732" y="312" fill="#132542" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="800">126</text><text x="732" y="337" fill="#2ba98f" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="700">Mes actual</text>
+</g>
+<rect x="280" y="388" width="624" height="196" rx="18" fill="#fff" stroke="#e1e8f0"/>
+<text x="304" y="421" fill="#14223a" font-family="Inter,Arial,sans-serif" font-size="16" font-weight="800">Agenda de atención</text>
+<g font-family="Inter,Arial,sans-serif" font-size="12"><rect x="304" y="444" width="560" height="34" rx="8" fill="#eef5f8"/><text x="322" y="466" fill="#65748a">09:00</text><text x="410" y="466" fill="#132542" font-weight="700">Consulta general</text><text x="620" y="466" fill="#718096">Dra. Morales</text><rect x="304" y="490" width="560" height="34" rx="8" fill="#f7fafc"/><text x="322" y="512" fill="#65748a">10:30</text><text x="410" y="512" fill="#132542" font-weight="700">Odontología</text><text x="620" y="512" fill="#718096">Dr. Cedeño</text><rect x="304" y="536" width="560" height="34" rx="8" fill="#f7fafc"/><text x="322" y="558" fill="#65748a">12:00</text><text x="410" y="558" fill="#132542" font-weight="700">Pediatría</text><text x="620" y="558" fill="#718096">Dra. Vera</text></g>
+<rect x="930" y="388" width="198" height="196" rx="18" fill="#0d2948"/><text x="954" y="421" fill="#fff" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="800">Estado</text><circle cx="968" cy="456" r="6" fill="#55d6be"/><text x="984" y="461" fill="#c9d7e8" font-family="Inter,Arial,sans-serif" font-size="12">Agenda activa</text><circle cx="968" cy="489" r="6" fill="#72a7ff"/><text x="984" y="494" fill="#c9d7e8" font-family="Inter,Arial,sans-serif" font-size="12">Historias clínicas</text><circle cx="968" cy="522" r="6" fill="#55d6be"/><text x="984" y="527" fill="#c9d7e8" font-family="Inter,Arial,sans-serif" font-size="12">Operación online</text>
 </svg>
