@@ -1,0 +1,28 @@
+/* QA fixes: preserve original iconography while integrating the new visual system. */
+.brand-photo{display:grid;place-items:center;width:40px;height:40px;overflow:hidden;border:1px solid rgba(105,232,201,.42);border-radius:12px;background:rgba(76,220,191,.07);box-shadow:0 0 25px rgba(76,220,191,.10)}
+.brand-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.stack-icon{position:relative;min-height:38px;display:flex;align-items:center}
+.stack-icon img{display:none!important}
+.stack-icon:before{content:"";display:block;width:36px;height:36px;background-position:center;background-repeat:no-repeat;background-size:contain;filter:drop-shadow(0 8px 18px rgba(0,0,0,.22))}
+.stack-card:nth-child(1) .stack-icon:before{background-image:var(--imgjavascript)}
+.stack-card:nth-child(2) .stack-icon:before{background-image:var(--imgjava)}
+.stack-card:nth-child(3) .stack-icon:before{background-image:var(--imgmongo)}
+.stack-card:nth-child(4) .stack-icon:before{content:"✦";background:none;color:#69e8c9;font:700 32px/36px 'Space Grotesk'}
+.stack-card:nth-child(5) .stack-icon:before{background-image:var(--imgdocker)}
+.stack-card:nth-child(6) .stack-icon:before{background-image:var(--imggit)}
+.tech-list b{display:inline-flex;align-items:center;gap:5px}
+.project-card{min-height:300px}
+.project-card.project-with-image{display:flex;flex-direction:column;justify-content:flex-end;padding:0;overflow:hidden}
+.project-card.project-with-image .project-thumb{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.48;transition:transform .45s ease,opacity .45s ease;filter:saturate(.9) contrast(1.05)}
+.project-card.project-with-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,10,18,.08) 15%,rgba(3,10,18,.88) 72%,rgba(3,10,18,.98) 100%)}
+.project-card.project-with-image:hover .project-thumb{transform:scale(1.04);opacity:.62}
+.project-card.project-with-image>div{position:relative;z-index:2;padding:28px}
+.project-card.project-with-image .project-number{z-index:3}
+.project-card.project-with-image .project-arrow{z-index:3}
+.social-contact:before{content:"";width:22px;height:22px;flex:0 0 22px;background-position:center;background-repeat:no-repeat;background-size:contain}
+.social-contact:nth-child(1):before{background-image:var(--imglinkedin)}
+.social-contact:nth-child(2):before{background-image:var(--imggithub)}
+.social-contact:nth-child(3):before{background-image:var(--imgyotube)}
+.social-contact:nth-child(4):before{background-image:var(--imgplatzi)}
+.social-contact img{display:none!important}
+@media(max-width:650px){.brand-photo{width:36px;height:36px}.project-card.project-with-image{min-height:330px}}
