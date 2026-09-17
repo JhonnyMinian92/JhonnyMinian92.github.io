@@ -26,4 +26,18 @@
 .social-contact:nth-child(3):before{background-image:var(--imgyotube)}
 .social-contact:nth-child(4):before{background-image:var(--imgplatzi)}
 .social-contact img{display:none!important}
+
+/* Accessibility, stability and performance hardening. */
+html{scroll-behavior:smooth}
+body{overflow-x:hidden}
+img{max-width:100%;height:auto}
+a,button{ -webkit-tap-highlight-color:transparent }
+a:focus-visible,button:focus-visible{outline:2px solid #69e8c9;outline-offset:4px;border-radius:6px}
+.nav a,.button,.social-contact,.text-link{min-height:44px}
+.project-card{isolation:isolate}
+.reveal{will-change:transform,opacity}
+#network{pointer-events:none}
+@media (hover:none){.cursor-glow{display:none!important}.tilt{transform:none!important}}
+@media (max-width:700px){#network{display:none!important}.page-noise{opacity:.16!important}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{will-change:auto}.orbit,.floating-card,.pulse,.photo-shine{animation:none!important}.project-card.project-with-image .project-thumb{transition:none}}
 @media(max-width:650px){.brand-photo{width:36px;height:36px}.project-card.project-with-image{min-height:330px}}
