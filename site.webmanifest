@@ -6,5 +6,5 @@
   "background_color": "#06101d",
   "theme_color": "#06101d",
   "lang": "es",
-  "icons": []
+  "icons": [{"src":"/assets/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
 }
