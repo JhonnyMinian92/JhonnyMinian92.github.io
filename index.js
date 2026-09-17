@@ -47,7 +47,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!reduceMotion && !touch && glow) addEventListener('pointermove', e => { glow.style.left = `${e.clientX}px`; glow.style.top = `${e.clientY}px`; }, { passive:true });
 
-  const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } }), { threshold:.12 });
+  const decodeChars = '01</>{}#$%&*';
+  const decodeReveal = el => {
+    const final = el.textContent;
+    let frame = 0; const totalFrames = 10;
+    const iv = setInterval(() => {
+      frame++;
+      el.textContent = final.split('').map((ch, i) => (frame / totalFrames > i / final.length ? ch : decodeChars[Math.floor(Math.random() * decodeChars.length)])).join('');
+      if (frame >= totalFrames) { el.textContent = final; clearInterval(iv); }
+    }, 45);
+  };
+
+  const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      if (!reduceMotion && entry.target.matches('.section-label')) {
+        const label = entry.target.querySelector('span');
+        if (label) decodeReveal(label);
+      }
+      revealObserver.unobserve(entry.target);
+    }
+  }), { threshold:.12 });
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
   if (!reduceMotion && !touch) {
@@ -70,6 +90,82 @@ document.addEventListener('DOMContentLoaded', () => {
     const chip=document.createElement('div'); chip.className='dev-chip'; chip.textContent='deploy --production'; visual.appendChild(chip);
   }
 
+  const boot = document.querySelector('[data-boot]');
+  if (boot) {
+    if (reduceMotion || boot.style.display === 'none') {
+      boot.remove();
+    } else {
+      const finishBoot = () => { boot.remove(); document.removeEventListener('pointerdown', finishBoot); document.removeEventListener('keydown', finishBoot); };
+      boot.addEventListener('animationend', finishBoot, { once:true });
+      document.addEventListener('pointerdown', finishBoot, { once:true });
+      document.addEventListener('keydown', finishBoot, { once:true });
+    }
+  }
+
+  const roleEl = document.querySelector('.role-text');
+  if (roleEl) {
+    const roles = (roleEl.dataset.roles || '').split('|').filter(Boolean);
+    if (roles.length) {
+      if (reduceMotion) {
+        roleEl.textContent = roles[0];
+      } else {
+        let ri = 0, ci = 0, deleting = false;
+        const tick = () => {
+          const word = roles[ri];
+          ci += deleting ? -1 : 1;
+          roleEl.textContent = word.slice(0, ci);
+          let delay = deleting ? 35 : 65;
+          if (!deleting && ci === word.length) { delay = 1500; deleting = true; }
+          else if (deleting && ci === 0) { deleting = false; ri = (ri + 1) % roles.length; delay = 250; }
+          setTimeout(tick, delay);
+        };
+        tick();
+      }
+    }
+  }
+
+  if (!reduceMotion) {
+    document.querySelectorAll('.button, .nav-cta, .social-contact, .text-link').forEach(el => {
+      el.classList.add('fx-ripple-host');
+      el.addEventListener('pointerdown', e => {
+        const r = el.getBoundingClientRect();
+        const size = Math.max(r.width, r.height) * 1.6;
+        const span = document.createElement('span');
+        span.className = 'fx-ripple';
+        span.style.width = span.style.height = `${size}px`;
+        span.style.left = `${e.clientX - r.left - size / 2}px`;
+        span.style.top = `${e.clientY - r.top - size / 2}px`;
+        el.appendChild(span);
+        span.addEventListener('animationend', () => span.remove(), { once:true });
+      });
+    });
+  }
+
+  const navSectionLinks = document.querySelectorAll('.nav a[href^="#"]');
+  const navSections = Array.from(navSectionLinks).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  if (navSections.length) {
+    const navObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+      const link = document.querySelector(`.nav a[href="#${entry.target.id}"]`);
+      if (link) link.classList.toggle('active', entry.isIntersecting);
+    }), { rootMargin:'-45% 0px -50% 0px', threshold:0 });
+    navSections.forEach(el => navObserver.observe(el));
+  }
+
+  document.querySelectorAll('.project-with-image').forEach(card => {
+    const img = card.querySelector('.project-thumb');
+    if (!img) return;
+    const markLoaded = () => card.classList.add('img-loaded');
+    if (img.complete && img.naturalWidth > 0) markLoaded();
+    else img.addEventListener('load', markLoaded, { once:true });
+  });
+
+  const backToTop = document.createElement('button');
+  backToTop.type = 'button'; backToTop.className = 'back-to-top'; backToTop.setAttribute('aria-label', 'Volver arriba'); backToTop.textContent = '↑';
+  document.body.appendChild(backToTop);
+  backToTop.addEventListener('click', () => window.scrollTo({ top:0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+  const toggleBackToTop = () => backToTop.classList.toggle('visible', scrollY > innerHeight);
+  toggleBackToTop(); addEventListener('scroll', toggleBackToTop, { passive:true });
+
   const canvas = document.querySelector('#network');
   const ctx = canvas?.getContext('2d');
   if (!ctx || reduceMotion || touch || innerWidth < 760) return;
@@ -78,4 +174,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const draw=()=>{ if(!running)return; ctx.clearRect(0,0,width,height); for(const p of points){p.x+=p.vx;p.y+=p.vy;if(p.x<-10||p.x>width+10)p.vx*=-1;if(p.y<-10||p.y>height+10)p.vy*=-1;const d=Math.hypot(p.x-pointer.x,p.y-pointer.y);if(d<150){p.x+=(p.x-pointer.x)/150*.12;p.y+=(p.y-pointer.y)/150*.12}ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(105,232,201,.28)';ctx.fill();} for(let i=0;i<points.length;i++)for(let j=i+1;j<points.length;j++){const a=points[i],b=points[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<110){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle=`rgba(105,232,201,${(1-d/110)*.05})`;ctx.stroke();}} raf=requestAnimationFrame(draw); };
   const stop=()=>{running=false;if(raf)cancelAnimationFrame(raf)}; const start=()=>{if(!running){running=true;draw()}};
   document.addEventListener('visibilitychange',()=>document.hidden?stop():start()); addEventListener('resize',resize,{passive:true}); addEventListener('pointermove',e=>{pointer.x=e.clientX;pointer.y=e.clientY},{passive:true}); resize(); draw();
+
+  let pausedByScroll = false;
+  const scrollPause = () => {
+    const pastHero = scrollY > innerHeight * 1.2;
+    if (pastHero && !pausedByScroll) { pausedByScroll = true; stop(); }
+    else if (!pastHero && pausedByScroll) { pausedByScroll = false; start(); }
+  };
+  addEventListener('scroll', scrollPause, { passive:true });
 });

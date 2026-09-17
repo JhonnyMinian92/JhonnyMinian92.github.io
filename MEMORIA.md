@@ -82,6 +82,42 @@ Validar antes de aprobar:
 - En escritorio, las grillas deben verse equilibradas.
 - Con `prefers-reduced-motion`, la p&aacute;gina debe seguir usable sin animaciones fuertes.
 
+## Capa de efectos "dev-fx" (2026-09-17)
+
+Se agrego una capa adicional de animaciones tematicas de desarrollo de software, en un archivo nuevo `dev-fx.css` (enlazado al final del `<head>`, despues de `site-fixes.css`) mas pequenos agregados en `index.js` e `index.html`:
+
+- Pantalla de "boot" tipo terminal al cargar (una vez por sesion via `sessionStorage`, se oculta sola).
+- Linea de "typewriter" con roles rotativos debajo del `<h1>` del hero (`.role-line`), decorativa (`aria-hidden`), el contenido real ya esta en el `h1` y el parrafo.
+- Efecto "decode" (scramble) en los numeros de `.section-label` al entrar en viewport.
+- Ripple en botones, `nav-cta`, `social-contact` y `text-link` al hacer click/tap.
+- Timeline: la linea vertical se dibuja progresivamente y los puntos aparecen en cascada al hacer scroll.
+- Miniaturas de proyectos: revelado tipo "wipe" (clip-path) al entrar en viewport.
+- Glitch sutil de color en el `em` del `h1` al pasar el mouse.
+
+Todo respeta `prefers-reduced-motion` (se desactiva o se muestra el estado final sin animacion) y no bloquea contenido: si JS falla, el boot screen no se remueve solo via CSS-fallback en el `<script>` inline sin-sessionStorage no se pierde nada critico (el contenido real de la pagina no depende de estos efectos).
+
+## Auditoria y checklist de mejoras (2026-09-17)
+
+Auditoria posterior a la capa dev-fx encontro y corrigio un bug real preexistente: las tarjetas de stack 04/AI, 05/INFRA y 06/NEGOCIO mostraban su icono duplicado (un caracter suelto en el HTML del `.stack-icon` superpuesto al icono real inyectado por `site-fixes.css`). Se vacio el contenido de esos tres `div.stack-icon` en `index.html`.
+
+Tambien se implemento el checklist de mejoras visuales/efectos/responsive/UX pedido por el usuario:
+
+- **Proyectos con link real**: las 3 tarjetas de `#proyectos` pasaron de `<article>` sin destino a `<a target="_blank">`. Cuspide → operacionadmin.com, Clinical Admin → clinical-admin.xo.je, y la tercera se renombro a **Mnemosine** (memoria central determinista para proyectos de agentes de IA) enlazando a github.com/EcuApp/mnemosine (sin captura porque aun no tiene sitio publicado). Cada tarjeta indica si es "Sitio en vivo" o "Repositorio".
+- **WhatsApp en contacto**: se agrego `.social-contact.whatsapp` enlazando a `https://wa.me/jhonnyminan92` (usuario, no numero, por pedido explicito del usuario — verificar que ese short-link este reclamado en WhatsApp Business si no resuelve).
+- **Nav activo por seccion** via `IntersectionObserver` (subrayado animado en el link de la seccion visible).
+- **Boton flotante "volver arriba"** creado por JS, aparece pasado 1 viewport de scroll.
+- **Boot screen saltable**: click o tecla lo cierra al instante (antes solo terminaba solo).
+- **Canvas de red pausado** cuando el scroll supera ~1.2 viewports (ahorro de CPU en scroll largo).
+- **Skeleton/shimmer** en miniaturas de proyecto hasta que la imagen realmente cargo, combinado con el wipe existente.
+- **Icono de IA (stack card 04)** con doble sparkle (cian + violeta) para igualar peso visual a los logos reales de las demas tarjetas.
+- **Stat "+8 años de trayectoria"** agregado al hero (dato ya usado en este documento).
+- **Mobile nav**: opacidad subida a ~99.5% + blur reducido porque el texto del hero se transparentaba (ghosting) detras del panel abierto.
+- Ajustes responsive: tablet (701-900px) con tarjetas de stack mas compactas, mobile con menos espacio reservado en `.stack-card`, y hero comprimido en landscape de poca altura (`max-height:520px`).
+- Feedback táctil (`:active`) en tarjetas `.tilt` y botones para dispositivos sin hover.
+- Se decidio omitir el boton de descarga de CV (el usuario no tiene PDF listo aun).
+
+Todo lo anterior se probo con Chrome DevTools (desktop, tablet 820px, mobile 390px portrait/landscape) sin errores de consola ni 404s, y respeta `prefers-reduced-motion`.
+
 ## Guia para futuras IAs
 
 - No volver a bloquear copiar, pegar, zoom, click derecho o herramientas del navegador.
