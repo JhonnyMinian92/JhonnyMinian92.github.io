@@ -5,12 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const glow = document.querySelector('.cursor-glow');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ------------------------------------------------------------------
-     Developer portfolio visual system
-     - Makes the existing SVG technology/social icons render reliably.
-     - Adds graceful SVG fallbacks when a remote icon cannot be loaded.
-     - Adds subtle developer-themed motion without changing the content.
-  ------------------------------------------------------------------ */
   const motionStyle = document.createElement('style');
   motionStyle.textContent = `
     .stack-icon > img,
@@ -100,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const stream = document.createElement('div');
       stream.className = 'code-stream';
       const snippets = ['const build = () => {};','API /v1/users','git commit -m "ship"','<component />','async function deploy()','SELECT * FROM data','docker compose up','AI_AGENT = READY','npm run build','HTTP 200 OK'];
-      snippets.forEach((text, i) => {
+      snippets.forEach((text) => {
         const item = document.createElement('span');
         item.textContent = text;
         item.style.left = `${4 + Math.random() * 92}%`;
