@@ -1,6 +1,7 @@
 /* QA fixes: preserve original iconography while integrating the new visual system. */
 @import url("responsive.css");
 @import url("premium-effects.css");
+@import url("hero-effects.css");
 .brand-photo{display:grid;place-items:center;width:40px;height:40px;overflow:hidden;border:1px solid rgba(105,232,201,.42);border-radius:12px;background:rgba(76,220,191,.07);box-shadow:0 0 25px rgba(76,220,191,.10)}
 .brand-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .stack-icon{position:relative;min-height:38px;display:flex;align-items:center}
@@ -27,18 +28,3 @@
 .social-contact:nth-child(3):before{background-image:var(--imgyotube)}
 .social-contact:nth-child(4):before{background-image:var(--imgplatzi)}
 .social-contact img{display:none!important}
-
-/* Accessibility, stability and performance hardening. */
-html{scroll-behavior:smooth}
-body{overflow-x:hidden}
-img{max-width:100%;height:auto}
-a,button{-webkit-tap-highlight-color:transparent}
-a:focus-visible,button:focus-visible{outline:2px solid #69e8c9;outline-offset:4px;border-radius:6px}
-.nav a,.button,.social-contact,.text-link{min-height:44px}
-.project-card{isolation:isolate}
-.reveal{will-change:transform,opacity}
-#network{pointer-events:none}
-@media (hover:none){.cursor-glow{display:none!important}.tilt{transform:none!important}}
-@media (max-width:700px){#network{display:none!important}.page-noise{opacity:.16!important}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{will-change:auto}.orbit,.floating-card,.pulse,.photo-shine{animation:none!important}.project-card.project-with-image .project-thumb{transition:none}}
-@media(max-width:650px){.brand-photo{width:36px;height:36px}.project-card.project-with-image{min-height:330px}}
