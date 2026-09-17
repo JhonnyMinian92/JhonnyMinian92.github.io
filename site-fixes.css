@@ -1,5 +1,6 @@
 /* QA fixes: preserve original iconography while integrating the new visual system. */
 @import url("responsive.css");
+@import url("premium-effects.css");
 .brand-photo{display:grid;place-items:center;width:40px;height:40px;overflow:hidden;border:1px solid rgba(105,232,201,.42);border-radius:12px;background:rgba(76,220,191,.07);box-shadow:0 0 25px rgba(76,220,191,.10)}
 .brand-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .stack-icon{position:relative;min-height:38px;display:flex;align-items:center}
@@ -31,7 +32,7 @@
 html{scroll-behavior:smooth}
 body{overflow-x:hidden}
 img{max-width:100%;height:auto}
-a,button{ -webkit-tap-highlight-color:transparent }
+a,button{-webkit-tap-highlight-color:transparent}
 a:focus-visible,button:focus-visible{outline:2px solid #69e8c9;outline-offset:4px;border-radius:6px}
 .nav a,.button,.social-contact,.text-link{min-height:44px}
 .project-card{isolation:isolate}
