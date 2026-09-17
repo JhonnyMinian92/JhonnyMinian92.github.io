@@ -43,7 +43,67 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="properties.css">
   <link rel="stylesheet" href="index.css">
+  <style>
+    /* Iconografía original del portafolio, integrada al nuevo diseño. */
+    .stack-icon { position: relative; min-height: 36px; }
+    .stack-icon > img { display: none !important; }
+    .stack-icon::before {
+      content: "";
+      display: block;
+      width: 34px;
+      height: 34px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,.22));
+    }
+    .stack-card:nth-child(1) .stack-icon::before { background-image: var(--imgjavascript); }
+    .stack-card:nth-child(2) .stack-icon::before { background-image: var(--imgjava); }
+    .stack-card:nth-child(3) .stack-icon::before { background-image: var(--imgmongo); }
+    .stack-card:nth-child(4) .stack-icon::before { content: "✦"; background: none; font-size: 32px; line-height: 34px; color: #69e8c9; }
+    .stack-card:nth-child(5) .stack-icon::before { background-image: var(--imgdocker); }
+    .stack-card:nth-child(6) .stack-icon::before { background-image: var(--imggit); }
+
+    .tech-list b { display: inline-flex; align-items: center; gap: 6px; }
+    .tech-list b > img { display: none !important; }
+    .tech-list b::before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      flex: 0 0 16px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: .95;
+    }
+    .stack-card:nth-child(1) .tech-list b:nth-child(4)::before { background-image: var(--imgjavascript); }
+    .stack-card:nth-child(2) .tech-list b:nth-child(3)::before { background-image: var(--imgphp); }
+    .stack-card:nth-child(2) .tech-list b:nth-child(4)::before { background-image: var(--imgjava); }
+    .stack-card:nth-child(3) .tech-list b:nth-child(2)::before { background-image: var(--imgmongo); }
+
+    .contact-links { display: grid; gap: 10px; min-width: min(300px, 100%); }
+    .social-contact { display: flex; align-items: center; gap: 12px; }
+    .social-contact > img { display: none !important; }
+    .social-contact::before {
+      content: "";
+      width: 22px;
+      height: 22px;
+      flex: 0 0 22px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .social-contact:nth-child(1)::before { background-image: var(--imglinkedin); }
+    .social-contact:nth-child(2)::before { background-image: var(--imggithub); }
+    .social-contact:nth-child(3)::before { background-image: var(--imgyotube); }
+    .social-contact:nth-child(4)::before { background-image: var(--imgplatzi); }
+
+    @media (max-width: 650px) {
+      .contact-links { min-width: 100%; }
+    }
+  </style>
 
   <script type="application/ld+json">
   {
