@@ -1,39 +1,281 @@
 /* Hero developer HUD — visual restoration around the profile photo. */
-.hero-visual{position:relative;min-height:560px;isolation:isolate;display:grid;place-items:center}
-.hero-visual::before{content:"";position:absolute;left:50%;top:50%;width:min(620px,110%);aspect-ratio:1;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(105,232,201,.20) 0 8%,rgba(105,232,201,.10) 22%,rgba(125,211,252,.045) 43%,transparent 70%);filter:blur(4px);z-index:0;animation:heroCore 6s ease-in-out infinite;pointer-events:none}
-.hero-visual::after{content:"";position:absolute;left:50%;top:50%;width:min(590px,105%);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:repeating-conic-gradient(from 0deg,rgba(105,232,201,.18) 0 1deg,transparent 1deg 14deg);mask-image:radial-gradient(circle,transparent 0 53%,#000 54% 58%,transparent 59%);-webkit-mask-image:radial-gradient(circle,transparent 0 53%,#000 54% 58%,transparent 59%);z-index:0;animation:heroRadar 28s linear infinite;pointer-events:none}
-.hero-visual>.orbit{z-index:1;pointer-events:none}
-.hero-visual>.photo-frame{z-index:3}
-.hero-visual>.floating-card{z-index:5}
-.photo-frame{overflow:visible}
-.photo-frame::before{z-index:8}
-.photo-frame::after{z-index:7}
-.photo-frame .profile-photo{position:relative;z-index:2}
-.photo-frame .photo-shine{z-index:6}
-.photo-frame::marker{display:none}
-.photo-frame{box-shadow:0 0 0 1px rgba(105,232,201,.18),0 0 0 8px rgba(105,232,201,.025),0 30px 110px rgba(0,0,0,.46),0 0 85px rgba(105,232,201,.17)}
-.photo-frame:hover{box-shadow:0 0 0 1px rgba(105,232,201,.35),0 0 0 10px rgba(105,232,201,.045),0 38px 125px rgba(0,0,0,.50),0 0 105px rgba(105,232,201,.25)}
-.photo-frame .profile-photo{filter:saturate(1.05) contrast(1.03)}
-.photo-frame .photo-badge{z-index:9}
-.hero-visual>.orbit-one{width:min(430px,82%);height:min(430px,82%);border-color:rgba(105,232,201,.35);border-style:dashed;box-shadow:0 0 30px rgba(105,232,201,.12),inset 0 0 30px rgba(125,211,252,.07)}
-.hero-visual>.orbit-two{width:min(510px,96%);height:min(510px,96%);border-color:rgba(125,211,252,.25);border-style:dotted;box-shadow:0 0 42px rgba(125,211,252,.08),inset 0 0 42px rgba(105,232,201,.04)}
-.hero-visual>.orbit-one::before,.hero-visual>.orbit-two::before{content:"";position:absolute;top:50%;left:-5px;width:9px;height:9px;border-radius:50%;background:#69e8c9;box-shadow:0 0 10px #69e8c9,0 0 24px rgba(105,232,201,.75)}
-.hero-visual>.orbit-two::before{left:auto;right:-5px;background:#7dd3fc;box-shadow:0 0 10px #7dd3fc,0 0 24px rgba(125,211,252,.75)}
-.hero-visual>.orbit-one::after,.hero-visual>.orbit-two::after{content:"";position:absolute;inset:8%;border:1px solid rgba(105,232,201,.055);border-radius:50%;animation:orbitInner 7s ease-in-out infinite}
-.hero-visual>.orbit-two::after{inset:13%;animation-delay:-2.5s}
-.hero-visual .card-code{border-color:rgba(105,232,201,.30);box-shadow:0 20px 70px rgba(0,0,0,.38),0 0 32px rgba(105,232,201,.12)}
-.hero-visual .card-code::after{content:"git  •  api  •  ai";display:block;margin-top:6px;color:rgba(105,232,201,.42);font:500 8px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:1.5px}
-.hero-visual .card-ai{border-color:rgba(167,139,250,.28);box-shadow:0 20px 70px rgba(0,0,0,.38),0 0 34px rgba(167,139,250,.11)}
-.hero-visual .card-ai::after{content:"MODEL READY";display:block;margin-top:5px;color:rgba(167,139,250,.55);font:600 8px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:1.4px}
-.hero-visual .dev-terminal{z-index:6}
-.hero-visual .dev-chip{z-index:6}
-.hero-visual .code-stream{z-index:1;opacity:.7}
-.hero-visual .code-stream span:nth-child(3n){color:rgba(125,211,252,.48)}
-.hero-visual .code-stream span:nth-child(4n){color:rgba(167,139,250,.40)}
-.hero-visual .dev-terminal::before{content:"●  ●  ●   /dev/portfolio"}
-@keyframes heroCore{0%,100%{opacity:.55;transform:translate(-50%,-50%) scale(.94)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.07)}}
-@keyframes heroRadar{to{transform:translate(-50%,-50%) rotate(360deg)}}
-@keyframes orbitInner{0%,100%{transform:scale(.94);opacity:.25}50%{transform:scale(1.06);opacity:.8}}
-@media(max-width:900px){.hero-visual{min-height:500px}.hero-visual::before{width:100vw}.hero-visual::after{width:96vw}.hero-visual>.orbit-one{width:min(390px,84%);height:min(390px,84%)}.hero-visual>.orbit-two{width:min(455px,98%);height:min(455px,98%)}}
-@media(max-width:650px){.hero-visual{min-height:410px}.hero-visual::after{opacity:.55}.hero-visual>.orbit-one{width:285px;height:285px}.hero-visual>.orbit-two{width:340px;height:340px}.hero-visual .dev-terminal{display:none}.hero-visual .code-stream{opacity:.32}.hero-visual .card-code{left:0}.hero-visual .card-ai{right:0}}
-@media(prefers-reduced-motion:reduce){.hero-visual::before,.hero-visual::after,.hero-visual>.orbit-one,.hero-visual>.orbit-two,.hero-visual>.orbit-one::after,.hero-visual>.orbit-two::after{animation:none!important}}
+.hero-visual {
+  position: relative;
+  min-height: 560px;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+}
+.hero-visual::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(620px, 110%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(105, 232, 201, 0.2) 0 8%, rgba(105, 232, 201, 0.1) 22%, rgba(125, 211, 252, 0.045) 43%, transparent 70%);
+  filter: blur(4px);
+  z-index: 0;
+  animation: heroCore 6s ease-in-out infinite;
+  pointer-events: none;
+}
+.hero-visual::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(590px, 105%);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: repeating-conic-gradient(from 0deg, rgba(105, 232, 201, 0.18) 0 1deg, transparent 1deg 14deg);
+  mask-image: radial-gradient(circle, transparent 0 53%, #000 54% 58%, transparent 59%);
+  -webkit-mask-image: radial-gradient(circle, transparent 0 53%, #000 54% 58%, transparent 59%);
+  z-index: 0;
+  animation: heroRadar 28s linear infinite;
+  pointer-events: none;
+}
+.hero-visual > .orbit {
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-visual > .photo-frame {
+  z-index: 3;
+}
+.hero-visual > .floating-card {
+  z-index: 5;
+}
+.photo-frame {
+  overflow: visible;
+}
+.photo-frame::before {
+  z-index: 8;
+}
+.photo-frame::after {
+  z-index: 7;
+}
+.photo-frame .profile-photo {
+  position: relative;
+  z-index: 2;
+}
+.photo-frame .photo-shine {
+  z-index: 6;
+}
+.photo-frame::marker {
+  display: none;
+}
+.photo-frame {
+  box-shadow:
+    0 0 0 1px rgba(105, 232, 201, 0.18),
+    0 0 0 8px rgba(105, 232, 201, 0.025),
+    0 30px 110px rgba(0, 0, 0, 0.46),
+    0 0 85px rgba(105, 232, 201, 0.17);
+}
+.photo-frame:hover {
+  box-shadow:
+    0 0 0 1px rgba(105, 232, 201, 0.35),
+    0 0 0 10px rgba(105, 232, 201, 0.045),
+    0 38px 125px rgba(0, 0, 0, 0.5),
+    0 0 105px rgba(105, 232, 201, 0.25);
+}
+.photo-frame .profile-photo {
+  filter: saturate(1.05) contrast(1.03);
+  border-radius: 165px 165px 70px 70px;
+}
+.photo-frame .photo-badge {
+  z-index: 9;
+}
+.hero-visual > .orbit-one {
+  width: min(430px, 82%);
+  height: min(430px, 82%);
+  border-color: rgba(105, 232, 201, 0.35);
+  border-style: dashed;
+  box-shadow:
+    0 0 30px rgba(105, 232, 201, 0.12),
+    inset 0 0 30px rgba(125, 211, 252, 0.07);
+}
+.hero-visual > .orbit-two {
+  width: min(510px, 96%);
+  height: min(510px, 96%);
+  border-color: rgba(125, 211, 252, 0.25);
+  border-style: dotted;
+  box-shadow:
+    0 0 42px rgba(125, 211, 252, 0.08),
+    inset 0 0 42px rgba(105, 232, 201, 0.04);
+}
+.hero-visual > .orbit-one::before,
+.hero-visual > .orbit-two::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #69e8c9;
+  box-shadow:
+    0 0 10px #69e8c9,
+    0 0 24px rgba(105, 232, 201, 0.75);
+}
+.hero-visual > .orbit-two::before {
+  left: auto;
+  right: -5px;
+  background: #7dd3fc;
+  box-shadow:
+    0 0 10px #7dd3fc,
+    0 0 24px rgba(125, 211, 252, 0.75);
+}
+.hero-visual > .orbit-one::after,
+.hero-visual > .orbit-two::after {
+  content: '';
+  position: absolute;
+  inset: 8%;
+  border: 1px solid rgba(105, 232, 201, 0.055);
+  border-radius: 50%;
+  animation: orbitInner 7s ease-in-out infinite;
+}
+.hero-visual > .orbit-two::after {
+  inset: 13%;
+  animation-delay: -2.5s;
+}
+.hero-visual .card-code {
+  border-color: rgba(105, 232, 201, 0.3);
+  box-shadow:
+    0 20px 70px rgba(0, 0, 0, 0.38),
+    0 0 32px rgba(105, 232, 201, 0.12);
+}
+.hero-visual .card-code::after {
+  content: 'git  •  api  •  ai';
+  display: block;
+  margin-top: 6px;
+  color: rgba(105, 232, 201, 0.42);
+  font:
+    500 8px ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+  letter-spacing: 1.5px;
+}
+.hero-visual .card-ai {
+  border-color: rgba(167, 139, 250, 0.28);
+  box-shadow:
+    0 20px 70px rgba(0, 0, 0, 0.38),
+    0 0 34px rgba(167, 139, 250, 0.11);
+}
+.hero-visual .card-ai::after {
+  content: 'MODEL READY';
+  display: block;
+  margin-top: 5px;
+  color: rgba(167, 139, 250, 0.55);
+  font:
+    600 8px ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+  letter-spacing: 1.4px;
+}
+.hero-visual .dev-terminal {
+  z-index: 6;
+}
+.hero-visual .dev-chip {
+  z-index: 6;
+}
+.hero-visual .code-stream {
+  z-index: 1;
+  opacity: 0.7;
+}
+.hero-visual .code-stream span:nth-child(3n) {
+  color: rgba(125, 211, 252, 0.48);
+}
+.hero-visual .code-stream span:nth-child(4n) {
+  color: rgba(167, 139, 250, 0.4);
+}
+.hero-visual .dev-terminal::before {
+  content: '●  ●  ●   /dev/portfolio';
+}
+@keyframes heroCore {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translate(-50%, -50%) scale(0.94);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.07);
+  }
+}
+@keyframes heroRadar {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes orbitInner {
+  0%,
+  100% {
+    transform: scale(0.94);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 0.8;
+  }
+}
+@media (max-width: 900px) {
+  .hero-visual {
+    min-height: 500px;
+  }
+  .hero-visual::before {
+    width: 100vw;
+  }
+  .hero-visual::after {
+    width: 96vw;
+  }
+  .hero-visual > .orbit-one {
+    width: min(390px, 84%);
+    height: min(390px, 84%);
+  }
+  .hero-visual > .orbit-two {
+    width: min(455px, 98%);
+    height: min(455px, 98%);
+  }
+}
+@media (max-width: 650px) {
+  .hero-visual {
+    min-height: 410px;
+  }
+  .hero-visual::after {
+    opacity: 0.55;
+  }
+  .hero-visual > .orbit-one {
+    width: 285px;
+    height: 285px;
+  }
+  .hero-visual > .orbit-two {
+    width: 340px;
+    height: 340px;
+  }
+  .hero-visual .dev-terminal {
+    display: none;
+  }
+  .hero-visual .code-stream {
+    opacity: 0.32;
+  }
+  .hero-visual .card-code {
+    left: 0;
+  }
+  .hero-visual .card-ai {
+    right: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-visual::before,
+  .hero-visual::after,
+  .hero-visual > .orbit-one,
+  .hero-visual > .orbit-two,
+  .hero-visual > .orbit-one::after,
+  .hero-visual > .orbit-two::after {
+    animation: none !important;
+  }
+}
