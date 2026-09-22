@@ -1,0 +1,34 @@
+{
+  "catalog": {
+    "architecture": [
+      "architectures/hexagonal.md"
+    ],
+    "design_pattern": [
+      "patterns/backend/repository.md",
+      "patterns/frontend/component-composition.md"
+    ],
+    "language": [
+      "languages/javascript.md"
+    ],
+    "version": [
+      "versions/javascript-es2022.md"
+    ],
+    "role": [
+      "roles/fullstack_developer/definition.md",
+      "roles/ui_ux/definition.md",
+      "roles/ux_researcher/definition.md",
+      "roles/scrum_master/definition.md",
+      "roles/product_owner/definition.md"
+    ],
+    "rule": [
+      "rules/audit_before_closing.md",
+      "rules/no_hallucination.md",
+      "rules/document_after_change.md"
+    ],
+    "design": [
+      "design/modern_filters.md",
+      "design/skeleton_loading.md",
+      "design/modern_selectors.md"
+    ]
+  }
+}
