@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "project_uuid": "47b48739-5942-403b-9def-129837a27d5c",
+  "status": "pending",
+  "maturity": "INITIALIZED",
+  "progress_percent": 0.0,
+  "active_task_uuid": null,
+  "next_ready_task_uuid": null,
+  "tasks": {
+    "total": 0,
+    "pending": 0,
+    "ready": 0,
+    "claimed": 0,
+    "in_progress": 0,
+    "blocked": 0,
+    "failed": 0,
+    "completed": 0,
+    "cancelled": 0
+  },
+  "executions": {
+    "attempts": 0,
+    "completed": 0,
+    "by_type": {
+      "feature": {
+        "tasks": 0,
+        "completed": 0,
+        "attempts": 0,
+        "errors": 0,
+        "retries": 0,
+        "tokens": 0
+      },
+      "fix": {
+        "tasks": 0,
+        "completed": 0,
+        "attempts": 0,
+        "errors": 0,
+        "retries": 0,
+        "tokens": 0
+      },
+      "test": {
+        "tasks": 0,
+        "completed": 0,
+        "attempts": 0,
+        "errors": 0,
+        "retries": 0,
+        "tokens": 0
+      }
+    }
+  },
+  "tokens": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "context_tokens": 0,
+    "memory_tokens": 0,
+    "code_tokens": 0,
+    "reasoning_tokens": 0,
+    "total": 0
+  },
+  "errors": 0,
+  "retries": 0,
+  "last_activity_at": null,
+  "index": {
+    "path": "indexes/project.index.json",
+    "generated_at": "2026-09-22T22:06:17.594861+00:00"
+  },
+  "updated_at": "2026-09-22T22:06:17.594861+00:00"
+}
