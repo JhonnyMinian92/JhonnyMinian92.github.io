@@ -2,34 +2,26 @@
 
 ## Changes
 
-- Confirmación de archivo JSON estático como fuente única de verdad para el contenido profesional.
-- Eliminación de tareas relacionadas con configuración de dominios personalizados y registros CNAME.
-- Ajuste del flujo de datos: se implementará un adaptador de infraestructura específico para leer el archivo JSON local mediante Fetch API.
-- Refinamiento de la Arquitectura Hexagonal: se estructurará como un 'Modular Frontend' donde el Dominio define las entidades (Proyecto, Experiencia), los Casos de Uso gestionan la carga de datos y la UI reacciona a los cambios de estado.
+- Confirmación del uso de JavaScript Vanilla con Vite sin frameworks adicionales.
+- Eliminación de la pregunta sobre bibliotecas de animación tras la respuesta del usuario.
+- Consolidación de las tareas orientadas a la estructura hexagonal simplificada en frontend y carga de datos estáticos vía JSON.
 
 ## Tasks
 
-- Configurar el entorno de desarrollo utilizando Vite con JavaScript ES2022 optimizado para sitios estáticos.
-- Definir el esquema del archivo 'src/data/profile.json' que contendrá la información de experiencia, habilidades y proyectos.
-- Implementar la capa de Dominio: Definir modelos de datos y puertos (interfaces) para el repositorio de datos profesionales.
-- Implementar el Adaptador de Infraestructura: Repositorio que utiliza Fetch API para obtener y validar el contenido del JSON estático.
-- Desarrollar componentes de UI siguiendo el patrón de composición: Layout, Hero con efectos visuales, Timeline de experiencia y Grid de proyectos.
-- Integrar filtros y selectores modernos para la sección de proyectos, permitiendo categorizar por tecnologías o tipo de desarrollo.
-- Implementar Skeleton Loading para la transición de carga inicial del JSON.
-- Aplicar animaciones y transiciones (CSS/JS) para cumplir con el requisito de 'sitio visualmente atractivo'.
-- Configurar GitHub Actions para el despliegue automatizado a la rama 'gh-pages' utilizando la URL por defecto de github.io.
+- Configurar el proyecto con Vite y JavaScript ES2022 para GitHub Pages.
+- Crear el archivo de datos estáticos en src/data/profile.json.
+- Implementar el dominio, las interfaces de puertos y el adaptador de repositorio utilizando Fetch API.
+- Desarrollar componentes de UI reutilizables aplicando el patrón de composición y Skeleton Loading.
+- Implementar filtros modernos de proyectos y transiciones visuales.
+- Configurar el flujo de GitHub Actions para despliegue automático en la rama gh-pages.
 
 ## Tests
 
-- Prueba Unitaria: Validar que el Repositorio de datos procesa correctamente el JSON y maneja errores de formato o archivos ausentes.
-- Prueba de Integración: Verificar que los filtros de proyectos actualizan correctamente la vista según los criterios seleccionados.
-- Prueba de Performance: Ejecutar auditoría Lighthouse para asegurar un LCP (Largest Contentful Paint) óptimo y fluidez en las animaciones.
-- Prueba de Accesibilidad (A11y): Validar que el sitio sea navegable mediante teclado y compatible con lectores de pantalla.
-- Prueba Funcional (Golden Path): Confirmar que el despliegue en github.io visualiza toda la información y los enlaces de contacto funcionan.
+- Prueba Unitaria: Verificar la correcta carga y validación del archivo JSON por el adaptador de repositorio.
+- Prueba de Integración: Comprobar el funcionamiento de los filtros y selectores de proyectos en la interfaz.
+- Prueba de Accesibilidad y Performance: Validar Lighthouse scores y navegación por teclado.
 
 ## Rationale
 
-- Se ha simplificado la infraestructura al confirmarse el uso de JSON estático y dominio por defecto, eliminando complejidad innecesaria de red y DNS.
-- Se mantiene el enfoque de Arquitectura Hexagonal para asegurar que si en el futuro el usuario decide cambiar el JSON por una API de Notion o GitHub, la lógica de la UI permanezca intacta.
-- Se priorizan tareas de efectos visuales y transiciones para cumplir con la expectativa estética del proyecto.
-- Se añade una pregunta sobre el framework UI para evitar asumir 'Vanilla' estricto si el usuario prefiere la ergonomía de una librería de componentes.
+- Todas las preguntas necesarias han sido respondidas satisfactoriamente por el usuario, eliminando ambigüedades sobre el framework y la librería de animaciones.
+- Se han refinado las tareas y pruebas para reflejar un flujo de desarrollo totalmente acotado a un sitio estático basado en JSON sin dependencias externas complejas.

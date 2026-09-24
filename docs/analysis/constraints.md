@@ -13,3 +13,9 @@ Record mandatory technical, business, security, compatibility and operational co
 - Ajuste del flujo de datos: se implementará un adaptador de infraestructura específico para leer el archivo JSON local mediante Fetch API.
 - Refinamiento de la Arquitectura Hexagonal: se estructurará como un 'Modular Frontend' donde el Dominio define las entidades (Proyecto, Experiencia), los Casos de Uso gestionan la carga de datos y la UI reacciona a los cambios de estado.
 
+## Gemini proposed changes
+
+- Confirmación del uso de JavaScript Vanilla con Vite sin frameworks adicionales.
+- Eliminación de la pregunta sobre bibliotecas de animación tras la respuesta del usuario.
+- Consolidación de las tareas orientadas a la estructura hexagonal simplificada en frontend y carga de datos estáticos vía JSON.
+

@@ -75,3 +75,9 @@ More unit tests usually improve speed and diagnosis, while integration and end-t
 - Prueba de Accesibilidad (A11y): Validar que el sitio sea navegable mediante teclado y compatible con lectores de pantalla.
 - Prueba Funcional (Golden Path): Confirmar que el despliegue en github.io visualiza toda la información y los enlaces de contacto funcionan.
 
+## Tests required by Gemini
+
+- Prueba Unitaria: Verificar la correcta carga y validación del archivo JSON por el adaptador de repositorio.
+- Prueba de Integración: Comprobar el funcionamiento de los filtros y selectores de proyectos en la interfaz.
+- Prueba de Accesibilidad y Performance: Validar Lighthouse scores y navegación por teclado.
+
