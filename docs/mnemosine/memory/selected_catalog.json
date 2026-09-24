@@ -1,17 +1,9 @@
 {
   "catalog": {
-    "architecture": [
-      "architectures/hexagonal.md"
-    ],
-    "design_pattern": [
-      "patterns/backend/repository.md",
-      "patterns/frontend/component-composition.md"
-    ],
-    "language": [
-      "languages/javascript.md"
-    ],
-    "version": [
-      "versions/javascript-es2022.md"
+    "qa": [
+      "qa/functional_testing_checklist.md",
+      "qa/release_readiness_checklist.md",
+      "qa/performance_checklist.md"
     ],
     "role": [
       "roles/fullstack_developer/definition.md",
@@ -29,6 +21,22 @@
       "design/modern_filters.md",
       "design/skeleton_loading.md",
       "design/modern_selectors.md"
+    ],
+    "testing": [
+      "testing/test_pyramid.md"
+    ],
+    "version": [
+      "versions/javascript-es2022.md"
+    ],
+    "language": [
+      "languages/javascript.md"
+    ],
+    "architecture": [
+      "architectures/hexagonal.md"
+    ],
+    "design_pattern": [
+      "patterns/backend/repository.md",
+      "patterns/frontend/component-composition.md"
     ]
   }
 }
