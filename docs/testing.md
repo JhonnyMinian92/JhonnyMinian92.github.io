@@ -61,3 +61,9 @@ More unit tests usually improve speed and diagnosis, while integration and end-t
 - **Critical login journey:** add end-to-end coverage.
 - **API provider/consumer boundary:** add contract tests.
 
+## Tests required by Gemini
+
+- Verificar el renderizado correcto de todos los componentes principales mediante pruebas unitarias y de integración del DOM.
+- Comprobar el funcionamiento del skeleton loading y los estados de carga o vacíos.
+- Validar la correctitud de los enlaces y la accesibilidad básica del sitio web.
+
