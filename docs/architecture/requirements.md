@@ -2,6 +2,17 @@
 
 Languages, versions and frameworks selected from Central Memory are listed below. Gemini may propose additions.
 
+# Reused Version from Central Memory
+
+
+## versions/javascript-es2022.md
+
+# JavaScript ES2022
+
+Applies to: `languages/javascript.md`
+
+Baseline for modern browsers and Node.js 16+.
+
 # Reused Language from Central Memory
 
 
@@ -20,15 +31,4 @@ Frontend interactivity, Node.js backends, scripting for web and PWA projects.
 ## Common pitfalls
 - Implicit type coercion (`==` instead of `===`) causes subtle bugs.
 - Unhandled promise rejections silently swallow async errors.
-
-# Reused Version from Central Memory
-
-
-## versions/javascript-es2022.md
-
-# JavaScript ES2022
-
-Applies to: `languages/javascript.md`
-
-Baseline for modern browsers and Node.js 16+.
 

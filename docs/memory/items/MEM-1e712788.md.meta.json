@@ -1,11 +1,11 @@
 {
-  "id": "MEM-1e712788",
+  "id": "1e712788-3e83-45e2-9187-c519052d516f",
   "type": "decision",
   "path": "memory/items/MEM-1e712788.md",
   "uuid": "1e712788-3e83-45e2-9187-c519052d516f",
   "scope": "project",
   "scope_id": "47b48739-5942-403b-9def-129837a27d5c",
-  "status": "CANDIDATE",
+  "status": "VALIDATED",
   "schema_version": "1.0",
   "title": "Diseño Tecnologico",
   "summary": "La maquetacion y efectos de diseño deben ser basados en tecnologia o representativos de desarrollo de software.\n",
@@ -19,14 +19,25 @@
   "source": null,
   "created_by": null,
   "updated_by": null,
-  "created_at": "2026-09-23T12:38:52.824552+00:00",
-  "updated_at": "2026-09-23T12:38:52.824552+00:00",
+  "created_at": "2026-09-23T12:38:52.906943+00:00",
+  "updated_at": "2026-09-24T12:18:38.369300+00:00",
   "confidence": 1.0,
   "priority": 50,
   "usage_count": 0,
   "last_used_at": null,
   "validation": {},
-  "lifecycle": {},
+  "lifecycle": {
+    "history": [
+      {
+        "from": "CANDIDATE",
+        "to": "VALIDATED",
+        "at": "2026-09-24T12:18:38.369300+00:00",
+        "reason": "",
+        "actor": "77623808-7808-4379-8865-b5b9de6a18f1"
+      }
+    ],
+    "last_transition_at": "2026-09-24T12:18:38.369300+00:00"
+  },
   "why": null,
   "negative_decision": null,
   "agent_learning": null,
