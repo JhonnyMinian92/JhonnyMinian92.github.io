@@ -67,3 +67,11 @@ More unit tests usually improve speed and diagnosis, while integration and end-t
 - Comprobar el funcionamiento del skeleton loading y los estados de carga o vacíos.
 - Validar la correctitud de los enlaces y la accesibilidad básica del sitio web.
 
+## Tests required by Gemini
+
+- Prueba Unitaria: Validar que el Repositorio de datos procesa correctamente el JSON y maneja errores de formato o archivos ausentes.
+- Prueba de Integración: Verificar que los filtros de proyectos actualizan correctamente la vista según los criterios seleccionados.
+- Prueba de Performance: Ejecutar auditoría Lighthouse para asegurar un LCP (Largest Contentful Paint) óptimo y fluidez en las animaciones.
+- Prueba de Accesibilidad (A11y): Validar que el sitio sea navegable mediante teclado y compatible con lectores de pantalla.
+- Prueba Funcional (Golden Path): Confirmar que el despliegue en github.io visualiza toda la información y los enlaces de contacto funcionan.
+

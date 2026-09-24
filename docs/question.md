@@ -1,15 +1,15 @@
 # Questions Pending
 
-## github_pages_domain
-¿Se utilizará un dominio personalizado para GitHub Pages o la URL por defecto de github.io?
+## ui_framework_preference
+¿Prefieres utilizar JavaScript Vanilla (sin frameworks) con herramientas modernas como Vite, o alguna librería específica como React o Vue para la composición de componentes?
 
-Why: Es necesario para configurar correctamente los metadatos, los archivos CNAME y las rutas relativas o absolutas en el proyecto.
+Why: Aunque se mencionó 'vainilla optimizada', la selección de patrones como 'Component Composition' y 'Unidirectional Data Flow' es más nativa en frameworks modernos. Necesito confirmar para definir el boilerplate inicial.
 
 Answer: 
 
-## content_source
-¿De dónde se obtendrán los datos del perfil (archivo estático JSON, Markdown local o integraciones con APIs externas como GitHub API)?
+## visual_library_preference
+¿Tienes alguna preferencia por una librería de animaciones específica (ej. Framer Motion, GSAP, Motion One) o prefieres animaciones personalizadas con CSS y Web Animations API?
 
-Why: Determina el diseño de la capa de datos y los adaptadores necesarios para alimentar la interfaz de usuario.
+Why: El requerimiento de 'llena de efectos y transiciones' se beneficia enormemente de una librería especializada para mantener el código limpio.
 
 Answer:
