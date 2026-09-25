@@ -58,3 +58,26 @@ When the project is connected to GitHub, the connected repository and branch are
 Mnemosine core does not require an LLM. Memory retrieval, task readiness, dependency validation, indexing, permissions and context budgeting are deterministic. The consuming agent may use any model provider or no LLM.
 
 After an interrupted execution, inspect task state before retrying. Do not fabricate completion. Use Mnemosine diagnostics/recovery to repair derived state, then resume only after dependencies and ownership are valid.
+
+<!-- mnemosine:connection:start -->
+## Conexión con Mnemosine
+
+- Proyecto: `Perfil Profesional` (`47b48739-5942-403b-9def-129837a27d5c`)
+- Modo de conexión configurado: **AUTONOMOUS**
+- API base: `http://localhost/app-microservices-mnemosine/api/v1`
+- Autenticación: cabecera `Authorization: Bearer <clave>`; la clave `mnk_...` se genera en Mnemosine → Proyecto → pestaña Conexión. Nunca la guardes en el repositorio.
+
+### MCP (agentes conversacionales: Claude Code, Codex, Cursor, Claude Desktop vía mcp-remote...)
+- Servidor MCP (Streamable HTTP): `http://localhost/app-microservices-mnemosine/api/v1/mcp/`
+- Herramientas: `mnemosine_get_briefing`, `mnemosine_next_task`, `mnemosine_update_task`, `mnemosine_ack_notification`, `mnemosine_read_memory`.
+- Al abrir una conversación: Trabaja en el proyecto "Perfil Profesional" de Mnemosine (id 47b48739-5942-403b-9def-129837a27d5c). Llama primero a la herramienta mnemosine_get_briefing, sigue sus reglas, pide la tarea con mnemosine_next_task, reporta cada cambio de estado con mnemosine_update_task y no inventes el estado del proyecto.
+
+### Agente autónomo (proceso continuo)
+- Consulta cada 1-5 minutos: `GET http://localhost/app-microservices-mnemosine/api/v1/agent-gateway/projects/47b48739-5942-403b-9def-129837a27d5c/poll/` → `next_task`, `notifications`.
+- Confirma cada aviso: `POST http://localhost/app-microservices-mnemosine/api/v1/agent-gateway/notifications/<notification_id>/ack/`.
+- Reporta estados (`CLAIMED`, `ACTIVE`, `COMPLETED`, `BLOCKED`, `FAILED`): `PUT http://localhost/app-microservices-mnemosine/api/v1/agent-gateway/projects/47b48739-5942-403b-9def-129837a27d5c/tasks/<task_id>/status/` con cuerpo `{"status": "...", "reason": "..."}`.
+- Opcional, para que Mnemosine te despierte: `PUT http://localhost/app-microservices-mnemosine/api/v1/agent-gateway/projects/47b48739-5942-403b-9def-129837a27d5c/callback/` con `{"callback_url": "https://..."}`.
+
+### Modo API
+- Mnemosine ejecuta las tareas con la API del proveedor y entrega cada una como pull request contra la rama del proyecto. Revisa y fusiona los PR; no hace falta ningún proceso del lado del agente.
+<!-- mnemosine:connection:end -->
