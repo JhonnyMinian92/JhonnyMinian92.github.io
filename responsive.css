@@ -1,0 +1,125 @@
+/* Responsive QA layer — mobile-first stability for the portfolio. */
+html,body{max-width:100%;overflow-x:hidden}
+img,svg,canvas{max-width:100%}
+.section-wrap{min-width:0}
+.hero-copy,.hero-visual,.profile-grid,.experience-grid,.education-card,.contact-section,.stack-card,.project-card{min-width:0}
+.hero-lead,.profile-text,.stack-card p,.timeline-item p,.project-card p,.contact-content>p{overflow-wrap:anywhere}
+
+@media (max-width: 900px){
+  .site-header{padding-inline:20px}
+  .nav{gap:14px}
+  .hero{gap:20px}
+  .hero-copy{max-width:760px}
+  .hero-visual{width:100%;max-width:620px;margin-inline:auto}
+  .profile-grid,.experience-grid,.education-card{width:100%}
+  .experience-grid{gap:35px}
+  .education-card{gap:35px}
+  .project-showcase{width:100%}
+}
+
+@media (max-width: 650px){
+  .section-wrap{width:calc(100% - 28px);max-width:none}
+  .site-header{height:64px;padding-inline:14px}
+  .brand{gap:8px;min-width:0}
+  .brand strong{font-size:13px;white-space:nowrap}
+  .brand-photo{width:36px;height:36px;flex:0 0 36px}
+  .menu-toggle{display:block;padding:7px;margin-right:-5px}
+  .nav{top:64px;left:10px;right:10px;max-height:calc(100vh - 78px);overflow:auto}
+
+  .hero{padding-top:102px;padding-bottom:55px;gap:8px}
+  .availability{max-width:100%;white-space:normal;line-height:1.35;margin-bottom:20px}
+  .kicker{font-size:9px;letter-spacing:.16em;margin-bottom:14px}
+  .hero h1{font-size:clamp(38px,11.5vw,48px);line-height:.98;letter-spacing:-.055em}
+  .hero h1 br{display:none}
+  .hero-lead{font-size:13px;line-height:1.72;margin:20px 0 24px}
+  .hero-actions{display:grid;grid-template-columns:1fr;gap:9px;width:100%}
+  .button{width:100%;min-height:48px;padding-inline:16px}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:34px}
+  .hero-stats div{padding-left:9px;min-width:0}
+  .hero-stats strong{font-size:11px;white-space:nowrap}
+  .hero-stats span{font-size:7px;line-height:1.35}
+
+  .hero-visual{height:min(108vw,410px);min-height:340px;margin-top:8px;overflow:visible}
+  .photo-frame{width:min(72vw,280px);max-width:280px}
+  .orbit-one{width:min(94vw,360px);height:min(94vw,360px)}
+  .orbit-two{width:min(102vw,390px);height:min(58vw,220px)}
+  .floating-card{max-width:125px;padding:10px 11px;border-radius:11px;transform:scale(.78);transform-origin:center}
+  .card-code{left:-4%;top:14%}
+  .card-ai{right:-4%;bottom:11%}
+
+  .profile-section,.stack-section,.experience-section,.projects-section,.education-section,.contact-section{padding-top:70px;padding-bottom:70px}
+  .section-label{margin-bottom:30px;font-size:8px}
+  .section-intro h2,.section-heading h2{font-size:clamp(32px,9.5vw,40px);line-height:1.03}
+  .profile-grid,.experience-grid,.education-card{gap:28px}
+  .profile-text{font-size:13px;line-height:1.75}
+  .pill-cloud{gap:6px;margin-top:32px}
+  .pill-cloud span{padding:7px 9px;font-size:8px}
+
+  .stack-grid{grid-template-columns:1fr;gap:10px}
+  .stack-card{min-height:0;padding:21px;border-radius:18px}
+  .stack-icon{min-height:34px;margin-bottom:22px}
+  .stack-icon:before{width:34px;height:34px}
+  .stack-card h3{font-size:20px}
+  .stack-card p{font-size:10.5px;min-height:0}
+  .tech-list{margin-top:16px}
+  .tech-list b{font-size:8px;padding:6px 8px;max-width:100%}
+
+  .timeline{padding-left:25px}
+  .timeline-item{padding-left:15px;padding-bottom:32px}
+  .timeline-dot{left:-25px}
+  .timeline-item h3{font-size:18px}
+  .timeline-item h4{font-size:10px}
+  .timeline-item p{font-size:10px}
+
+  .projects-head{margin-bottom:25px}
+  .projects-head h2{font-size:clamp(34px,10vw,42px)}
+  .project-showcase{grid-template-columns:1fr;gap:10px}
+  .project-card,.project-card.project-with-image{min-height:300px;border-radius:18px}
+  .project-main{min-height:360px}
+  .project-card.project-with-image>div{padding:21px}
+  .project-card h3{font-size:21px}
+  .project-card p{font-size:10.5px}
+  .project-number{font-size:52px}
+  .project-arrow{right:19px;bottom:18px}
+
+  .education-card{padding:24px 20px;border-radius:20px}
+  .education-card h2{font-size:clamp(31px,9vw,39px)}
+  .education-items{gap:16px}
+  .education-items span{font-size:14px;line-height:1.35}
+
+  .contact-section{min-height:0;display:block}
+  .contact-content h2{font-size:clamp(38px,11vw,50px);line-height:1}
+  .contact-content>p:not(.kicker){font-size:11px;line-height:1.7}
+  .contact-links{min-width:0;margin-top:35px;width:100%}
+  .contact-links a{padding:13px 0}
+  .footer{font-size:8px;padding-top:20px;padding-bottom:25px}
+}
+
+@media (max-width: 380px){
+  .section-wrap{width:calc(100% - 22px)}
+  .site-header{padding-inline:10px}
+  .hero{padding-top:94px}
+  .hero h1{font-size:36px}
+  .hero-stats{grid-template-columns:1fr;gap:10px}
+  .hero-stats div{padding-left:10px}
+  .hero-visual{height:340px;min-height:300px}
+  .photo-frame{width:235px}
+  .orbit-one{width:300px;height:300px}
+  .orbit-two{width:325px;height:190px}
+  .floating-card{display:none}
+  .section-intro h2,.section-heading h2{font-size:31px}
+  .stack-card{padding:18px}
+  .project-card,.project-card.project-with-image{min-height:285px}
+  .project-main{min-height:335px}
+  .education-card{padding:21px 17px}
+  .contact-content h2{font-size:37px}
+}
+
+@media (hover:none) and (pointer:coarse){
+  .tilt.visible:hover,.stack-card:hover,.project-card:hover{transform:none}
+  .button:hover{box-shadow:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .project-card.project-with-image .project-thumb{transition:none}
+}
