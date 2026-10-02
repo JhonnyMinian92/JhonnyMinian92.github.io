@@ -1,0 +1,75 @@
+/* Stability + visual QA layer — loaded last. */
+html{overflow-x:hidden}
+body{min-width:0;overflow-x:hidden}
+main{width:100%;min-width:0;overflow:clip}
+.section-wrap,.hero{min-width:0}
+.section-wrap>*,
+.hero>*{min-width:0}
+.hero-copy{position:relative;z-index:4}
+.hero-visual{isolation:isolate;z-index:2}
+.hero-visual .photo-frame{z-index:4}
+.hero-visual .floating-card{z-index:7;max-width:min(240px,42vw)}
+.hero-orbit{z-index:1}
+.hero-ring-label{pointer-events:none}
+.hero-proof{width:100%}
+.executive-section,.profile-section,.stack-section,.experience-section,.ecuapp-section,.projects-section,.education-section,.contact-section{overflow:clip}
+.executive-cards,.stack-grid,.experience-grid,.ecosystem-grid,.project-showcase,.education-card,.contact-section{min-width:0}
+.executive-card,.stack-card,.ecosystem-card,.project-card,.method-card,.vision-principles>div{min-width:0}
+.executive-card p,.stack-card p,.ecosystem-card p,.project-card p,.timeline-item p,.method-card p,.vision-principles small{overflow-wrap:anywhere}
+.project-card{position:relative}
+.project-card.project-with-image .project-thumb{z-index:0}
+.project-card.project-with-image::after{z-index:1}
+.project-card.project-with-image>div{z-index:3}
+.project-card .project-number{position:absolute!important;left:26px!important;top:22px!important;z-index:4!important;padding:0!important}
+.project-card .project-arrow{position:absolute!important;right:22px!important;bottom:22px!important;z-index:6!important}
+.project-card.project-with-image>div:not(.project-number){padding:30px!important}
+.project-card.project-with-image>div:not(.project-number)>span:first-child{display:inline-block}
+.timeline{min-width:0}
+.timeline-item{min-width:0}
+.timeline-tags{padding-right:55px}
+.contact-section .contact-orb{z-index:0;pointer-events:none}
+.contact-section .contact-content,.contact-section .contact-links{position:relative;z-index:2;min-width:0}
+.footer{min-width:0}
+.footer>*{min-width:0}
+
+.site-header{overflow:visible}
+.nav{min-width:0}
+html:not(.js-ready) .reveal{opacity:1;transform:none}
+html.js-ready .reveal{will-change:opacity,transform}
+
+@media(max-width:1100px){
+  .nav{gap:12px!important}
+}
+@media(max-width:900px){
+  .hero{gap:32px!important}
+  .hero-visual{max-width:620px}
+  .executive-header,.profile-grid,.experience-grid,.ecuapp-hero,.contact-section{min-width:0}
+}
+@media(max-width:700px){
+  .section-wrap,.hero,.footer{width:calc(100% - 28px)!important}
+  .hero{display:grid!important;grid-template-columns:1fr!important;gap:10px!important}
+  .hero-copy{width:100%}
+  .hero-visual{width:100%!important;height:380px!important;min-height:320px!important;margin-top:4px!important}
+  .hero-visual .photo-frame{width:min(70vw,265px)!important}
+  .hero-visual .floating-card{max-width:125px}
+  .hero-proof>div{min-width:0}
+  .career-spectrum{width:100%}
+  .career-spectrum article{min-width:0}
+  .timeline{padding-left:23px!important}
+  .timeline-item .timeline-dot{left:-27px!important}
+  .project-card.project-with-image>div:not(.project-number){padding:22px!important;padding-bottom:56px!important}
+  .project-card .project-number{left:22px!important;top:18px!important}
+  .project-card .project-arrow{right:18px!important;bottom:16px!important}
+  .contact-section{display:grid!important}
+  .nav.open{display:flex!important;flex-direction:column!important;align-items:stretch!important}
+  .nav.open a{width:100%;text-align:left}
+  .nav.open .nav-separator{display:none!important}
+}
+@media(max-width:420px){
+  .hero-visual{height:340px!important}
+  .hero-visual .floating-card{display:none}
+  .project-card.project-with-image>div:not(.project-number){padding-bottom:58px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  html:not(.js-ready) .reveal{opacity:1;transform:none}
+}
