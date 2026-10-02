@@ -1,118 +1,98 @@
-# Perfil Web de Jhonny Mi&ntilde;an
+# Perfil Web de Jhonny Miñan
 
-Memoria t&eacute;cnica del redise&ntilde;o del perfil profesional. Este documento resume qu&eacute; se cambi&oacute;, por qu&eacute; se hizo y qu&eacute; debe respetar una IA o desarrollador al continuar el proyecto.
+Memoria técnica vigente del perfil profesional. Este documento debe servir como referencia para futuras modificaciones de la web.
 
 ## Objetivo
 
-Convertir una p&aacute;gina est&aacute;tica sencilla en un perfil laboral moderno, responsive y profesional para Jhonny Mi&ntilde;an Gir&oacute;n: desarrollador Full Stack con m&aacute;s de 8 a&ntilde;os de trayectoria y Maestr&iacute;a certificada en Inteligencia Artificial.
+La web debe comunicar una trayectoria de más de 16 años de práctica profesional, una progresión hasta Senior Full Stack, formación avanzada en Inteligencia Artificial y una visión de producto alrededor de EcuApp y su ecosistema de proyectos.
 
-## Archivos modificados
+La página debe sentirse como un perfil profesional de ingeniería, no como una plantilla genérica de portafolio.
 
-- `index.html`: se reorganizo la estructura semantica completa.
-- `index.css`: se reemplazo el CSS duplicado por un sistema visual consistente y responsive.
-- `index.js`: se elimino el bloqueo de navegador y se agregaron interacciones utiles.
-- `README.md`: se creo esta memoria de cambios y criterios.
+## Arquitectura actual
 
-## Arquitectura visual actual
+- `index.html`: estructura semántica y contenido profesional.
+- `portfolio.css`: única hoja visual principal. Contiene layout, componentes, desktop, tablet, mobile, responsive, accesibilidad visual y efectos.
+- `properties.css`: fuente heredada de variables/assets; se mantiene sin cambios.
+- `index.js`: navegación móvil, estado activo, reveal, progreso, interacción de tarjetas y efectos no críticos.
 
-La página usa `properties.css` únicamente como fuente de variables y assets heredados, y `portfolio.css` como única hoja de estilos de layout, componentes, responsive y efectos visuales. Se eliminaron las antiguas capas `index.css`, `site-fixes.css`, `responsive.css`, `premium-effects.css`, `hero-effects.css`, `executive-refresh.css` y `stability-qa.css` para evitar conflictos de cascada y facilitar mantenimiento.
+Las antiguas hojas `index.css`, `site-fixes.css`, `responsive.css`, `premium-effects.css`, `hero-effects.css`, `executive-refresh.css` y `stability-qa.css` fueron eliminadas para evitar conflictos de cascada.
 
-## Mejoras en `index.html`
+## Narrativa profesional
 
-- Se pas&oacute; de una estructura b&aacute;sica con secciones vac&iacute;as a una p&aacute;gina de perfil completa.
-- Se agrego un `header` sticky con navegacion interna: Perfil, Especialidades, Experiencia, Proyectos y Contacto.
-- Se incorpor&oacute; un hero profesional con nombre, posicionamiento, trayectoria, Maestr&iacute;a en IA, CTA de correo, CTA de WhatsApp y m&eacute;tricas.
-- Se agregaron secciones reales:
-  - Sobre el perfil.
-  - Especialidades con tabs.
-  - Experiencia tipo timeline.
-  - Formaci&oacute;n acad&eacute;mica.
-  - Proyectos destacados.
-  - Planes de suscripci&oacute;n.
-  - Contacto.
-- Se mejoraron textos visibles para reflejar seniority, trayectoria y orientaci&oacute;n profesional.
-- Se mantuvieron enlaces existentes a LinkedIn, YouTube, Platzi, GitHub, Gmail y WhatsApp.
-- Se usaron entidades HTML para acentos y caracteres especiales, reduciendo riesgos de problemas de codificaci&oacute;n.
+La página debe comunicar la evolución:
 
-## Mejoras en `index.css`
+**2010 → desarrollo independiente → sistemas y soporte → infraestructura → análisis → emprendimiento → desarrollo profesional → Senior Full Stack → IA aplicada y agentes.**
 
-- Se elimino la mezcla de estilos antiguos, duplicados y clases sin uso.
-- Se cre&oacute; un dise&ntilde;o dark profesional con acentos dorados y verdes, aprovechando `--colorfondo`, `--colorbtn` y assets de `properties.css`.
-- Se aplicaron layouts responsive con CSS Grid y Flexbox.
-- Se ajustaron tama&ntilde;os de texto para evitar una apariencia exagerada o infantil.
-- Se agregaron estados `hover`, `focus-visible` y animaciones con `transform` y `opacity`, que son m&aacute;s eficientes para navegador y m&oacute;vil.
-- Se agrego soporte para `prefers-reduced-motion`.
-- Se mejor&oacute; la navegaci&oacute;n m&oacute;vil con men&uacute; colapsable.
-- Se corrigio la experiencia de lectura quitando restricciones de seleccion de texto.
-- Se mantuvieron dimensiones estables para tarjetas, botones, iconos, planes y grillas, evitando saltos visuales.
+La superposición de etapas laborales debe conservarse porque refleja empleos, trabajo independiente, emprendimiento y formación coexistentes.
 
-## Mejoras en `index.js`
+## Secciones
 
-- Se elimino el bloqueo de F12, F5, copiar, pegar, zoom, click derecho y herramientas del navegador.
-- Motivo: bloquear acciones basicas perjudica accesibilidad, QA, usuarios moviles, navegadores modernos y confianza profesional.
-- Se agrego scroll suave para enlaces internos.
-- Se agreg&oacute; men&uacute; m&oacute;vil accesible con `aria-expanded` y cierre con Escape.
-- Se agrego observador de secciones para resaltar el enlace activo del menu.
-- Se agregaron animaciones reveal al hacer scroll.
-- Se agregaron tabs accesibles con soporte de teclado.
-- Se agrego contador animado para la metrica de experiencia.
-- Se agrego efecto ripple sutil en botones y enlaces interactivos.
-- Se respeta `prefers-reduced-motion` para usuarios que prefieren menos animacion.
+1. Hero / posicionamiento.
+2. Resumen ejecutivo de trayectoria.
+3. Perfil profesional.
+4. Expertise técnico.
+5. Trayectoria laboral.
+6. EcuApp y ecosistema.
+7. Proyectos y evidencia.
+8. Formación.
+9. Contacto.
 
-## Criterios UX aplicados
+## EcuApp
 
-- Perfil profesional antes que plantilla generica.
-- Primera vista enfocada en identidad, valor y contacto.
-- Tarjetas sobrias, no infantiles.
-- Botones claros y con tama&ntilde;o moderado.
-- Animaciones ligeras, utiles y no invasivas.
-- Experiencia mobile-first: menu colapsable, grillas de una columna y CTAs faciles de tocar.
-- Accesibilidad basica: roles en tabs, labels en iconos, focus visible y navegacion con teclado.
+EcuApp representa la startup que Jhonny quiere construir: una base empresarial para crear productos de software flexibles y personalizados, combinando ingeniería, IA, agentes, memoria, automatización y producto.
 
-## Criterios QA
+La web no debe presentar EcuApp como una empresa ya consolidada si todavía está en construcción.
 
-Validar antes de aprobar:
+## Ecosistema
 
-- `properties.css` no debe tener cambios.
-- La p&aacute;gina debe abrir sin errores de consola.
-- El men&uacute; m&oacute;vil debe abrir, cerrar y navegar a secciones.
-- Los tabs deben cambiar contenido con click y flechas izquierda/derecha.
-- Los enlaces externos deben mantener `target="_blank"` y `rel="noopener noreferrer"`.
-- Los textos no deben desbordar tarjetas ni botones en m&oacute;vil.
-- En escritorio, las grillas deben verse equilibradas.
-- Con `prefers-reduced-motion`, la p&aacute;gina debe seguir usable sin animaciones fuertes.
+Los proyectos del ecosistema deben mostrar siempre dos niveles:
 
-## Capa de efectos
+- Estado actual: concepto, análisis, arquitectura, V1, pruebas, etc.
+- Dirección del proyecto: objetivo y alcance conceptual.
 
-Los efectos interactivos que siguen siendo útiles se implementan de forma controlada desde `index.js` y `portfolio.css`. El contenido no depende de las animaciones para ser visible: la clase `js-ready` solo activa la animación de entrada después de cargar el DOM.
+No usar descripciones vacías como “workstream personal”, “en análisis” o “en definición” sin explicar qué problema intenta resolver el proyecto.
 
-## Auditoria y checklist de mejoras (2026-09-17)
+### Mnemosine / Mnemonise
 
-Auditoria posterior a la capa dev-fx encontro y corrigio un bug real preexistente: las tarjetas de stack 04/AI, 05/INFRA y 06/NEGOCIO mostraban su icono duplicado (un caracter suelto en el HTML del `.stack-icon` superpuesto al icono real inyectado por `site-fixes.css`). Se vacio el contenido de esos tres `div.stack-icon` en `index.html`.
+Es la pieza central de memoria y contexto para proyectos y agentes. Debe comunicar contexto, conocimiento, reglas, tareas, requerimientos, memoria reutilizable, skills y continuidad del trabajo entre agentes/proyectos.
 
-Tambien se implemento el checklist de mejoras visuales/efectos/responsive/UX pedido por el usuario:
+### Hefesto, Atena, Mercurio, Heimdall, Panacea y Tyr
 
-- **Proyectos con link real**: las 3 tarjetas de `#proyectos` pasaron de `<article>` sin destino a `<a target="_blank">`. Cuspide → operacionadmin.com, Clinical Admin → clinical-admin.xo.je, y la tercera se renombro a **Mnemosine** (memoria central determinista para proyectos de agentes de IA) enlazando a github.com/EcuApp/mnemosine (sin captura porque aun no tiene sitio publicado). Cada tarjeta indica si es "Sitio en vivo" o "Repositorio".
-- **WhatsApp en contacto**: se agrego `.social-contact.whatsapp` enlazando a `https://wa.me/jhonnyminan92` (usuario, no numero, por pedido explicito del usuario — verificar que ese short-link este reclamado en WhatsApp Business si no resuelve).
-- **Nav activo por seccion** via `IntersectionObserver` (subrayado animado en el link de la seccion visible).
-- **Boton flotante "volver arriba"** creado por JS, aparece pasado 1 viewport de scroll.
-- **Boot screen saltable**: click o tecla lo cierra al instante (antes solo terminaba solo).
-- **Canvas de red pausado** cuando el scroll supera ~1.2 viewports (ahorro de CPU en scroll largo).
-- **Skeleton/shimmer** en miniaturas de proyecto hasta que la imagen realmente cargo, combinado con el wipe existente.
-- **Icono de IA (stack card 04)** con doble sparkle (cian + violeta) para igualar peso visual a los logos reales de las demas tarjetas.
-- **Stat "+8 años de trayectoria"** agregado al hero (dato ya usado en este documento).
-- **Mobile nav**: opacidad subida a ~99.5% + blur reducido porque el texto del hero se transparentaba (ghosting) detras del panel abierto.
-- Ajustes responsive: tablet (701-900px) con tarjetas de stack mas compactas, mobile con menos espacio reservado en `.stack-card`, y hero comprimido en landscape de poca altura (`max-height:520px`).
-- Feedback táctil (`:active`) en tarjetas `.tilt` y botones para dispositivos sin hover.
-- Se decidio omitir el boton de descarga de CV (el usuario no tiene PDF listo aun).
+Mientras estos proyectos continúen en definición, la web debe presentar sus objetivos como **dirección conceptual** y no como funcionalidades ya implementadas.
 
-Todo lo anterior se probo con Chrome DevTools (desktop, tablet 820px, mobile 390px portrait/landscape) sin errores de consola ni 404s, y respeta `prefers-reduced-motion`.
+Direcciones conceptuales actualmente usadas en la web:
+- Hefesto: capacidad sistemática de ingeniería y construcción de software asistida por IA.
+- Atena: análisis, conocimiento y razonamiento para apoyar decisiones y planificación.
+- Mercurio: comunicación e integración entre sistemas, servicios, agentes y canales.
+- Heimdall: seguridad, supervisión, observabilidad y control.
+- Panacea: componentes y servicios transversales reutilizables.
+- Tyr: reglas, memoria de proyecto, instrucciones y contexto operativo para agentes.
 
-## Guia para futuras IAs
+Estas direcciones no deben presentarse como producto terminado sin evidencia en el repositorio correspondiente.
 
-- No volver a bloquear copiar, pegar, zoom, click derecho o herramientas del navegador.
-- No modificar `properties.css` salvo que el usuario lo pida explicitamente.
-- Si se actualiza contenido profesional, hacerlo en `index.html` o pedir permiso para migrar textos heredados de `properties.css`.
-- Mantener un tono visual ejecutivo: sobrio, moderno, tecnico y confiable.
-- Priorizar rendimiento, accesibilidad y responsive antes que efectos decorativos.
-- Si se agregan nuevas secciones, conectarlas a la navegacion y verificar mobile.
+## Diseño
+
+La versión vigente prioriza:
+
+- escritorio grande primero, sin romper tablet/mobile;
+- max-width central de 1320px para pantallas amplias;
+- hero en dos columnas con proporciones controladas;
+- grillas de 3/2/1 columnas según breakpoint;
+- tipografía editorial sobria;
+- tarjetas con jerarquía de información;
+- animaciones discretas;
+- contenido visible aun si JavaScript falla;
+- `prefers-reduced-motion`;
+- ausencia de scroll horizontal.
+
+## Reglas para futuras IAs
+
+- No volver a crear múltiples capas CSS que peleen entre sí.
+- Antes de modificar el diseño, revisar `portfolio.css` completo.
+- No modificar `properties.css` salvo petición explícita.
+- No afirmar que un proyecto está terminado cuando solo está en análisis.
+- Cada proyecto debe explicar problema/objetivo y alcance conceptual.
+- Mantener la trayectoria profesional completa.
+- Los PDF no se modifican hasta que Jhonny apruebe explícitamente la versión web.
+- Validar desktop grande antes de cerrar cualquier rediseño.
+- Después validar 1024px, 768px y 390px.
