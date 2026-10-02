@@ -20,9 +20,17 @@ Downloadable PDF versions are available directly from the site:
 
 ## EcuApp ecosystem
 
-Hefesto, Atena, Mercurio, Heimdall, Panacea, Tyr and Mnemosine/Mnemonise are personal projects within the EcuApp vision.
+EcuApp is a suite of independent systems, each in its own private repository in the [EcuApp organization](https://github.com/orgs/EcuApp/repositories):
 
-Most projects are still in analysis and architecture definition. Mnemosine/Mnemonise V1 is completed and under testing.
+- Business management: Hefesto (inventory), Mercurio (electronic invoicing), Atenea (education management), Panacea (medical management), Clínica (clinic appointments).
+- Security and documents: Heimdall (authentication), Tyr (electronic document signing), EC Google Extension (Chrome PDF viewer).
+- AI for voice and documents: Forcis (speech to text), Poseidon (text to speech), Loki (voice cloning), Thot (OCR for images and PDFs).
+
+Mnemosine/Mnemonise is the memory/context layer for projects and AI agents; V1 is completed and under testing.
+
+## Stylesheets
+
+Cascade order (linked from `index.html`): `properties.css` → `index.css` → `responsive.css` → `premium-effects.css` → `hero-effects.css` → `site-fixes.css` → `executive-refresh.css` → `refine.css`. `refine.css` is the final layer for typography, the shared container and layout fixes.
 
 ## Deployment
 

@@ -31,7 +31,7 @@ La narrativa no debe reducir a Jhonny a "desarrollador web". Su trayectoria es m
 
 # 2. RESUMEN PROFESIONAL
 
-Jhonny mantiene una trayectoria de práctica profesional sostenida desde aproximadamente 2010, es decir, más de 16 años de evolución acumulada hasta 2026.
+Jhonny mantiene una trayectoria profesional sostenida desde aproximadamente 2010. Como desarrollador de software, Jhonny declara **8+ años de experiencia** (dato corregido por Jhonny el 2026-10-02: no usar "16+ años"; la cifra 16 solo describe el tiempo total desde 2010, que incluye etapas de soporte, infraestructura, negocio y otros cargos no centrados en desarrollo).
 
 La evolución profesional debe entenderse como una trayectoria con etapas parcialmente superpuestas, no como una secuencia de cargos estrictamente excluyentes:
 
@@ -696,6 +696,14 @@ Mujer Bonita — sitio web standalone para venta de catálogo de artículos de b
 
 Tecnología indicada: JavaScript.
 
+## Security Image (gestor-imagenes)
+
+Repositorio: JhonnyMinian92/gestor-imagenes.
+
+Desplegado en el portal de Security Data: https://portal-sd.securitydata.net.ec/security-image/
+
+Funcionalidad visible en la captura aportada por Jhonny (2026-10-02): panel con total de imágenes, almacenamiento usado, última carga y cuota por usuario (5120 MB); carga de imágenes JPG/PNG de hasta 10 MB; expiración configurable del enlace (p. ej. 7 días); biblioteca de imágenes; secciones de Usuarios, Registro, Plantillas y Mi cuenta. No inventar stack tecnológico sin revisar el repositorio.
+
 ## EcuApi
 
 Proyecto histórico mencionado en el README público del perfil:
@@ -739,24 +747,30 @@ La web no debe presentar EcuApp como una empresa ya consolidada si todavía se e
 
 # 14. ECOSISTEMA ECUAPP
 
-Proyectos identificados:
+Corrección del 2026-10-02: las descripciones conceptuales anteriores (Hefesto = construcción asistida por IA, Atena = razonamiento, Mercurio = integración, Heimdall = observabilidad, Panacea = capacidades transversales, Tyr = memoria del agente) eran **incorrectas**. Cada sistema tiene su propio repositorio privado en la organización https://github.com/orgs/EcuApp/repositories con una descripción oficial. Fuente de verdad: esas descripciones.
 
-- Mnemosine / Mnemonise;
-- Hefesto;
-- Atena;
-- Mercurio;
-- Heimdall;
-- Panacea;
-- Tyr.
+Repositorios de la organización EcuApp (todos privados; licencia Apache 2.0 salvo clinica):
 
-Los proyectos deben mostrar siempre:
+| Repositorio | Descripción oficial del repositorio | Lenguaje | Área |
+|---|---|---|---|
+| hefesto | Sistema para manejo, venta, control y distribución de inventario de todo tipo de producto | PHP | Gestión empresarial |
+| mercurio | Software para facturación electrónica | PHP | Gestión empresarial |
+| atenea | Sistema de gestión educativa | PHP | Gestión empresarial |
+| Panacea | Sistema de gestión médica | PHP | Gestión empresarial |
+| clinica | Sistema de agendamiento de citas para clínicas | PHP | Gestión empresarial |
+| Heimdall | Sistema de control de autenticación | PHP | Seguridad y documentos |
+| tyr | Sistema para firma de documentos con firma electrónica | PHP | Seguridad y documentos |
+| ec-google-extension | Extensión para Google Chrome con visor de PDF | TypeScript | Seguridad y documentos |
+| forcis | Sistema para convertir audio a texto | PHP | IA aplicada (voz/documentos) |
+| poseidon | Sistema para convertir texto a voz | PHP | IA aplicada (voz/documentos) |
+| loki | Sistema para clonación de voz con audios de ejemplo | PHP | IA aplicada (voz/documentos) |
+| thot | Sistema OCR de imágenes y archivos PDF | PHP | IA aplicada (voz/documentos) |
 
-1. estado actual;
-2. problema/objetivo;
-3. alcance conceptual;
-4. relación con el resto.
+Nota de nombre: el repositorio es **atenea** (no "Atena").
 
-Nunca presentar como terminado un proyecto que continúa en análisis, arquitectura, definición o pruebas.
+Mnemosine / Mnemonise no aparece en la lista proporcionada por Jhonny el 2026-10-02 (la lista pegada podría estar incompleta). Se mantiene como pieza central de memoria/contexto según la información previa; confirmar si su repositorio existe en la organización y si es público.
+
+Estado: repositorios privados en desarrollo activo (actualizados entre agosto y septiembre de 2026). No presentarlos como productos terminados ni inventar funcionalidades más allá de la descripción oficial de cada repositorio.
 
 ---
 
@@ -893,22 +907,11 @@ Medidas obligatorias para web y mobile, incluyendo autenticación, autorización
 
 ---
 
-# 19. TYR Y MEMORIA OPERATIVA DEL AGENTE
+# 19. MEMORIA OPERATIVA DEL AGENTE
 
-TYR es el proyecto relacionado con la memoria operativa del agente.
+Idea de arquitectura: una jerarquía de archivos Markdown usada como memoria central, memoria del agente, conocimiento local, reglas, instrucciones, contexto, procedimientos y documentación, que conviva con Mnemosine y consuma el contexto necesario para desarrollar software.
 
-Debe contener o administrar una jerarquía de archivos Markdown utilizada como:
-
-- memoria central;
-- memoria del agente;
-- conocimiento local;
-- reglas;
-- instrucciones;
-- contexto;
-- procedimientos;
-- documentación.
-
-Debe convivir con Mnemosine y consumir el contexto necesario para desarrollar software.
+Corrección del 2026-10-02: esta idea se había atribuido al repositorio **tyr**, pero tyr es un sistema de firma de documentos con firma electrónica (ver sección 14). La memoria operativa del agente es un concepto ligado a Mnemosine, no a Tyr.
 
 ---
 
@@ -926,99 +929,21 @@ No debe depender de un IDE específico ni de una sola empresa.
 
 ---
 
-# 21. DIRECCIONES CONCEPTUALES DEL ECOSISTEMA
+# 21. ÁREAS DEL ECOSISTEMA
 
-## Hefesto
+El ecosistema EcuApp se organiza en tres áreas (así se presenta en la web):
 
-Objetivo: sistematizar la construcción de software asistida por IA.
-
-Alcance conceptual:
-- metodología;
-- arquitectura;
-- desarrollo asistido;
-- testing;
-- herramientas reutilizables;
-- automatización de ingeniería.
-
-## Atena
-
-Objetivo: análisis, conocimiento y razonamiento para apoyar decisiones y planificación.
-
-Alcance:
-- análisis de contexto;
-- conocimiento estructurado;
-- razonamiento;
-- planificación técnica;
-- apoyo a decisiones.
-
-## Mercurio
-
-Objetivo: comunicación e integración entre sistemas, servicios, agentes y canales.
-
-Alcance:
-- APIs;
-- mensajería;
-- integraciones;
-- workflows;
-- comunicación entre agentes;
-- integración de servicios.
-
-## Heimdall
-
-Objetivo: seguridad, supervisión y control.
-
-Alcance:
-- seguridad;
-- observabilidad;
-- políticas;
-- controles;
-- monitoreo;
-- supervisión.
-
-## Panacea
-
-Objetivo: componentes y servicios transversales reutilizables.
-
-Alcance:
-- componentes comunes;
-- servicios compartidos;
-- automatizaciones;
-- infraestructura funcional;
-- capacidades reutilizables.
-
-## Tyr
-
-Objetivo: base operativa de agentes con memoria, contexto e instrucciones.
-
-Alcance:
-- jerarquía local;
-- memoria;
-- AGENT.md;
-- reglas de trabajo;
-- contexto;
-- agentes locales y cloud.
+1. **Gestión empresarial:** Hefesto (inventario), Mercurio (facturación electrónica), Atenea (gestión educativa), Panacea (gestión médica), Clínica (agendamiento de citas).
+2. **Seguridad y documentos:** Heimdall (autenticación), Tyr (firma electrónica), EC Google Extension (visor de PDF en Chrome).
+3. **IA aplicada a voz y documentos:** Forcis (audio → texto), Poseidon (texto → voz), Loki (clonación de voz), Thot (OCR de imágenes y PDF).
 
 ---
 
 # 22. RELACIÓN ENTRE ECUAPP Y MNEMOSINE
 
-EcuApp = marco empresarial y de producto.
+EcuApp = marco empresarial y suite de productos (sistemas independientes que pueden usarse por separado o combinarse según el cliente).
 
-Mnemosine = memoria y contexto.
-
-Tyr = reglas/memoria operativa del agente.
-
-Hefesto = ingeniería y construcción.
-
-Atena = análisis y razonamiento.
-
-Mercurio = integración y comunicación.
-
-Heimdall = seguridad y control.
-
-Panacea = capacidades transversales.
-
-La intención es que estos proyectos puedan cooperar como un ecosistema y no funcionar únicamente como aplicaciones aisladas.
+Mnemosine = memoria y contexto para proyectos y agentes de IA; pieza central de la forma de trabajar con IA.
 
 ---
 
@@ -1076,7 +1001,7 @@ Busca construir una arquitectura donde:
 - las decisiones queden registradas;
 - exista continuidad entre sesiones y proyectos.
 
-Esto explica la importancia de Mnemosine y Tyr.
+Esto explica la importancia de Mnemosine.
 
 ---
 
@@ -1235,7 +1160,7 @@ El hero comunica:
 - Senior Software Engineer;
 - Full Stack;
 - AI;
-- 16+ años construyendo sistemas;
+- 8+ años desarrollando software;
 - evolución desde soporte/sistemas hacia IA;
 - intención de llevar una idea desde problema hasta solución utilizable.
 
@@ -1333,6 +1258,16 @@ Correcciones realizadas:
 - carga explícita de index.js con defer.
 
 ---
+
+## Refinamiento del 2026-10-02
+
+- Corrección de experiencia: "8+ años desarrollando software" (antes "16+ años").
+- EcuApp reescrito con la descripción real de los 12 repositorios, agrupados en 3 áreas.
+- Expertise: se añadió tarjeta de Frontend y extensiones (Angular, TypeScript, microfrontends, Chrome Extensions).
+- Proyectos: se añadió Security Image (gestor-imagenes) con captura en assets/projects/gestor_imagen.jpg. En desktop las tres tarjetas con captura (Cúspide, Clinical Admin, Security Image) van en una fila y Multimodal ocupa el ancho completo.
+- Formación: TFM, certificaciones históricas y nota de Platzi/Coursera.
+- CSS: nueva capa final refine.css (tipografía legible, contenedor común que crece en pantallas grandes, corrección de tarjetas flotantes del hero, imágenes de proyectos, enlaces de contacto). Las hojas responsive/premium/hero se enlazan desde el HTML en vez de @import (mismo orden de cascada).
+- Reveal: el contenido solo se oculta si html tiene la clase js (añadida inline en el head) y existe IntersectionObserver.
 
 # 35. HEADER
 
@@ -1615,7 +1550,7 @@ Microfrontends / APIs / sistemas productivos
 IA  
 → nueva capa de automatización y razonamiento.
 
-Mnemosine/Tyr  
+Mnemosine  
 → necesidad de persistencia del contexto y continuidad de agentes.
 
 EcuApp  
@@ -1790,8 +1725,8 @@ Temas centrales trabajados en conversaciones conocidas:
 7. No presentar EcuApp como empresa consolidada si continúa en construcción.
 8. No presentar proyectos conceptuales como terminados.
 9. Mantener Mnemosine como pieza central.
-10. Mantener Tyr como capa operativa de memoria/reglas.
-11. Mantener Hefesto, Atena, Mercurio, Heimdall y Panacea como capacidades del ecosistema.
+10. Describir cada repositorio de EcuApp según su descripción oficial (sección 14); Tyr es firma electrónica, no memoria de agentes.
+11. Usar "8+ años" como experiencia en desarrollo de software; nunca "16+ años".
 12. Mantener skills reutilizables por rol, lenguaje, arquitectura, UX/UI, base de datos, patrones y seguridad.
 13. Recordar portabilidad de AGENT.md.
 14. No almacenar secretos.
@@ -1895,13 +1830,13 @@ hecho verificado / dato declarado por Jhonny / dirección conceptual / hipótesi
 
 # 58. RESUMEN EJECUTIVO PARA FUTUROS AGENTES
 
-Jhonny Miñan es un profesional de software de Ecuador con más de 16 años de práctica desde aproximadamente 2010. Su trayectoria comenzó en desarrollo independiente y pasó por soporte, hardware, redes, servidores, sistemas, análisis, emprendimiento y desarrollo profesional hasta consolidarse en Full Stack y evolucionar hacia un posicionamiento Senior con especialización en Inteligencia Artificial.
+Jhonny Miñan es un profesional de software de Ecuador con 8+ años de experiencia como desarrollador de software y una trayectoria profesional que arranca hacia 2010. Su trayectoria comenzó en desarrollo independiente y pasó por soporte, hardware, redes, servidores, sistemas, análisis, emprendimiento y desarrollo profesional hasta consolidarse en Full Stack y evolucionar hacia un posicionamiento Senior con especialización en Inteligencia Artificial.
 
 Es ingeniero de sistemas por la Universidad Técnica de Machala y cursó una Maestría en Inteligencia Artificial en UNIR durante 2025–2026. Su trabajo académico incluye un sistema web para gestión de transporte y seguimiento de carga mediante GPS.
 
 Trabaja con tecnologías como Java, Spring, PHP, JavaScript, TypeScript, Python, Angular, Node.js, APIs REST, microservicios, SQL, PostgreSQL, MySQL, Redis, Docker y herramientas de desarrollo modernas. Su especialización actual incluye IA aplicada, Machine Learning, agentes, automatización y memoria/contexto.
 
-EcuApp es la visión de startup/producto que pretende reunir ingeniería, IA, agentes, memoria, automatización y producto. Mnemosine/Mnemonise es la arquitectura central de memoria y contexto. Tyr se orienta a reglas y memoria operativa para agentes. Hefesto, Atena, Mercurio, Heimdall y Panacea representan capacidades complementarias.
+EcuApp es la visión de startup/producto que pretende reunir ingeniería, IA, agentes, memoria, automatización y producto. Mnemosine/Mnemonise es la arquitectura central de memoria y contexto. La suite incluye sistemas de gestión (Hefesto, Mercurio, Atenea, Panacea, Clínica), seguridad y documentos (Heimdall, Tyr, EC Google Extension) y servicios de IA para voz y documentos (Forcis, Poseidon, Loki, Thot).
 
 Su filosofía técnica busca reutilización, continuidad de contexto, skills desacopladas, arquitectura reusable y agentes capaces de trabajar con memoria persistente.
 

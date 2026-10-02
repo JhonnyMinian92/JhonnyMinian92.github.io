@@ -785,14 +785,15 @@ button {
 .footer a {
   color: #6fe7ca;
 }
-.reveal {
+/* Reveal only hides content once JS is confirmed (html.js is set inline in <head>). */
+.js .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition:
     opacity 0.8s ease,
     transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.reveal.visible {
+.js .reveal.visible {
   opacity: 1;
   transform: none;
 }

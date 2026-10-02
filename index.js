@@ -48,8 +48,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!reduceMotion && !touch && glow) addEventListener('pointermove', e => { glow.style.left = `${e.clientX}px`; glow.style.top = `${e.clientY}px`; }, { passive:true });
 
-  const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } }), { threshold:.12 });
-  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } }), { threshold:.12 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    const navLinks = [...(menu?.querySelectorAll('a[href^="#"]') || [])];
+    const spy = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+    }), { rootMargin:'-45% 0px -50% 0px' });
+    navLinks.forEach(link => { const section = document.querySelector(link.getAttribute('href')); if (section) spy.observe(section); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+  }
 
   if (!reduceMotion && !touch) {
     document.querySelectorAll('.tilt').forEach(card => {
@@ -67,8 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const stream = document.createElement('div'); stream.className='code-stream';
     ['const build = () => {};','API /v1/users','git commit -m "ship"','<component />','async function deploy()','SELECT * FROM data','docker compose up','AI_AGENT = READY','npm run build','HTTP 200 OK'].forEach(text => { const item=document.createElement('span'); item.textContent=text; item.style.left=`${4+Math.random()*92}%`; item.style.animationDuration=`${7+Math.random()*7}s`; item.style.animationDelay=`${-Math.random()*10}s`; stream.appendChild(item); });
     visual.appendChild(stream);
-    const terminal=document.createElement('div'); terminal.className='dev-terminal'; terminal.innerHTML='<div class="terminal-line"><span class="prompt">$</span> whoami → jhonnyminian</div><div class="terminal-line"><span class="prompt">$</span> focus → software + ai</div><div class="terminal-line"><span class="prompt">$</span> status → building<span class="cursor"></span></div>'; visual.appendChild(terminal);
-    const chip=document.createElement('div'); chip.className='dev-chip'; chip.textContent='deploy --production'; visual.appendChild(chip);
   }
 
   const canvas = document.querySelector('#network');
