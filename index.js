@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  document.documentElement.classList.add('js-ready');
   const header = document.querySelector('[data-header]');
   const menu = document.querySelector('#nav');
   const menuToggle = document.querySelector('.menu-toggle');
