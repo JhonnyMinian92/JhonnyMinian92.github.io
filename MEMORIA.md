@@ -13,9 +13,9 @@ Convertir una p&aacute;gina est&aacute;tica sencilla en un perfil laboral modern
 - `index.js`: se elimino el bloqueo de navegador y se agregaron interacciones utiles.
 - `README.md`: se creo esta memoria de cambios y criterios.
 
-## Archivo que no debe modificarse
+## Arquitectura visual actual
 
-- `properties.css`: se mantiene intacto. Sigue siendo la fuente de variables, im&aacute;genes, iconos, colores y textos heredados. El redise&ntilde;o reutiliza esas variables para foto de perfil, redes sociales, tecnolog&iacute;as y colores base.
+La página usa `properties.css` únicamente como fuente de variables y assets heredados, y `portfolio.css` como única hoja de estilos de layout, componentes, responsive y efectos visuales. Se eliminaron las antiguas capas `index.css`, `site-fixes.css`, `responsive.css`, `premium-effects.css`, `hero-effects.css`, `executive-refresh.css` y `stability-qa.css` para evitar conflictos de cascada y facilitar mantenimiento.
 
 ## Mejoras en `index.html`
 
@@ -82,19 +82,9 @@ Validar antes de aprobar:
 - En escritorio, las grillas deben verse equilibradas.
 - Con `prefers-reduced-motion`, la p&aacute;gina debe seguir usable sin animaciones fuertes.
 
-## Capa de efectos "dev-fx" (2026-09-17)
+## Capa de efectos
 
-Se agrego una capa adicional de animaciones tematicas de desarrollo de software, en un archivo nuevo `dev-fx.css` (enlazado al final del `<head>`, despues de `site-fixes.css`) mas pequenos agregados en `index.js` e `index.html`:
-
-- Pantalla de "boot" tipo terminal al cargar (una vez por sesion via `sessionStorage`, se oculta sola).
-- Linea de "typewriter" con roles rotativos debajo del `<h1>` del hero (`.role-line`), decorativa (`aria-hidden`), el contenido real ya esta en el `h1` y el parrafo.
-- Efecto "decode" (scramble) en los numeros de `.section-label` al entrar en viewport.
-- Ripple en botones, `nav-cta`, `social-contact` y `text-link` al hacer click/tap.
-- Timeline: la linea vertical se dibuja progresivamente y los puntos aparecen en cascada al hacer scroll.
-- Miniaturas de proyectos: revelado tipo "wipe" (clip-path) al entrar en viewport.
-- Glitch sutil de color en el `em` del `h1` al pasar el mouse.
-
-Todo respeta `prefers-reduced-motion` (se desactiva o se muestra el estado final sin animacion) y no bloquea contenido: si JS falla, el boot screen no se remueve solo via CSS-fallback en el `<script>` inline sin-sessionStorage no se pierde nada critico (el contenido real de la pagina no depende de estos efectos).
+Los efectos interactivos que siguen siendo útiles se implementan de forma controlada desde `index.js` y `portfolio.css`. El contenido no depende de las animaciones para ser visible: la clase `js-ready` solo activa la animación de entrada después de cargar el DOM.
 
 ## Auditoria y checklist de mejoras (2026-09-17)
 
