@@ -768,6 +768,27 @@ Repositorios de la organización EcuApp (todos privados; licencia Apache 2.0 sal
 
 Nota de nombre: el repositorio es **atenea** (no "Atena").
 
+## Stack elegido por sistema (decisión de Jhonny, 2026-10-02)
+
+GitHub muestra PHP como lenguaje en casi todos los repositorios, pero Jhonny pidió asignar a cada sistema el lenguaje que mejor encaja con su dominio, eligiendo entre PHP, Java Spring Boot y Python. La web muestra este stack:
+
+| Sistema | Stack | Motivo |
+|---|---|---|
+| Hefesto | Java · Spring Boot | Transacciones y concurrencia para stock, ventas y distribución; integración con Mercurio |
+| Mercurio | Java · Spring Boot | Firma de comprobantes del SRI con certificado .p12 (mismas librerías Java que Tyr) |
+| Atenea | PHP · Laravel | Gestión centrada en formularios, reportes y portales; CRUD rápido y hosting económico |
+| Panacea | Java · Spring Boot | Datos clínicos sensibles, auditoría e interoperabilidad HL7 FHIR (HAPI FHIR) |
+| Clínica | PHP · Laravel | Agenda y notificaciones; misma base que Clinical Admin |
+| Heimdall | Java · Spring Boot | Spring Security / Spring Authorization Server (OAuth 2.0, OpenID Connect) |
+| Tyr | Java · Spring Boot | Las librerías ecuatorianas de firma con certificados .p12 solo existen en Java (dato de Jhonny) |
+| EC Google Extension | TypeScript | Extensión de navegador; PHP, Java y Python no aplican |
+| Forcis | Python | Reconocimiento de voz (p. ej. Whisper) |
+| Poseidon | Python | Síntesis de voz (p. ej. Piper) |
+| Loki | Python | Clonación de voz (p. ej. XTTS, OpenVoice) sobre PyTorch |
+| Thot | Python | OCR (Tesseract / PaddleOCR) y extracción de PDF (PyMuPDF) |
+
+Las librerías mencionadas son recomendaciones de implementación, no dependencias confirmadas en los repositorios.
+
 Mnemosine / Mnemonise no aparece en la lista proporcionada por Jhonny el 2026-10-02 (la lista pegada podría estar incompleta). Se mantiene como pieza central de memoria/contexto según la información previa; confirmar si su repositorio existe en la organización y si es público.
 
 Estado: repositorios privados en desarrollo activo (actualizados entre agosto y septiembre de 2026). No presentarlos como productos terminados ni inventar funcionalidades más allá de la descripción oficial de cada repositorio.

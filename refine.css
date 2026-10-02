@@ -320,3 +320,16 @@
 }
 .project-card.project-with-image:not(.project-featured)::after { display: none; }
 .project-card.project-with-image:not(.project-featured) > div:not(.project-number) { margin-top: -28px; }
+
+/* EcuApp: per-system stack, colored by language. */
+.product-intro { max-width: 860px; margin: 0 0 22px; color: var(--rf-muted); font-size: var(--rf-body); line-height: 1.75; }
+.product-intro strong { color: #d6e2ea; font-weight: 700; }
+.product-card p { margin-bottom: 10px; }
+.product-card .product-why { margin-bottom: 18px; padding-top: 10px; border-top: 1px dashed var(--rf-line); color: #7f93a5; font-size: calc(var(--rf-small) - .5px); line-height: 1.6; }
+.product-stack { display: inline-flex; align-items: center; gap: 7px; }
+.product-stack::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--lang-color, #8ea3b5); }
+.product-stack[data-lang="java"] { --lang-color: #f89820; }
+.product-stack[data-lang="python"] { --lang-color: #ffd43b; }
+.product-stack[data-lang="php"] { --lang-color: #8892bf; }
+.product-stack[data-lang="ts"] { --lang-color: #3178c6; }
+.product-stack[data-lang] { color: #c9d6df; border-color: color-mix(in srgb, var(--lang-color) 35%, transparent); }
