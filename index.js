@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const stream = document.createElement('div'); stream.className='code-stream';
     ['const build = () => {};','API /v1/users','git commit -m "ship"','<component />','async function deploy()','SELECT * FROM data','docker compose up','AI_AGENT = READY','npm run build','HTTP 200 OK'].forEach(text => { const item=document.createElement('span'); item.textContent=text; item.style.left=`${4+Math.random()*92}%`; item.style.animationDuration=`${7+Math.random()*7}s`; item.style.animationDelay=`${-Math.random()*10}s`; stream.appendChild(item); });
     visual.appendChild(stream);
-    const terminal=document.createElement('div'); terminal.className='dev-terminal'; terminal.innerHTML='<div class="terminal-line"><span class="prompt">$</span> whoami → jhonnyminian</div><div class="terminal-line"><span class="prompt">$</span> stack → fullstack + ai</div><div class="terminal-line"><span class="prompt">$</span> status → building<span class="cursor"></span></div>'; visual.appendChild(terminal);
+    const terminal=document.createElement('div'); terminal.className='dev-terminal'; terminal.innerHTML='<div class="terminal-line"><span class="prompt">$</span> whoami → jhonnyminian</div><div class="terminal-line"><span class="prompt">$</span> focus → software + ai</div><div class="terminal-line"><span class="prompt">$</span> status → building<span class="cursor"></span></div>'; visual.appendChild(terminal);
     const chip=document.createElement('div'); chip.className='dev-chip'; chip.textContent='deploy --production'; visual.appendChild(chip);
   }
 
