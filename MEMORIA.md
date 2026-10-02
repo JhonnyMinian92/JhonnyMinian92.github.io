@@ -455,20 +455,133 @@ La documentación institucional de UTMACH muestra a Jhonny Darwin Miñan Girón 
 
 ---
 
-# 9. CURSOS Y CAPACITACIONES
+# 9. FORMACIÓN COMPLEMENTARIA, CERTIFICACIONES Y CURSOS
 
-Cursos/capacitaciones expresamente identificados en conversaciones:
+## 9.1. Certificaciones históricas registradas en perfiles profesionales
 
-- AWS Machine Learning Foundations — 2026;
-- Python — 2025.
+Una versión histórica del perfil profesional de Jhonny registra explícitamente estas certificaciones:
 
-Presencia adicional:
+- **Firebase para Android**
+- **Programación Orientada a Objetos con Java SE**
+- **Programación Básica**
+- **Fundamentos de Java Spring Boot**
 
-- Platzi, mediante el perfil https://platzi.com/p/JhonnyMinian92/
+Estas certificaciones aparecen también en versiones anteriores del CV como "Selected Certifications" / "Certificaciones seleccionadas".
 
-Puede existir formación adicional en Platzi u otras plataformas, pero no se debe inventar una lista de cursos no recuperada de una fuente verificable.
+## 9.2. Formación complementaria expresamente registrada en el CV actual
 
----
+- **AWS Machine Learning Foundations — 2026**
+- **Programación en Python — 2025**
+
+## 9.3. Maestría en Inteligencia Artificial — áreas de formación registradas
+
+El CV y la memoria académica de la maestría registran trabajo/formación en áreas como:
+
+- Machine Learning;
+- Machine Learning no supervisado;
+- Cloud para Inteligencia Artificial;
+- gestión de proyectos de IA;
+- Natural Language Processing (NLP);
+- razonamiento y planificación automática;
+- Deep Learning;
+- Computer Vision / visión artificial;
+- modelado multimodal;
+- evaluación de modelos;
+- ingeniería de software apoyada por IA.
+
+El Trabajo Fin de Máster se titula:
+
+**Pipeline software reproducible para la clasificación multimodal de intenciones de renovación y negociabilidad mediante fusión temprana de datos tabulares y texto.**
+
+Director registrado en la memoria: **Juan Manuel González Calleros**.
+
+Fecha prevista/registrada de defensa en la memoria: **09/09/2026**.
+
+## 9.4. Formación práctica desarrollada durante la maestría y TFM
+
+El trabajo académico documenta práctica con:
+
+- Python;
+- pandas;
+- NumPy;
+- scikit-learn;
+- XGBoost;
+- TF-IDF;
+- aprendizaje supervisado;
+- supervisión débil;
+- fusión temprana multimodal;
+- evaluación estadística;
+- validación cruzada;
+- validación agrupada por texto normalizado;
+- hold-out;
+- métricas F1-Macro, MCC, Balanced Accuracy, ROC-AUC y Log Loss;
+- experimentación reproducible;
+- pipelines batch/local;
+- análisis de fuga de plantillas;
+- evaluación de generalización.
+
+La documentación del TFM indica que el pipeline fue desarrollado como un trabajo de Desarrollo de Software y que el alcance académico se concentra en entrenamiento, validación e inferencia batch/local.
+
+## 9.5. Otras tecnologías y conocimientos de formación/experiencia
+
+Los documentos profesionales también registran exposición o práctica con:
+
+- Dart;
+- Flutter;
+- BLoC;
+- Firebase;
+- Dio;
+- Google Maps;
+- Mapbox;
+- geolocalización;
+- pandas;
+- NumPy;
+- scikit-learn;
+- XGBoost;
+- Angular/AngularJS;
+- Spring Boot;
+- Laravel;
+- Node.js;
+- PostgreSQL;
+- MySQL;
+- Redis;
+- REST APIs;
+- microservicios;
+- Git/GitHub;
+- Clean Architecture.
+
+Estas tecnologías deben diferenciarse entre experiencia profesional, formación y contribuciones a proyectos colaborativos.
+
+## 9.6. Formación en plataformas online
+
+Jhonny ha indicado expresamente que realizó cursos en **Platzi** y en **Coursera**, además de formación asociada a la maestría.
+
+**Importante:** la lista exacta, curso por curso, de Platzi y Coursera no se encuentra actualmente en los archivos/historiales que puedo recuperar en esta sesión. No se deben inventar nombres, fechas, instructores ni certificados.
+
+Cuando esa lista original vuelva a estar disponible, debe incorporarse aquí con esta estructura:
+
+### Platzi
+- [curso exacto]
+- [curso exacto]
+- [curso exacto]
+- etc.
+
+### Coursera
+- [curso exacto]
+- [curso exacto]
+- [curso exacto]
+- etc.
+
+## 9.7. Certificaciones, cursos y estudios: regla de procedencia
+
+Para futuras actualizaciones:
+
+- **Certificación**: registrar solo cuando exista certificado o fuente profesional verificable.
+- **Curso completado**: registrar cuando Jhonny lo haya confirmado explícitamente o exista evidencia documental.
+- **Curso en progreso**: indicar estado.
+- **Contenido de una maestría**: diferenciar asignatura/área académica de certificación independiente.
+- **Curso de Platzi/Coursera**: conservar plataforma, nombre exacto, fecha y estado cuando estén disponibles.
+
 
 # 10. EVOLUCIÓN TÉCNICA
 
