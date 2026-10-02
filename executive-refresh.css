@@ -56,3 +56,80 @@ body::before{opacity:.45!important}.page-noise{opacity:.025!important}.cursor-gl
     margin-top: 26px !important;
   }
 }
+
+/* Responsive safety layer: mobile/tablet content must remain visible even when
+   IntersectionObserver or motion effects are unavailable. Desktop composition is untouched. */
+@media (max-width: 1024px) {
+  body,
+  main,
+  .section-wrap,
+  .hero,
+  .hero-copy,
+  .hero-visual,
+  .executive-section,
+  .profile-section,
+  .stack-section,
+  .experience-section,
+  .ecuapp-section,
+  .projects-section,
+  .education-section,
+  .contact-section {
+    visibility: visible !important;
+  }
+
+  .reveal,
+  .reveal.visible,
+  .reveal-delay {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero {
+    grid-template-columns: 1fr !important;
+    min-height: auto !important;
+  }
+
+  .hero-visual {
+    width: min(620px, 100%) !important;
+    margin-inline: auto !important;
+  }
+
+  .profile-grid,
+  .experience-grid,
+  .education-card,
+  .ecuapp-hero,
+  .contact-section {
+    grid-template-columns: 1fr !important;
+  }
+
+  .stack-grid,
+  .project-showcase {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .project-featured {
+    grid-column: span 2 !important;
+  }
+
+  .ecosystem-main {
+    grid-column: span 2 !important;
+  }
+
+  .section-wrap,
+  .footer {
+    max-width: none !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .stack-grid,
+  .project-showcase {
+    grid-template-columns: 1fr !important;
+  }
+
+  .project-featured,
+  .ecosystem-main {
+    grid-column: auto !important;
+  }
+}
