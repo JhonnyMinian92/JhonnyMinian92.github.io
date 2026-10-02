@@ -22,8 +22,8 @@ Downloadable PDF versions are available directly from the site:
 
 EcuApp is a suite of independent systems, each in its own private repository in the [EcuApp organization](https://github.com/orgs/EcuApp/repositories):
 
-- Business management: Hefesto (inventory), Mercurio (electronic invoicing), Atenea (education management), Panacea (medical management), Clínica (clinic appointments).
-- Security and documents: Heimdall (authentication), Tyr (electronic document signing), EC Google Extension (Chrome PDF viewer).
+- Business management: Hefesto (inventory), Mercurio (electronic invoicing), Atenea (education management), Panacea (medical management).
+- Security and documents: Heimdall (authentication), Tyr (electronic document signing).
 - AI for voice and documents: Forcis (speech to text), Poseidon (text to speech), Loki (voice cloning), Thot (OCR for images and PDFs).
 
 Mnemosine/Mnemonise is the memory/context layer for projects and AI agents; V1 is completed and under testing.

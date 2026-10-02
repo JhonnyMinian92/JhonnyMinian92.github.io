@@ -227,7 +227,8 @@ Actividades documentadas:
 También se documentó el diseño y desarrollo de extensiones de Google Chrome para flujos operativos y productividad interna, entre ellas:
 
 - SingExtension;
-- Autolink.
+- Autolink;
+- EC Google Extension (visor de PDF; repositorio ec-google-extension, completado).
 
 La trayectoria dentro de Security Data debe representarse como:
 
@@ -757,16 +758,21 @@ Repositorios de la organización EcuApp (todos privados; licencia Apache 2.0 sal
 | mercurio | Software para facturación electrónica | PHP | Gestión empresarial |
 | atenea | Sistema de gestión educativa | PHP | Gestión empresarial |
 | Panacea | Sistema de gestión médica | PHP | Gestión empresarial |
-| clinica | Sistema de agendamiento de citas para clínicas | PHP | Gestión empresarial |
 | Heimdall | Sistema de control de autenticación | PHP | Seguridad y documentos |
 | tyr | Sistema para firma de documentos con firma electrónica | PHP | Seguridad y documentos |
-| ec-google-extension | Extensión para Google Chrome con visor de PDF | TypeScript | Seguridad y documentos |
 | forcis | Sistema para convertir audio a texto | PHP | IA aplicada (voz/documentos) |
 | poseidon | Sistema para convertir texto a voz | PHP | IA aplicada (voz/documentos) |
 | loki | Sistema para clonación de voz con audios de ejemplo | PHP | IA aplicada (voz/documentos) |
 | thot | Sistema OCR de imágenes y archivos PDF | PHP | IA aplicada (voz/documentos) |
 
 Nota de nombre: el repositorio es **atenea** (no "Atena").
+
+Repositorios de la organización que **no** son productos de EcuApp (aclaración de Jhonny, 2026-10-02):
+
+- **clinica** (agendamiento de citas para clínicas): proyecto culminado; es el sistema que la web presenta como **Clinical Admin** en Proyectos. No mostrarlo en el ecosistema EcuApp.
+- **ec-google-extension** (extensión de Chrome con visor de PDF): proyecto culminado desarrollado para **Security Data**, igual que SingExtension y Autolink. Pertenece a la empresa, no a EcuApp; en la web aparece dentro de la trayectoria en Security Data.
+
+EcuApp queda con 10 sistemas.
 
 ## Stack elegido por sistema (decisión de Jhonny, 2026-10-02)
 
@@ -778,10 +784,8 @@ GitHub muestra PHP como lenguaje en casi todos los repositorios, pero Jhonny pid
 | Mercurio | Java · Spring Boot | Firma de comprobantes del SRI con certificado .p12 (mismas librerías Java que Tyr) |
 | Atenea | PHP · Laravel | Gestión centrada en formularios, reportes y portales; CRUD rápido y hosting económico |
 | Panacea | Java · Spring Boot | Datos clínicos sensibles, auditoría e interoperabilidad HL7 FHIR (HAPI FHIR) |
-| Clínica | PHP · Laravel | Agenda y notificaciones; misma base que Clinical Admin |
 | Heimdall | Java · Spring Boot | Spring Security / Spring Authorization Server (OAuth 2.0, OpenID Connect) |
 | Tyr | Java · Spring Boot | Las librerías ecuatorianas de firma con certificados .p12 solo existen en Java (dato de Jhonny) |
-| EC Google Extension | TypeScript | Extensión de navegador; PHP, Java y Python no aplican |
 | Forcis | Python | Reconocimiento de voz (p. ej. Whisper) |
 | Poseidon | Python | Síntesis de voz (p. ej. Piper) |
 | Loki | Python | Clonación de voz (p. ej. XTTS, OpenVoice) sobre PyTorch |
@@ -954,8 +958,8 @@ No debe depender de un IDE específico ni de una sola empresa.
 
 El ecosistema EcuApp se organiza en tres áreas (así se presenta en la web):
 
-1. **Gestión empresarial:** Hefesto (inventario), Mercurio (facturación electrónica), Atenea (gestión educativa), Panacea (gestión médica), Clínica (agendamiento de citas).
-2. **Seguridad y documentos:** Heimdall (autenticación), Tyr (firma electrónica), EC Google Extension (visor de PDF en Chrome).
+1. **Gestión empresarial:** Hefesto (inventario), Mercurio (facturación electrónica), Atenea (gestión educativa), Panacea (gestión médica).
+2. **Seguridad y documentos:** Heimdall (autenticación), Tyr (firma electrónica).
 3. **IA aplicada a voz y documentos:** Forcis (audio → texto), Poseidon (texto → voz), Loki (clonación de voz), Thot (OCR de imágenes y PDF).
 
 ---
@@ -1283,7 +1287,7 @@ Correcciones realizadas:
 ## Refinamiento del 2026-10-02
 
 - Corrección de experiencia: "8+ años desarrollando software" (antes "16+ años").
-- EcuApp reescrito con la descripción real de los 12 repositorios, agrupados en 3 áreas.
+- EcuApp reescrito con la descripción real de sus 10 sistemas, agrupados en 3 áreas y con el stack elegido para cada uno (clinica = Clinical Admin y ec-google-extension = Security Data quedan fuera).
 - Expertise: se añadió tarjeta de Frontend y extensiones (Angular, TypeScript, microfrontends, Chrome Extensions).
 - Proyectos: se añadió Security Image (gestor-imagenes) con captura en assets/projects/gestor_imagen.jpg. En desktop las tres tarjetas con captura (Cúspide, Clinical Admin, Security Image) van en una fila y Multimodal ocupa el ancho completo.
 - Formación: TFM, certificaciones históricas y nota de Platzi/Coursera.
@@ -1857,7 +1861,7 @@ Es ingeniero de sistemas por la Universidad Técnica de Machala y cursó una Mae
 
 Trabaja con tecnologías como Java, Spring, PHP, JavaScript, TypeScript, Python, Angular, Node.js, APIs REST, microservicios, SQL, PostgreSQL, MySQL, Redis, Docker y herramientas de desarrollo modernas. Su especialización actual incluye IA aplicada, Machine Learning, agentes, automatización y memoria/contexto.
 
-EcuApp es la visión de startup/producto que pretende reunir ingeniería, IA, agentes, memoria, automatización y producto. Mnemosine/Mnemonise es la arquitectura central de memoria y contexto. La suite incluye sistemas de gestión (Hefesto, Mercurio, Atenea, Panacea, Clínica), seguridad y documentos (Heimdall, Tyr, EC Google Extension) y servicios de IA para voz y documentos (Forcis, Poseidon, Loki, Thot).
+EcuApp es la visión de startup/producto que pretende reunir ingeniería, IA, agentes, memoria, automatización y producto. Mnemosine/Mnemonise es la arquitectura central de memoria y contexto. La suite incluye sistemas de gestión (Hefesto, Mercurio, Atenea, Panacea), seguridad y documentos (Heimdall, Tyr) y servicios de IA para voz y documentos (Forcis, Poseidon, Loki, Thot).
 
 Su filosofía técnica busca reutilización, continuidad de contexto, skills desacopladas, arquitectura reusable y agentes capaces de trabajar con memoria persistente.
 
