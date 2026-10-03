@@ -1,394 +1,608 @@
 <!doctype html>
 <html lang="es">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="theme-color" content="#07111d"/>
-<meta name="color-scheme" content="dark"/>
-<meta name="description" content="Jhonny Darwin Miñan Girón — Senior Software Engineer Full Stack orientado a Inteligencia Artificial. 8+ años desarrollando software, con una base previa en soporte, redes, infraestructura y análisis de sistemas. Máster en IA (UNIR)."/>
-<meta name="keywords" content="Jhonny Darwin Miñan Girón, Jhonny Miñan, Software Engineer, Senior Full Stack Engineer, Artificial Intelligence, AI Agents, Java, Spring Boot, PHP, Python, EcuApp, Mnemosine, Ecuador"/>
-<meta name="author" content="Jhonny Darwin Miñan Girón"/>
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
-<meta property="og:type" content="profile"/>
-<meta property="og:title" content="Jhonny Miñan | Senior Software Engineer · AI"/>
-<meta property="og:description" content="Trayectoria profesional, ingeniería de software, IA aplicada, automatización y visión de EcuApp."/>
-<meta property="og:url" content="https://jhonnyminian92.github.io/"/>
-<meta property="og:image" content="https://jhonnyminian92.github.io/assets/me.jpg"/>
-<meta property="og:image:alt" content="Jhonny Miñan — Senior Software Engineer"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Jhonny Miñan | Senior Software Engineer · AI"/>
-<meta name="twitter:image" content="https://jhonnyminian92.github.io/assets/me.jpg"/>
-<link rel="canonical" href="https://jhonnyminian92.github.io/"/>
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
-<link rel="manifest" href="site.webmanifest"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
-<script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="properties.css"/>
-<link rel="stylesheet" href="index.css"/>
-<link rel="stylesheet" href="responsive.css"/>
-<link rel="stylesheet" href="premium-effects.css"/>
-<link rel="stylesheet" href="hero-effects.css"/>
-<link rel="stylesheet" href="site-fixes.css"/>
-<link rel="stylesheet" href="executive-refresh.css"/>
-<link rel="stylesheet" href="refine.css"/>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Jhonny Darwin Miñan Girón","alternateName":"Jhonny Miñan","url":"https://jhonnyminian92.github.io/","image":"https://jhonnyminian92.github.io/assets/me.jpg","jobTitle":"Senior Software Engineer | Full Stack | Artificial Intelligence","address":{"@type":"PostalAddress","addressLocality":"Machala","addressCountry":"EC"},"knowsAbout":["Software Engineering","Artificial Intelligence","AI Agents","Java","Spring Boot","PHP","JavaScript","TypeScript","Python","REST APIs","Microservices","Asterisk","Machine Learning","Natural Language Processing","Computer Vision","Automation","Software Architecture","Clean Code","Systems Analysis","Networks","Servers","Product Engineering"],"sameAs":["https://github.com/JhonnyMinian92","https://www.linkedin.com/in/jhonnyminian/","https://www.youtube.com/@fullstackecuador","https://platzi.com/p/JhonnyMinian92/"]}
-</script>
-<title>Jhonny Miñan | Senior Software Engineer · AI</title>
-</head>
-<body>
-<div class="cursor-glow" aria-hidden="true"></div>
-<canvas id="network" aria-hidden="true"></canvas>
-<div class="page-noise" aria-hidden="true"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="theme-color" content="#07111d" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="Jhonny Miñan — Senior Software Engineer Full Stack orientado a Inteligencia Artificial. 8+ años desarrollando software, con una base previa en soporte, redes, infraestructura y análisis de sistemas. Máster en IA (UNIR)." />
+    <meta name="keywords" content="Jhonny Miñan, Jhonny Miñan, Software Engineer, Senior Full Stack Engineer, Artificial Intelligence, AI Agents, Java, Spring Boot, PHP, Python, EcuApp, Mnemosine, Ecuador" />
+    <meta name="author" content="Jhonny Miñan" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Jhonny Miñan | Senior Software Engineer · AI" />
+    <meta property="og:description" content="Trayectoria profesional, ingeniería de software, IA aplicada, automatización y visión de EcuApp." />
+    <meta property="og:url" content="https://jhonnyminian92.github.io/" />
+    <meta property="og:image" content="https://jhonnyminian92.github.io/assets/me.jpg" />
+    <meta property="og:image:alt" content="Jhonny Miñan — Senior Software Engineer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jhonny Miñan | Senior Software Engineer · AI" />
+    <meta name="twitter:image" content="https://jhonnyminian92.github.io/assets/me.jpg" />
+    <link rel="canonical" href="https://jhonnyminian92.github.io/" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <link rel="stylesheet" href="properties.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="premium-effects.css" />
+    <link rel="stylesheet" href="hero-effects.css" />
+    <link rel="stylesheet" href="site-fixes.css" />
+    <link rel="stylesheet" href="executive-refresh.css" />
+    <link rel="stylesheet" href="refine.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jhonny Miñan",
+        "alternateName": "Jhonny Miñan",
+        "url": "https://jhonnyminian92.github.io/",
+        "image": "https://jhonnyminian92.github.io/assets/me.jpg",
+        "jobTitle": "Senior Software Engineer | Full Stack | Artificial Intelligence",
+        "address": { "@type": "PostalAddress", "addressLocality": "Machala", "addressCountry": "EC" },
+        "knowsAbout": ["Software Engineering", "Artificial Intelligence", "AI Agents", "Java", "Spring Boot", "PHP", "JavaScript", "TypeScript", "Python", "REST APIs", "Microservices", "Asterisk", "Machine Learning", "Natural Language Processing", "Computer Vision", "Automation", "Software Architecture", "Clean Code", "Systems Analysis", "Networks", "Servers", "Product Engineering"],
+        "sameAs": ["https://github.com/JhonnyMinian92", "https://www.linkedin.com/in/jhonnyminian/", "https://www.youtube.com/@fullstackecuador", "https://platzi.com/p/JhonnyMinian92/"]
+      }
+    </script>
+    <title>Jhonny Miñan | Senior Software Engineer · AI</title>
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <canvas id="network" aria-hidden="true"></canvas>
+    <div class="page-noise" aria-hidden="true"></div>
 
-<header class="site-header" data-header>
-  <a class="brand" href="#inicio" aria-label="Inicio">
-    <span class="brand-photo"><img src="assets/me.jpg" alt="Jhonny Miñan"/></span>
-    <span><strong>Jhonny Miñan</strong><small>Software Engineer · AI · Product</small></span>
-  </a>
-  <button class="menu-toggle" type="button" aria-label="Abrir navegación" aria-expanded="false" aria-controls="nav">
-    <span></span><span></span><span></span>
-  </button>
-  <nav id="nav" class="nav" aria-label="Navegación principal">
-    <a href="#perfil">Perfil</a>
-    <a href="#capacidades">Expertise</a>
-    <a href="#experiencia">Trayectoria</a>
-    <a href="#ecuapp">EcuApp</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#formacion">Formación</a>
-    <a href="#contacto">Contacto</a>
-    <span class="nav-separator" aria-hidden="true"></span>
-    <details class="cv-selector">
-      <summary aria-label="Seleccionar idioma del currículum">
-        <span class="cv-selector-label">CV</span>
-        <span class="cv-selector-langs">ES / EN</span>
-        <span class="cv-selector-chevron" aria-hidden="true">⌄</span>
-      </summary>
-      <div class="cv-selector-menu">
-        <a href="assets/cv/Jhonny-Minan-CV-ES.pdf" download="Jhonny-Minan-CV-ES.pdf">
-          <span><b>ES</b><small>Currículum en español</small></span>
-          <i>↓</i>
-        </a>
-        <a href="assets/cv/Jhonny-Minan-CV-EN.pdf" download="Jhonny-Minan-CV-EN.pdf">
-          <span><b>EN</b><small>Curriculum in English</small></span>
-          <i>↓</i>
-        </a>
-      </div>
-    </details>
-  </nav>
-</header>
+    <header class="site-header" data-header>
+      <a class="brand" href="#inicio" aria-label="Inicio">
+        <span class="brand-photo"><img src="assets/me.jpg" alt="Jhonny Miñan" /></span>
+        <span><strong>Jhonny Miñan</strong><small>Software Engineer · AI · Product</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Abrir navegación" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+      <nav id="nav" class="nav" aria-label="Navegación principal">
+        <a href="#perfil">Perfil</a>
+        <a href="#capacidades">Expertise</a>
+        <a href="#experiencia">Trayectoria</a>
+        <a href="#ecuapp">EcuApp</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#formacion">Formación</a>
+        <a href="#contacto">Contacto</a>
+        <span class="nav-separator" aria-hidden="true"></span>
+        <details class="cv-selector">
+          <summary aria-label="Seleccionar idioma del currículum">
+            <span class="cv-selector-label">CV</span>
+            <span class="cv-selector-langs">ES / EN</span>
+            <span class="cv-selector-chevron" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="cv-selector-menu">
+            <a href="assets/cv/Jhonny-Minan-CV-ES.pdf" download="Jhonny-Minan-CV-ES.pdf">
+              <span><b>ES</b><small>Currículum en español</small></span>
+              <i>↓</i>
+            </a>
+            <a href="assets/cv/Jhonny-Minan-CV-EN.pdf" download="Jhonny-Minan-CV-EN.pdf">
+              <span><b>EN</b><small>Curriculum in English</small></span>
+              <i>↓</i>
+            </a>
+          </div>
+        </details>
+      </nav>
+    </header>
 
-<main id="contenido">
-<section id="inicio" class="hero section-wrap hero-updated">
-  <div class="hero-copy reveal">
-    <div class="availability"><span></span> SENIOR SOFTWARE ENGINEER · FULL STACK · AI</div>
-    <p class="kicker">8+ AÑOS DESARROLLANDO SOFTWARE</p>
-    <h1>Ingeniería de software con una trayectoria que hoy <em>converge en IA.</em></h1>
-    <p class="hero-lead">Soy <strong>Jhonny Darwin Miñan Girón</strong>, ingeniero de sistemas y máster en Inteligencia Artificial. Empecé en soporte, redes y servidores; pasé por análisis de sistemas y emprendimiento; y hoy trabajo en <strong>ingeniería de software full stack, IA aplicada, agentes y automatización</strong>. Entiendo el sistema completo —datos, servicios, interfaz y operación— y llevo una idea desde el problema hasta un producto que funciona en producción.</p>
-    <div class="hero-actions hero-actions-wrap">
-      <a class="button button-primary magnetic" href="#trayectoria-brief">Ver trayectoria <span>↓</span></a>
-      <a class="button button-ghost magnetic" href="mailto:jhonnyminian@gmail.com?subject=Contacto%20profesional">Contactarme <span>↗</span></a>
-    </div>
-    <div class="hero-proof">
-      <div><strong>8+ años</strong><span>desarrollando software</span></div>
-      <div><strong>2021 → hoy</strong><span>Security Data · de soporte a Senior</span></div>
-      <div><strong>2025 → 2026</strong><span>Máster en IA · UNIR</span></div>
-    </div>
-  </div>
+    <main id="contenido">
+      <section id="inicio" class="hero section-wrap hero-updated">
+        <div class="hero-copy reveal">
+          <div class="availability"><span></span> SENIOR SOFTWARE ENGINEER · FULL STACK · AI</div>
+          <p class="kicker">8+ AÑOS DESARROLLANDO SOFTWARE</p>
+          <h1>Ingeniería de software con una trayectoria que hoy <em>converge en IA.</em></h1>
+          <p class="hero-lead">Soy <strong>Jhonny Miñan</strong>, ingeniero de sistemas y máster en Inteligencia Artificial. Empecé en soporte, redes y servidores; pasé por análisis de sistemas y emprendimiento; y hoy trabajo en <strong>ingeniería de software full stack, IA aplicada, agentes y automatización</strong>. Entiendo el sistema completo —datos, servicios, interfaz y operación— y llevo una idea desde el problema hasta un producto que funciona en producción.</p>
+          <div class="hero-actions hero-actions-wrap">
+            <a class="button button-primary magnetic" href="#trayectoria-brief">Ver trayectoria <span>↓</span></a>
+            <a class="button button-ghost magnetic" href="mailto:jhonnyminian@gmail.com?subject=Contacto%20profesional">Contactarme <span>↗</span></a>
+          </div>
+          <div class="hero-proof">
+            <div><strong>8+ años</strong><span>desarrollando software</span></div>
+            <div><strong>2021 → hoy</strong><span>Security Data · de soporte a Senior</span></div>
+            <div><strong>2025 → 2026</strong><span>Máster en IA · UNIR</span></div>
+          </div>
+        </div>
 
-  <div class="hero-visual reveal reveal-delay" aria-label="Perfil visual">
-    <div class="hero-orbit orbit orbit-one"></div>
-    <div class="hero-orbit orbit orbit-two"></div>
-    <div class="hero-ring-label ring-label-one">ENGINEERING</div>
-    <div class="hero-ring-label ring-label-two">ARTIFICIAL INTELLIGENCE</div>
-    <div class="photo-frame">
-      <div class="photo-shine"></div>
-      <img src="assets/me.jpg" alt="Jhonny Darwin Miñan Girón" class="profile-photo"/>
-      <div class="photo-badge"><span class="pulse"></span> SOFTWARE ENGINEER</div>
-    </div>
-    <div class="floating-card card-code"><span class="code-dot"></span><code>system → product</code><small>Arquitectura + ejecución</small></div>
-    <div class="floating-card card-ai"><span>✦</span><strong>AI</strong><small>Agents · Memory · Automation</small></div>
-  </div>
-</section>
+        <div class="hero-visual reveal reveal-delay" aria-label="Perfil visual">
+          <div class="hero-orbit orbit orbit-one"></div>
+          <div class="hero-orbit orbit orbit-two"></div>
+          <div class="hero-ring-label ring-label-one">ENGINEERING</div>
+          <div class="hero-ring-label ring-label-two">ARTIFICIAL INTELLIGENCE</div>
+          <div class="photo-frame">
+            <div class="photo-shine"></div>
+            <img src="assets/me.jpg" alt="Jhonny Miñan" class="profile-photo" />
+            <div class="photo-badge"><span class="pulse"></span> SOFTWARE ENGINEER</div>
+          </div>
+          <div class="floating-card card-code"><span class="code-dot"></span><code>system → product</code><small>Arquitectura + ejecución</small></div>
+          <div class="floating-card card-ai"><span>✦</span><strong>AI</strong><small>Agents · Memory · Automation</small></div>
+        </div>
+      </section>
 
-<section id="trayectoria-brief" class="section-wrap executive-section">
-  <div class="section-label reveal"><span>01</span><p>RESUMEN EJECUTIVO</p></div>
-  <div class="executive-header reveal">
-    <div>
-      <p class="kicker">Una trayectoria, varias capas</p>
-      <h2>No nací en una sola capa del stack. <em>La recorrí.</em></h2>
-    </div>
-    <p class="executive-intro">Mi perfil no se explica solo por el stack actual. Se explica por la suma de etapas: operación y soporte, análisis de sistemas, emprendimiento, desarrollo de software en producción y formación de posgrado en IA.</p>
-  </div>
+      <section id="trayectoria-brief" class="section-wrap executive-section">
+        <div class="section-label reveal">
+          <span>01</span>
+          <p>RESUMEN EJECUTIVO</p>
+        </div>
+        <div class="executive-header reveal">
+          <div>
+            <p class="kicker">Una trayectoria, varias capas</p>
+            <h2>No nací en una sola capa del stack. <em>La recorrí.</em></h2>
+          </div>
+          <p class="executive-intro">Mi perfil no se explica solo por el stack actual. Se explica por la suma de etapas: operación y soporte, análisis de sistemas, emprendimiento, desarrollo de software en producción y formación de posgrado en IA.</p>
+        </div>
 
-  <div class="career-spectrum reveal">
-    <div class="spectrum-line"><span class="spectrum-progress"></span></div>
-    <article><span>2010</span><strong>Software independiente</strong><small>Primeras aplicaciones de escritorio y web</small></article>
-    <article><span>2012</span><strong>Análisis + sistemas</strong><small>Responsable del departamento de TI</small></article>
-    <article><span>2014</span><strong>Emprendimiento</strong><small>Supercompu TIC: servicios y soluciones informáticas</small></article>
-    <article><span>2016</span><strong>Infraestructura</strong><small>Redes, servidores y desarrollo en Visual Basic</small></article>
-    <article><span>2021</span><strong>Software en producción</strong><small>De soporte TI a Full Stack en Security Data</small></article>
-    <article><span>2025</span><strong>IA aplicada</strong><small>Máster en IA, agentes y EcuApp</small></article>
-  </div>
+        <div class="career-spectrum reveal">
+          <div class="spectrum-line"><span class="spectrum-progress"></span></div>
+          <article><span>2010</span><strong>Software independiente</strong><small>Primeras aplicaciones de escritorio y web</small></article>
+          <article><span>2012</span><strong>Análisis + sistemas</strong><small>Responsable del departamento de TI</small></article>
+          <article><span>2014</span><strong>Emprendimiento</strong><small>Supercompu TIC: servicios y soluciones informáticas</small></article>
+          <article><span>2016</span><strong>Infraestructura</strong><small>Redes, servidores y desarrollo en Visual Basic</small></article>
+          <article><span>2021</span><strong>Software en producción</strong><small>De soporte TI a Full Stack en Security Data</small></article>
+          <article><span>2025</span><strong>IA aplicada</strong><small>Máster en IA, agentes y EcuApp</small></article>
+        </div>
 
-  <div class="executive-cards">
-    <article class="executive-card reveal">
-      <span class="card-index">A</span>
-      <p class="card-eyebrow">ENGINEERING</p>
-      <h3>Construcción integral</h3>
-      <p>Backend, frontend, APIs, bases de datos, integraciones y sistemas empresariales, con una mirada que empieza en el problema y termina en la operación.</p>
-    </article>
-    <article class="executive-card reveal">
-      <span class="card-index">B</span>
-      <p class="card-eyebrow">AI</p>
-      <h3>La IA ya es parte del oficio</h3>
-      <p>Uso y diseño de agentes, automatización, contexto y memoria como herramientas reales de desarrollo y como componentes de nuevos productos.</p>
-    </article>
-    <article class="executive-card reveal">
-      <span class="card-index">C</span>
-      <p class="card-eyebrow">PRODUCT</p>
-      <h3>Ingeniería con sentido de negocio</h3>
-      <p>La experiencia con clientes, operación y emprendimiento ayuda a traducir necesidades ambiguas en decisiones técnicas y productos utilizables.</p>
-    </article>
-  </div>
-</section>
+        <div class="executive-cards">
+          <article class="executive-card reveal">
+            <span class="card-index">A</span>
+            <p class="card-eyebrow">ENGINEERING</p>
+            <h3>Construcción integral</h3>
+            <p>Backend, frontend, APIs, bases de datos, integraciones y sistemas empresariales, con una mirada que empieza en el problema y termina en la operación.</p>
+          </article>
+          <article class="executive-card reveal">
+            <span class="card-index">B</span>
+            <p class="card-eyebrow">AI</p>
+            <h3>La IA ya es parte del oficio</h3>
+            <p>Uso y diseño de agentes, automatización, contexto y memoria como herramientas reales de desarrollo y como componentes de nuevos productos.</p>
+          </article>
+          <article class="executive-card reveal">
+            <span class="card-index">C</span>
+            <p class="card-eyebrow">PRODUCT</p>
+            <h3>Ingeniería con sentido de negocio</h3>
+            <p>La experiencia con clientes, operación y emprendimiento ayuda a traducir necesidades ambiguas en decisiones técnicas y productos utilizables.</p>
+          </article>
+        </div>
+      </section>
 
-<section id="perfil" class="section-wrap profile-section">
-  <div class="section-label reveal"><span>02</span><p>PERFIL PROFESIONAL</p></div>
-  <div class="profile-grid">
-    <div class="section-intro reveal">
-      <p class="kicker">Más que código</p>
-      <h2>Una evolución desde la infraestructura hasta la <em>ingeniería de sistemas.</em></h2>
-    </div>
-    <div class="profile-text reveal reveal-delay">
-      <p>Mi experiencia se ha construido en entornos muy distintos: soporte y hardware, redes y servidores, análisis de sistemas, desarrollo de aplicaciones, atención al cliente, gestión operativa y emprendimiento.</p>
-      <p>Ese recorrido definió mi forma de trabajar: primero entiendo el contexto, después modelo el problema, diseño la solución y recién entonces implemento y pruebo. Hoy aplico esa misma disciplina a la <strong>Inteligencia Artificial y al desarrollo asistido por agentes</strong>.</p>
-    </div>
-  </div>
+      <section id="perfil" class="section-wrap profile-section">
+        <div class="section-label reveal">
+          <span>02</span>
+          <p>PERFIL PROFESIONAL</p>
+        </div>
+        <div class="profile-grid">
+          <div class="section-intro reveal">
+            <p class="kicker">Más que código</p>
+            <h2>Una evolución desde la infraestructura hasta la <em>ingeniería de sistemas.</em></h2>
+          </div>
+          <div class="profile-text reveal reveal-delay">
+            <p>Mi experiencia se ha construido en entornos muy distintos: soporte y hardware, redes y servidores, análisis de sistemas, desarrollo de aplicaciones, atención al cliente, gestión operativa y emprendimiento.</p>
+            <p>Ese recorrido definió mi forma de trabajar: primero entiendo el contexto, después modelo el problema, diseño la solución y recién entonces implemento y pruebo. Hoy aplico esa misma disciplina a la <strong>Inteligencia Artificial y al desarrollo asistido por agentes</strong>.</p>
+          </div>
+        </div>
 
-  <div class="pill-cloud reveal">
-    <span>Software Engineering</span><span>AI Agents</span><span>Automation</span><span>Java</span><span>Spring Boot</span><span>PHP</span><span>Laravel</span><span>JavaScript / TypeScript</span><span>Angular</span><span>Python</span><span>REST APIs</span><span>Microservices</span><span>Microfrontends</span><span>PostgreSQL / MySQL</span><span>Docker</span><span>Clean Code</span><span>Systems Analysis</span><span>Product Engineering</span>
-  </div>
+        <div class="pill-cloud reveal"><span>Software Engineering</span><span>AI Agents</span><span>Automation</span><span>Java</span><span>Spring Boot</span><span>PHP</span><span>Laravel</span><span>JavaScript / TypeScript</span><span>Angular</span><span>Python</span><span>REST APIs</span><span>Microservices</span><span>Microfrontends</span><span>PostgreSQL / MySQL</span><span>Docker</span><span>Clean Code</span><span>Systems Analysis</span><span>Product Engineering</span></div>
 
-  <div class="method-grid reveal">
-    <article class="method-card"><span class="method-number">01</span><h3>Entiendo antes de construir</h3><p>Contexto, requerimientos, flujos, restricciones y arquitectura antes de convertir una necesidad en código.</p></article>
-    <article class="method-card"><span class="method-number">02</span><h3>Pienso en sistema, no en pantalla</h3><p>La solución incluye datos, servicios, integraciones, operación, seguridad, mantenimiento y evolución.</p></article>
-    <article class="method-card"><span class="method-number">03</span><h3>Busco producción, no solo demo</h3><p>Funcionalidad, documentación, pruebas y una base técnica que permita que el proyecto siga creciendo.</p></article>
-    <article class="method-card"><span class="method-number">04</span><h3>Uso IA como multiplicador</h3><p>Agentes, contexto, memoria y automatización para acelerar el trabajo sin perder control sobre la ingeniería.</p></article>
-  </div>
-</section>
+        <div class="method-grid reveal">
+          <article class="method-card">
+            <span class="method-number">01</span>
+            <h3>Entiendo antes de construir</h3>
+            <p>Contexto, requerimientos, flujos, restricciones y arquitectura antes de convertir una necesidad en código.</p>
+          </article>
+          <article class="method-card">
+            <span class="method-number">02</span>
+            <h3>Pienso en sistema, no en pantalla</h3>
+            <p>La solución incluye datos, servicios, integraciones, operación, seguridad, mantenimiento y evolución.</p>
+          </article>
+          <article class="method-card">
+            <span class="method-number">03</span>
+            <h3>Busco producción, no solo demo</h3>
+            <p>Funcionalidad, documentación, pruebas y una base técnica que permita que el proyecto siga creciendo.</p>
+          </article>
+          <article class="method-card">
+            <span class="method-number">04</span>
+            <h3>Uso IA como multiplicador</h3>
+            <p>Agentes, contexto, memoria y automatización para acelerar el trabajo sin perder control sobre la ingeniería.</p>
+          </article>
+        </div>
+      </section>
 
-<section id="capacidades" class="section-wrap stack-section">
-  <div class="section-label reveal"><span>03</span><p>EXPERTISE</p></div>
-  <div class="section-heading reveal">
-    <p class="kicker">Tecnología aplicada</p>
-    <h2>Una base Full Stack reforzada con <em>IA y arquitectura.</em></h2>
-    <p>El stack importa; más importante es saber dónde encaja cada pieza dentro de un sistema real.</p>
-  </div>
+      <section id="capacidades" class="section-wrap stack-section">
+        <div class="section-label reveal">
+          <span>03</span>
+          <p>EXPERTISE</p>
+        </div>
+        <div class="section-heading reveal">
+          <p class="kicker">Tecnología aplicada</p>
+          <h2>Una base Full Stack reforzada con <em>IA y arquitectura.</em></h2>
+          <p>El stack importa; más importante es saber dónde encaja cada pieza dentro de un sistema real.</p>
+        </div>
 
-  <div class="stack-grid">
-    <article class="stack-card featured reveal tilt">
-      <div class="stack-icon">01</div><span class="stack-index">BACKEND · ARCHITECTURE</span>
-      <h3>Backend y APIs</h3>
-      <p>Servicios empresariales, APIs REST y microservicios mantenibles, con foco en integración, depuración y estabilidad en producción.</p>
-      <div class="tech-list"><b>Java</b><b>Spring Boot</b><b>PHP</b><b>Laravel</b><b>Node.js</b><b>Python</b></div>
-    </article>
-    <article class="stack-card reveal tilt">
-      <div class="stack-icon">02</div><span class="stack-index">FRONTEND · EXTENSIONS</span>
-      <h3>Frontend y extensiones</h3>
-      <p>Interfaces web, microfrontends con Module Federation y extensiones de Google Chrome para flujos operativos.</p>
-      <div class="tech-list"><b>TypeScript</b><b>Angular</b><b>Microfrontends</b><b>Nx</b><b>Chrome Extensions</b></div>
-    </article>
-    <article class="stack-card reveal tilt">
-      <div class="stack-icon">03</div><span class="stack-index">AI · AGENTS</span>
-      <h3>Inteligencia Artificial</h3>
-      <p>IA aplicada al desarrollo y al producto: agentes, automatización, NLP, visión artificial y modelos de aprendizaje automático.</p>
-      <div class="tech-list"><b>ML</b><b>NLP</b><b>Computer Vision</b><b>AI Agents</b><b>scikit-learn</b><b>XGBoost</b></div>
-    </article>
-    <article class="stack-card reveal tilt">
-      <div class="stack-icon">04</div><span class="stack-index">DATA · INTEGRATION</span>
-      <h3>Datos e integración</h3>
-      <p>Modelado, persistencia y servicios externos para sistemas que necesitan comunicarse de forma confiable.</p>
-      <div class="tech-list"><b>PostgreSQL</b><b>MySQL</b><b>MongoDB</b><b>Redis</b><b>Asterisk</b></div>
-    </article>
-    <article class="stack-card reveal tilt">
-      <div class="stack-icon">05</div><span class="stack-index">AUTOMATION · INFRASTRUCTURE</span>
-      <h3>Automatización e infraestructura</h3>
-      <p>Tareas repetitivas convertidas en flujos reproducibles, sobre una base práctica en soporte, redes y servidores.</p>
-      <div class="tech-list"><b>Docker</b><b>REST</b><b>Workflows</b><b>Networks</b><b>Servers</b></div>
-    </article>
-    <article class="stack-card reveal tilt">
-      <div class="stack-icon">06</div><span class="stack-index">PRODUCT · CLIENT</span>
-      <h3>Producto y contexto</h3>
-      <p>Traducción de necesidades de usuarios y de la operación en decisiones técnicas, documentación y software útil.</p>
-      <div class="tech-list"><b>Analysis</b><b>Planning</b><b>Documentation</b><b>Client focus</b></div>
-    </article>
-  </div>
-</section>
+        <div class="stack-grid">
+          <article class="stack-card featured reveal tilt">
+            <div class="stack-icon">01</div>
+            <span class="stack-index">BACKEND · ARCHITECTURE</span>
+            <h3>Backend y APIs</h3>
+            <p>Servicios empresariales, APIs REST y microservicios mantenibles, con foco en integración, depuración y estabilidad en producción.</p>
+            <div class="tech-list"><b>Java</b><b>Spring Boot</b><b>PHP</b><b>Laravel</b><b>Node.js</b><b>Python</b></div>
+          </article>
+          <article class="stack-card reveal tilt">
+            <div class="stack-icon">02</div>
+            <span class="stack-index">FRONTEND · EXTENSIONS</span>
+            <h3>Frontend y extensiones</h3>
+            <p>Interfaces web, microfrontends con Module Federation y extensiones de Google Chrome para flujos operativos.</p>
+            <div class="tech-list"><b>TypeScript</b><b>Angular</b><b>Microfrontends</b><b>Nx</b><b>Chrome Extensions</b></div>
+          </article>
+          <article class="stack-card reveal tilt">
+            <div class="stack-icon">03</div>
+            <span class="stack-index">AI · AGENTS</span>
+            <h3>Inteligencia Artificial</h3>
+            <p>IA aplicada al desarrollo y al producto: agentes, automatización, NLP, visión artificial y modelos de aprendizaje automático.</p>
+            <div class="tech-list"><b>ML</b><b>NLP</b><b>Computer Vision</b><b>AI Agents</b><b>scikit-learn</b><b>XGBoost</b></div>
+          </article>
+          <article class="stack-card reveal tilt">
+            <div class="stack-icon">04</div>
+            <span class="stack-index">DATA · INTEGRATION</span>
+            <h3>Datos e integración</h3>
+            <p>Modelado, persistencia y servicios externos para sistemas que necesitan comunicarse de forma confiable.</p>
+            <div class="tech-list"><b>PostgreSQL</b><b>MySQL</b><b>MongoDB</b><b>Redis</b><b>Asterisk</b></div>
+          </article>
+          <article class="stack-card reveal tilt">
+            <div class="stack-icon">05</div>
+            <span class="stack-index">AUTOMATION · INFRASTRUCTURE</span>
+            <h3>Automatización e infraestructura</h3>
+            <p>Tareas repetitivas convertidas en flujos reproducibles, sobre una base práctica en soporte, redes y servidores.</p>
+            <div class="tech-list"><b>Docker</b><b>REST</b><b>Workflows</b><b>Networks</b><b>Servers</b></div>
+          </article>
+          <article class="stack-card reveal tilt">
+            <div class="stack-icon">06</div>
+            <span class="stack-index">PRODUCT · CLIENT</span>
+            <h3>Producto y contexto</h3>
+            <p>Traducción de necesidades de usuarios y de la operación en decisiones técnicas, documentación y software útil.</p>
+            <div class="tech-list"><b>Analysis</b><b>Planning</b><b>Documentation</b><b>Client focus</b></div>
+          </article>
+        </div>
+      </section>
 
-<section id="experiencia" class="section-wrap experience-section">
-  <div class="section-label reveal"><span>04</span><p>TRAYECTORIA</p></div>
-  <div class="experience-grid">
-    <div class="section-heading reveal">
-      <p class="kicker">Historia profesional</p>
-      <h2>Una progresión que se puede <em>ver.</em></h2>
-      <p>Las etapas se superponen porque en distintos periodos combiné empleo, trabajo independiente, emprendimiento y formación.</p>
-      <div class="trajectory-callout">
-        <span>HITO ACTUAL</span>
-        <strong>Senior Full Stack · Security Data</strong>
-        <small>Progresión interna: Operador de Registro / Soporte TI → Full Stack Junior → Full Stack Mid-Level → Senior.</small>
-      </div>
-    </div>
+      <section id="experiencia" class="section-wrap experience-section">
+        <div class="section-label reveal">
+          <span>04</span>
+          <p>TRAYECTORIA</p>
+        </div>
+        <div class="experience-grid">
+          <div class="section-heading reveal">
+            <p class="kicker">Historia profesional</p>
+            <h2>Una progresión que se puede <em>ver.</em></h2>
+            <p>Las etapas se superponen porque en distintos periodos combiné empleo, trabajo independiente, emprendimiento y formación.</p>
+            <div class="trajectory-callout">
+              <span>HITO ACTUAL</span>
+              <strong>Senior Full Stack · Security Data</strong>
+              <small>Progresión interna: Operador de Registro / Soporte TI → Full Stack Junior → Full Stack Mid-Level → Senior.</small>
+            </div>
+          </div>
 
-    <div class="timeline reveal reveal-delay">
-      <article class="timeline-item current"><span class="timeline-dot"></span><div class="timeline-date">2021 — ACTUALIDAD</div><h3>Security Data</h3><h4>Desarrollador Senior Full Stack</h4><p>Ingresé como Operador de Registro y Soporte TI y pasé a desarrollo: Full Stack Junior desde diciembre de 2022 y Mid-Level desde marzo de 2024. Desarrollo y mantengo sistemas en producción con PHP, Java y JavaScript: servicios backend, integración de APIs, capas de datos, depuración y refactorización. Desarrollé <strong>AutoLink</strong>, que creció de extensión de Chrome a una plataforma distribuida de continuidad de trámites de firma electrónica: a partir de un enlace cifrado recupera la solicitud, valida identidad, RUC y trámites en curso, reutiliza documentos en renovaciones y lleva al usuario a su siguiente tarea (biometría, vídeo, pago o revisión) sobre procesos orquestados con Camunda. Incluye un gateway B2B con autenticación HMAC y payloads cifrados, y un SDK en TypeScript para integradores. También entregué las extensiones SingExtension y EC Google Extension (visor de PDF) y trabajo con arquitectura de microfrontends.</p><div class="timeline-tags"><b>Java</b><b>Spring Boot</b><b>PHP</b><b>TypeScript</b><b>Angular</b><b>Chrome Extensions</b><b>Camunda</b><b>B2B Gateway</b><b>TypeScript SDK</b><b>Asterisk</b><b>Agent AI</b></div><a class="timeline-link" href="https://portal-sd.securitydata.net.ec/app-security-data/#/formulario-autolink/RpN6Tsfpd4oHBQPDC6w-a3cs9STBEME5ELmL3JCegd8" target="_blank" rel="noopener noreferrer">Ver formulario AutoLink ↗</a></article>
-      <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-date">2017 — 2021</div><h3>Diners Club del Ecuador</h3><h4>Oficial de Crédito</h4><p>Análisis y gestión crediticia de cartera de tarjetas de crédito. Una etapa fuera de la tecnología que amplió mi comprensión de procesos, riesgo, operación y atención al cliente.</p></article>
-      <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-date">2017 — 2021</div><h3>Gestiona GTX</h3><h4>Gestor Domiciliario</h4><p>Negociación y gestión de carteras vencidas y prelegal, desarrollada en paralelo con la etapa en Diners Club.</p></article>
-      <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-date">2016 — 2017</div><h3>Explofrap</h3><h4>Analista de Sistemas</h4><p>Análisis de sistemas, desarrollo de aplicaciones con Visual Basic, arquitectura de red y administración de servidores.</p></article>
-      <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-date">2014 — 2017</div><h3>Supercompu TIC</h3><h4>Propietario y fundador</h4><p>Emprendimiento propio de servicios técnicos y soluciones informáticas, combinando operación, cliente, soporte y gestión.</p></article>
-      <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-date">2015 — 2016</div><h3>Grupo Open</h3><h4>Jefe Técnico Informático</h4><p>Mantenimiento correctivo y preventivo de equipos en agencias de Huaquillas, Arenillas y Santa Rosa.</p></article>
-      <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-date">2015 — 2016</div><h3>Marcimex</h3><h4>Promotor Informático</h4><p>Promoción de equipos y accesorios informáticos y control de garantías, etapa desarrollada en paralelo con Grupo Open.</p></article>
-      <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-date">2012 — 2014</div><h3>Almacén V&amp;A</h3><h4>Analista de Sistemas</h4><p>Progresión desde técnico auxiliar hasta técnico jefe y responsable del departamento de informática: soporte, operación tecnológica y mantenimiento de sistemas.</p></article>
-      <article class="timeline-item"><span class="timeline-dot"></span><div class="timeline-date">2010 — ACTUALIDAD</div><h3>Codeandolo</h3><h4>Desarrollador de software independiente</h4><p>Desarrollo de aplicaciones de escritorio y web, comenzando con Java y .NET y evolucionando hacia un stack más amplio.</p></article>
-    </div>
-  </div>
-</section>
+          <div class="timeline reveal reveal-delay">
+            <article class="timeline-item current">
+              <span class="timeline-dot"></span>
+              <div class="timeline-date">2021 — ACTUALIDAD</div>
+              <h3>Security Data</h3>
+              <h4>Desarrollador Senior Full Stack</h4>
+              <p>
+                Ingresé como Operador de Registro y Soporte TI y pasé a desarrollo: Full Stack Junior desde diciembre de 2022 y Mid-Level desde marzo de 2024. Desarrollo y mantengo sistemas en producción con PHP, Java y JavaScript: servicios backend, integración de APIs, capas de datos, depuración y refactorización. Desarrollé <strong>AutoLink</strong>, que creció de de un formulario de registro a una plataforma distribuida de emisión y continuidad de trámites de firma electrónica: a partir de
+                un enlace cifrado recupera la solicitud, valida identidad, RUC y trámites en curso, reutiliza documentos en renovaciones y lleva al usuario a su siguiente tarea (biometría, vídeo, pago o revisión) sobre procesos orquestados. Posteriormente, incluye un gateway B2B con autenticación HMAC y payloads cifrados, y Posterior maduro como una extensión de Chrome + PWA y un SDK en TypeScript para integradores. También entregué las extensiones SingExtension y EC Google Extension (visor de
+                PDF) y trabajo con arquitectura de microfrontends.
+              </p>
+              <div class="timeline-tags"><b>Java</b><b>Spring Boot</b><b>PHP</b><b>TypeScript</b><b>Angular</b><b>React</b><b>Chrome Extensions</b><b>PWA</b><b>B2B Gateway</b><b>TypeScript SDK</b><b>Asterisk</b><b>Agent AI</b></div>
+              <a class="timeline-link" href="https://portal-sd.securitydata.net.ec/app-security-data/#/formulario-autolink/RpN6Tsfpd4oHBQPDC6w-a3cs9STBEME5ELmL3JCegd8" target="_blank" rel="noopener noreferrer">Ver formulario AutoLink ↗</a>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-date">2017 — 2021</div>
+              <h3>Diners Club del Ecuador</h3>
+              <h4>Oficial de Crédito</h4>
+              <p>Análisis y gestión crediticia de cartera de tarjetas de crédito. Una etapa fuera de la tecnología que amplió mi comprensión de procesos, riesgo, operación y atención al cliente.</p>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-date">2017 — 2021</div>
+              <h3>Gestiona GTX</h3>
+              <h4>Gestor Domiciliario</h4>
+              <p>Negociación y gestión de carteras vencidas y prelegal, desarrollada en paralelo con la etapa en Diners Club.</p>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-date">2016 — 2017</div>
+              <h3>Explofrap</h3>
+              <h4>Analista de Sistemas</h4>
+              <p>Análisis de sistemas, desarrollo de aplicaciones con Visual Basic, arquitectura de red y administración de servidores.</p>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-date">2014 — 2017</div>
+              <h3>Supercompu TIC</h3>
+              <h4>Propietario y fundador</h4>
+              <p>Emprendimiento propio de servicios técnicos y soluciones informáticas, combinando operación, cliente, soporte y gestión.</p>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-date">2015 — 2016</div>
+              <h3>Grupo Open</h3>
+              <h4>Jefe Técnico Informático</h4>
+              <p>Mantenimiento correctivo y preventivo de equipos en agencias de Huaquillas, Arenillas y Santa Rosa.</p>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-date">2015 — 2016</div>
+              <h3>Marcimex</h3>
+              <h4>Promotor Informático</h4>
+              <p>Promoción de equipos y accesorios informáticos y control de garantías, etapa desarrollada en paralelo con Grupo Open.</p>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-date">2012 — 2014</div>
+              <h3>Almacén V&amp;A</h3>
+              <h4>Analista de Sistemas</h4>
+              <p>Progresión desde técnico auxiliar hasta técnico jefe y responsable del departamento de informática: soporte, operación tecnológica y mantenimiento de sistemas.</p>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-date">2010 — ACTUALIDAD</div>
+              <h3>Codeandolo</h3>
+              <h4>Desarrollador de software independiente</h4>
+              <p>Desarrollo de aplicaciones de escritorio y web, comenzando con Java y .NET y evolucionando hacia un stack más amplio.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-<section id="ecuapp" class="section-wrap ecuapp-section">
-  <div class="section-label reveal"><span>05</span><p>ECUAPP · ECOSISTEMA</p></div>
-  <div class="ecuapp-hero reveal">
-    <div class="ecuapp-copy">
-      <span class="ecuapp-mark">ECUAPP</span>
-      <h2>Una suite de software para negocios, construida alrededor de <em>IA + producto.</em></h2>
-      <p>EcuApp es la startup que estoy construyendo: un conjunto de sistemas independientes que resuelven necesidades concretas —inventario, facturación electrónica, educación, salud, autenticación, firma electrónica— y servicios de IA para voz y documentos.</p>
-      <p class="ecuapp-note">Cada sistema vive en su propio repositorio dentro de la organización EcuApp en GitHub. La idea es que puedan usarse por separado o combinarse según el cliente.</p>
-    </div>
-    <div class="ecuapp-status-card">
-      <span>ESTADO ACTUAL</span>
-      <strong>En construcción</strong>
-      <small>EcuApp todavía no es una empresa consolidada. Sus sistemas están en desarrollo activo en repositorios privados de la organización.</small>
-      <div class="ecuapp-counts"><div><b>10</b><small>sistemas</small></div><div><b>3</b><small>áreas</small></div></div>
-    </div>
-  </div>
+      <section id="ecuapp" class="section-wrap ecuapp-section">
+        <div class="section-label reveal">
+          <span>05</span>
+          <p>ECUAPP · ECOSISTEMA</p>
+        </div>
+        <div class="ecuapp-hero reveal">
+          <div class="ecuapp-copy">
+            <span class="ecuapp-mark">ECUAPP</span>
+            <h2>Una suite de software para negocios, construida alrededor de <em>IA + producto.</em></h2>
+            <p>EcuApp es la startup que estoy construyendo: un conjunto de sistemas independientes que resuelven necesidades concretas —inventario, facturación electrónica, educación, salud, autenticación, firma electrónica— y servicios de IA para voz y documentos.</p>
+            <p class="ecuapp-note">Cada sistema vive en su propio repositorio dentro de la organización EcuApp en GitHub. La idea es que puedan usarse por separado o combinarse según el cliente.</p>
+          </div>
+          <div class="ecuapp-status-card">
+            <span>ESTADO ACTUAL</span>
+            <strong>En construcción</strong>
+            <small>EcuApp todavía no es una empresa consolidada. Sus sistemas están en desarrollo activo en repositorios privados de la organización.</small>
+            <div class="ecuapp-counts">
+              <div><b>10</b><small>sistemas</small></div>
+              <div><b>3</b><small>áreas</small></div>
+            </div>
+          </div>
+        </div>
 
-  <div class="ecosystem-main reveal">
-    <div>
-      <span class="ecosystem-status">PIEZA CENTRAL · V1 EN PRUEBAS</span>
-      <h3>Mnemosine</h3>
-      <p>Capa de memoria y contexto para proyectos y agentes de IA: conocimiento, reglas, tareas, requerimientos y skills reutilizables. El objetivo es que cada proyecto consuma desde una API solo el contexto que necesita, sin duplicar su memoria en cada repositorio.</p>
-    </div>
-    <div class="ecosystem-tags"><b>Memory</b><b>Context</b><b>Agents</b><b>Skills</b><b>Project orchestration</b></div>
-  </div>
+        <div class="ecosystem-main reveal">
+          <div>
+            <span class="ecosystem-status">PIEZA CENTRAL · V1 EN PRUEBAS</span>
+            <h3>Mnemosine</h3>
+            <p>Capa de memoria y contexto para proyectos y agentes de IA: conocimiento, reglas, tareas, requerimientos y skills reutilizables. El objetivo es que cada proyecto consuma desde una API solo el contexto que necesita, sin duplicar su memoria en cada repositorio.</p>
+          </div>
+          <div class="ecosystem-tags"><b>Memory</b><b>Context</b><b>Agents</b><b>Skills</b><b>Project orchestration</b></div>
+        </div>
 
-  <div class="product-groups reveal">
-    <p class="product-intro">Cada sistema usa el lenguaje que mejor encaja con su dominio: <strong>Java · Spring Boot</strong> para firma electrónica, facturación, autenticación, inventario y datos clínicos; <strong>Python</strong> para los modelos de voz y OCR; y <strong>PHP · Laravel</strong> para la gestión educativa, centrada en formularios y reportes.</p>
-    <ul class="product-legend" aria-label="Áreas del ecosistema"><li data-group="gestion">Gestión empresarial</li><li data-group="seguridad">Seguridad y documentos</li><li data-group="ia">IA aplicada a voz y documentos</li></ul>
-    <div class="product-grid">
-    <article class="product-card" data-group="gestion"><span class="product-domain">GESTIÓN · INVENTARIO</span><h3>Hefesto</h3><p>Manejo, venta, control y distribución de inventario para todo tipo de producto.</p><p class="product-why">Transacciones y concurrencia para stock, ventas y distribución, con integración directa a Mercurio.</p><b class="product-stack" data-lang="java">Java · Spring Boot</b></article>
-    <article class="product-card" data-group="gestion"><span class="product-domain">GESTIÓN · FACTURACIÓN</span><h3>Mercurio</h3><p>Software de facturación electrónica.</p><p class="product-why">La firma de comprobantes del SRI con certificado .p12 se apoya en las mismas librerías Java que Tyr.</p><b class="product-stack" data-lang="java">Java · Spring Boot</b></article>
-    <article class="product-card" data-group="gestion"><span class="product-domain">GESTIÓN · EDUCACIÓN</span><h3>Atenea</h3><p>Sistema de gestión educativa.</p><p class="product-why">Gestión con mucho formulario, reporte y portal: Laravel acelera el CRUD y abarata el hosting.</p><b class="product-stack" data-lang="php">PHP · Laravel</b></article>
-    <article class="product-card" data-group="gestion"><span class="product-domain">GESTIÓN · SALUD</span><h3>Panacea</h3><p>Sistema de gestión médica.</p><p class="product-why">Datos clínicos sensibles, auditoría e interoperabilidad HL7 FHIR con HAPI FHIR.</p><b class="product-stack" data-lang="java">Java · Spring Boot</b></article>
-    <article class="product-card" data-group="seguridad"><span class="product-domain">SEGURIDAD · ACCESO</span><h3>Heimdall</h3><p>Sistema de control de autenticación.</p><p class="product-why">Spring Security y Spring Authorization Server para OAuth 2.0 y OpenID Connect.</p><b class="product-stack" data-lang="java">Java · Spring Boot</b></article>
-    <article class="product-card" data-group="seguridad"><span class="product-domain">SEGURIDAD · DOCUMENTOS</span><h3>Tyr</h3><p>Firma de documentos con firma electrónica.</p><p class="product-why">Las librerías ecuatorianas de firma con certificados .p12 solo existen en Java.</p><b class="product-stack" data-lang="java">Java · Spring Boot</b></article>
-    <article class="product-card" data-group="ia"><span class="product-domain">IA · VOZ</span><h3>Forcis</h3><p>Conversión de audio a texto.</p><p class="product-why">Reconocimiento de voz con modelos como Whisper, cuyo ecosistema es Python.</p><b class="product-stack" data-lang="python">Python</b></article>
-    <article class="product-card" data-group="ia"><span class="product-domain">IA · VOZ</span><h3>Poseidon</h3><p>Conversión de texto a voz.</p><p class="product-why">Síntesis de voz con modelos TTS abiertos como Piper, nativos de Python.</p><b class="product-stack" data-lang="python">Python</b></article>
-    <article class="product-card" data-group="ia"><span class="product-domain">IA · VOZ</span><h3>Loki</h3><p>Clonación de voz a partir de audios de ejemplo.</p><p class="product-why">Modelos de clonación como XTTS u OpenVoice, construidos sobre PyTorch.</p><b class="product-stack" data-lang="python">Python</b></article>
-    <article class="product-card" data-group="ia"><span class="product-domain">IA · DOCUMENTOS</span><h3>Thot</h3><p>OCR de imágenes y archivos PDF.</p><p class="product-why">OCR con Tesseract o PaddleOCR y extracción de PDF con PyMuPDF.</p><b class="product-stack" data-lang="python">Python</b></article>
-    </div>
-  </div>
-</section>
+        <div class="product-groups reveal">
+          <p class="product-intro">Cada sistema usa el lenguaje que mejor encaja con su dominio: <strong>Java · Spring Boot</strong> para firma electrónica, facturación, autenticación, inventario y datos clínicos; <strong>Python</strong> para los modelos de voz y OCR; y <strong>PHP · Laravel</strong> para la gestión educativa, centrada en formularios y reportes.</p>
+          <ul class="product-legend" aria-label="Áreas del ecosistema">
+            <li data-group="gestion">Gestión empresarial</li>
+            <li data-group="seguridad">Seguridad y documentos</li>
+            <li data-group="ia">IA aplicada a voz y documentos</li>
+          </ul>
+          <div class="product-grid">
+            <article class="product-card" data-group="gestion">
+              <span class="product-domain">GESTIÓN · INVENTARIO</span>
+              <h3>Hefesto</h3>
+              <p>Manejo, venta, control y distribución de inventario para todo tipo de producto.</p>
+              <p class="product-why">Transacciones y concurrencia para stock, ventas y distribución, con integración directa a Mercurio.</p>
+              <b class="product-stack" data-lang="java">Java · Spring Boot</b>
+            </article>
+            <article class="product-card" data-group="gestion">
+              <span class="product-domain">GESTIÓN · FACTURACIÓN</span>
+              <h3>Mercurio</h3>
+              <p>Software de facturación electrónica.</p>
+              <p class="product-why">La firma de comprobantes del SRI con certificado .p12 se apoya en las mismas librerías Java que Tyr.</p>
+              <b class="product-stack" data-lang="java">Java · Spring Boot</b>
+            </article>
+            <article class="product-card" data-group="gestion">
+              <span class="product-domain">GESTIÓN · EDUCACIÓN</span>
+              <h3>Atenea</h3>
+              <p>Sistema de gestión educativa.</p>
+              <p class="product-why">Gestión con mucho formulario, reporte y portal: Laravel acelera el CRUD y abarata el hosting.</p>
+              <b class="product-stack" data-lang="php">PHP · Laravel</b>
+            </article>
+            <article class="product-card" data-group="gestion">
+              <span class="product-domain">GESTIÓN · SALUD</span>
+              <h3>Panacea</h3>
+              <p>Sistema de gestión médica.</p>
+              <p class="product-why">Datos clínicos sensibles, auditoría e interoperabilidad HL7 FHIR con HAPI FHIR.</p>
+              <b class="product-stack" data-lang="java">Java · Spring Boot</b>
+            </article>
+            <article class="product-card" data-group="seguridad">
+              <span class="product-domain">SEGURIDAD · ACCESO</span>
+              <h3>Heimdall</h3>
+              <p>Sistema de control de autenticación.</p>
+              <p class="product-why">Spring Security y Spring Authorization Server para OAuth 2.0 y OpenID Connect.</p>
+              <b class="product-stack" data-lang="java">Java · Spring Boot</b>
+            </article>
+            <article class="product-card" data-group="seguridad">
+              <span class="product-domain">SEGURIDAD · DOCUMENTOS</span>
+              <h3>Tyr</h3>
+              <p>Firma de documentos con firma electrónica.</p>
+              <p class="product-why">Las librerías ecuatorianas de firma con certificados .p12 solo existen en Java.</p>
+              <b class="product-stack" data-lang="java">Java · Spring Boot</b>
+            </article>
+            <article class="product-card" data-group="ia">
+              <span class="product-domain">IA · VOZ</span>
+              <h3>Forcis</h3>
+              <p>Conversión de audio a texto.</p>
+              <p class="product-why">Reconocimiento de voz con modelos como Whisper, cuyo ecosistema es Python.</p>
+              <b class="product-stack" data-lang="python">Python</b>
+            </article>
+            <article class="product-card" data-group="ia">
+              <span class="product-domain">IA · VOZ</span>
+              <h3>Poseidon</h3>
+              <p>Conversión de texto a voz.</p>
+              <p class="product-why">Síntesis de voz con modelos TTS abiertos como Piper, nativos de Python.</p>
+              <b class="product-stack" data-lang="python">Python</b>
+            </article>
+            <article class="product-card" data-group="ia">
+              <span class="product-domain">IA · VOZ</span>
+              <h3>Loki</h3>
+              <p>Clonación de voz a partir de audios de ejemplo.</p>
+              <p class="product-why">Modelos de clonación como XTTS u OpenVoice, construidos sobre PyTorch.</p>
+              <b class="product-stack" data-lang="python">Python</b>
+            </article>
+            <article class="product-card" data-group="ia">
+              <span class="product-domain">IA · DOCUMENTOS</span>
+              <h3>Thot</h3>
+              <p>OCR de imágenes y archivos PDF.</p>
+              <p class="product-why">OCR con Tesseract o PaddleOCR y extracción de PDF con PyMuPDF.</p>
+              <b class="product-stack" data-lang="python">Python</b>
+            </article>
+          </div>
+        </div>
+      </section>
 
-<section id="proyectos" class="section-wrap projects-section">
-  <div class="section-label reveal"><span>06</span><p>PROYECTOS · EVIDENCIA</p></div>
-  <div class="projects-head reveal">
-    <div><p class="kicker">Trabajo visible</p><h2>De la visión a <em>artefactos concretos.</em></h2></div>
-    <a href="https://github.com/JhonnyMinian92" target="_blank" rel="noopener noreferrer" class="text-link">Explorar GitHub ↗</a>
-  </div>
+      <section id="proyectos" class="section-wrap projects-section">
+        <div class="section-label reveal">
+          <span>06</span>
+          <p>PROYECTOS · EVIDENCIA</p>
+        </div>
+        <div class="projects-head reveal">
+          <div>
+            <p class="kicker">Trabajo visible</p>
+            <h2>De la visión a <em>artefactos concretos.</em></h2>
+          </div>
+          <a href="https://github.com/JhonnyMinian92" target="_blank" rel="noopener noreferrer" class="text-link">Explorar GitHub ↗</a>
+        </div>
 
-  <div class="project-showcase project-showcase-expanded">
-    <article class="project-card project-main project-with-image reveal project-featured">
-      <img class="project-thumb" src="assets/projects/mnemosine.jpg" alt="Vista previa conceptual de Mnemosine" loading="lazy"/>
-      <div class="project-number">01</div>
-      <div><span>AI · MEMORY · ARCHITECTURE</span><h3>Mnemosine</h3><p>Arquitectura de memoria y contexto para agentes y proyectos de software. Organiza memoria de corto y largo plazo, episódica, semántica y procedimental, junto con reglas, tareas y skills por rol, lenguaje y arquitectura. Es la pieza que da continuidad al trabajo con IA entre sesiones y proyectos.</p><div class="project-tags"><b>Memory</b><b>Agents</b><b>Context</b><b>Skills</b><b>API</b></div></div>
-      <a class="project-arrow" href="https://github.com/EcuApp/mnemosine" target="_blank" rel="noopener noreferrer" aria-label="Abrir repositorio de Mnemosine">↗</a>
-    </article>
+        <div class="project-showcase project-showcase-expanded">
+          <article class="project-card project-main project-with-image reveal project-featured">
+            <img class="project-thumb" src="assets/projects/mnemosine.jpg" alt="Vista previa conceptual de Mnemosine" loading="lazy" />
+            <div class="project-number">01</div>
+            <div>
+              <span>AI · MEMORY · ARCHITECTURE</span>
+              <h3>Mnemosine</h3>
+              <p>Arquitectura de memoria y contexto para agentes y proyectos de software. Organiza memoria de corto y largo plazo, episódica, semántica y procedimental, junto con reglas, tareas y skills por rol, lenguaje y arquitectura. Es la pieza que da continuidad al trabajo con IA entre sesiones y proyectos.</p>
+              <div class="project-tags"><b>Memory</b><b>Agents</b><b>Context</b><b>Skills</b><b>API</b></div>
+            </div>
+            <a class="project-arrow" href="https://github.com/EcuApp/mnemosine" target="_blank" rel="noopener noreferrer" aria-label="Abrir repositorio de Mnemosine">↗</a>
+          </article>
 
-    <article class="project-card project-with-image reveal">
-      <img class="project-thumb" src="assets/projects/cuspide-preview.jpg" alt="Panel de Cúspide con alumnos, matrículas, ingresos y gastos" loading="lazy"/>
-      <div class="project-number">02</div>
-      <div><span>EDUCACIÓN · EN PRODUCCIÓN</span><h3>Cúspide</h3><p>Sistema de control educativo para clases, pagos, estudiantes y docentes, con un panel de alumnos, matrículas, ingresos, gastos y balance mensual.</p><div class="project-tags"><b>PHP</b><b>Composer</b><b>Twig</b></div></div>
-      <a class="project-arrow" href="https://operacionadmin.com" target="_blank" rel="noopener noreferrer" aria-label="Abrir Cúspide">↗</a>
-    </article>
+          <article class="project-card project-with-image reveal">
+            <img class="project-thumb" src="assets/projects/cuspide-preview.jpg" alt="Panel de Cúspide con alumnos, matrículas, ingresos y gastos" loading="lazy" />
+            <div class="project-number">02</div>
+            <div>
+              <span>EDUCACIÓN · EN PRODUCCIÓN</span>
+              <h3>Cúspide</h3>
+              <p>Sistema de control educativo para clases, pagos, estudiantes y docentes, con un panel de alumnos, matrículas, ingresos, gastos y balance mensual.</p>
+              <div class="project-tags"><b>PHP</b><b>Composer</b><b>Twig</b></div>
+            </div>
+            <a class="project-arrow" href="https://operacionadmin.com" target="_blank" rel="noopener noreferrer" aria-label="Abrir Cúspide">↗</a>
+          </article>
 
-    <article class="project-card project-with-image reveal">
-      <img class="project-thumb" src="assets/projects/clinical-admin-preview.jpg" alt="Agenda de citas de Clinical Admin" loading="lazy"/>
-      <div class="project-number">03</div>
-      <div><span>SALUD · EN PRODUCCIÓN</span><h3>Clinical Admin</h3><p>Administración de una clínica: agenda de citas por paciente, médico y especialidad, estados de atención y confirmaciones por correo y WhatsApp.</p><div class="project-tags"><b>PHP</b><b>MySQL</b><b>Web</b></div></div>
-      <a class="project-arrow" href="https://clinical-admin.xo.je" target="_blank" rel="noopener noreferrer" aria-label="Abrir Clinical Admin">↗</a>
-    </article>
+          <article class="project-card project-with-image reveal">
+            <img class="project-thumb" src="assets/projects/clinical-admin-preview.jpg" alt="Agenda de citas de Clinical Admin" loading="lazy" />
+            <div class="project-number">03</div>
+            <div>
+              <span>SALUD · EN PRODUCCIÓN</span>
+              <h3>Clinical Admin</h3>
+              <p>Administración de una clínica: agenda de citas por paciente, médico y especialidad, estados de atención y confirmaciones por correo y WhatsApp.</p>
+              <div class="project-tags"><b>PHP</b><b>MySQL</b><b>Web</b></div>
+            </div>
+            <a class="project-arrow" href="https://clinical-admin.xo.je" target="_blank" rel="noopener noreferrer" aria-label="Abrir Clinical Admin">↗</a>
+          </article>
 
-    <article class="project-card project-with-image reveal">
-      <img class="project-thumb" src="assets/projects/gestor_imagen.jpg" alt="Panel de Security Image con carga de imágenes, cuota y biblioteca" loading="lazy"/>
-      <div class="project-number">04</div>
-      <div><span>SEGURIDAD · EMPRESARIAL</span><h3>Security Image</h3><p>Gestor de imágenes desplegado en el portal de Security Data: carga de JPG y PNG, enlaces con expiración configurable, cuota de almacenamiento por usuario, administración de usuarios, plantillas y registro.</p><div class="project-tags"><b>Web</b><b>Storage</b><b>Expiring links</b><b>Users</b></div></div>
-      <a class="project-arrow" href="https://portal-sd.securitydata.net.ec/security-image/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Security Image">↗</a>
-    </article>
+          <article class="project-card project-with-image reveal">
+            <img class="project-thumb" src="assets/projects/gestor_imagen.jpg" alt="Panel de Security Image con carga de imágenes, cuota y biblioteca" loading="lazy" />
+            <div class="project-number">04</div>
+            <div>
+              <span>SEGURIDAD · EMPRESARIAL</span>
+              <h3>Security Image</h3>
+              <p>Gestor de imágenes desplegado en el portal de Security Data: carga de JPG y PNG, enlaces con expiración configurable, cuota de almacenamiento por usuario, administración de usuarios, plantillas y registro.</p>
+              <div class="project-tags"><b>Web</b><b>Storage</b><b>Expiring links</b><b>Users</b></div>
+            </div>
+            <a class="project-arrow" href="https://portal-sd.securitydata.net.ec/security-image/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Security Image">↗</a>
+          </article>
 
-    <article class="project-card project-wide reveal">
-      <div class="project-number">05</div>
-      <div><span>IA · INVESTIGACIÓN</span><h3>Multimodal Early Fusion · Green AI</h3><p>Experimentación pública sobre clasificación multimodal con fusión temprana de datos tabulares y texto, y sobre la eficiencia de los modelos (Green AI). Es la misma línea de investigación de mi Trabajo Fin de Máster.</p><div class="project-tags"><b>Python</b><b>scikit-learn</b><b>XGBoost</b><b>TF-IDF</b><b>Multimodal</b></div></div>
-      <a href="https://github.com/JhonnyMinian92/multimodal-early-fusion-green-ai" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="Abrir repositorio Multimodal Early Fusion">↗</a>
-    </article>
-  </div>
-</section>
+          <article class="project-card project-wide reveal">
+            <div class="project-number">05</div>
+            <div>
+              <span>IA · INVESTIGACIÓN</span>
+              <h3>Multimodal Early Fusion · Green AI</h3>
+              <p>Experimentación pública sobre clasificación multimodal con fusión temprana de datos tabulares y texto, y sobre la eficiencia de los modelos (Green AI). Es la misma línea de investigación de mi Trabajo Fin de Máster.</p>
+              <div class="project-tags"><b>Python</b><b>scikit-learn</b><b>XGBoost</b><b>TF-IDF</b><b>Multimodal</b></div>
+            </div>
+            <a href="https://github.com/JhonnyMinian92/multimodal-early-fusion-green-ai" target="_blank" rel="noopener noreferrer" class="project-arrow" aria-label="Abrir repositorio Multimodal Early Fusion">↗</a>
+          </article>
+        </div>
+      </section>
 
-<section id="formacion" class="section-wrap education-section">
-  <div class="section-label reveal"><span>07</span><p>FORMACIÓN</p></div>
-  <div class="education-card reveal">
-    <div>
-      <p class="kicker">Base académica</p>
-      <h2>Ingeniería + <em>Inteligencia Artificial.</em></h2>
-      <p>La formación académica se desarrolló en paralelo con el trabajo. El Máster en Inteligencia Artificial está culminado —TFM defendido en septiembre de 2026— y el título se encuentra en proceso administrativo.</p>
-    </div>
-    <div class="education-items">
-      <div><strong>2025 — 2026</strong><span>Máster Universitario en Inteligencia Artificial</span><small>UNIR · promedio final 8/10 · TFM: «Pipeline software reproducible para la clasificación multimodal de intenciones de renovación y negociabilidad mediante fusión temprana de datos tabulares y texto»</small></div>
-      <div><strong>2009 — 2020</strong><span>Ingeniería de Sistemas</span><small>Universidad Técnica de Machala · trabajo de titulación: sistema web de gestión de transporte y seguimiento de carga por GPS (publicado en 2020, ISBN 9786203032277)</small></div>
-      <div><strong>2025 — 2026</strong><span>Formación complementaria</span><small>AWS Machine Learning Foundations (2026) · Programación en Python (2025)</small></div>
-      <div><strong>Certificaciones</strong><span>Java, Spring Boot y Android</span><small>Fundamentos de Java Spring Boot · Programación Orientada a Objetos con Java SE · Firebase para Android · Programación Básica</small></div>
-    </div>
-  </div>
-  <div class="training-strip reveal"><span>ÁREAS DE LA MAESTRÍA</span><p>Machine Learning no supervisado · Cloud para IA · Gestión de proyectos de IA · NLP · Razonamiento y planificación automática · Redes neuronales y Deep Learning · Técnicas de Machine Learning · Visión Artificial</p><p class="training-note">Formación continua en Platzi y Coursera.</p></div>
-</section>
+      <section id="formacion" class="section-wrap education-section">
+        <div class="section-label reveal">
+          <span>07</span>
+          <p>FORMACIÓN</p>
+        </div>
+        <div class="education-card reveal">
+          <div>
+            <p class="kicker">Base académica</p>
+            <h2>Ingeniería + <em>Inteligencia Artificial.</em></h2>
+            <p>La formación académica se desarrolló en paralelo con el trabajo. El Máster en Inteligencia Artificial está culminado —TFM defendido en septiembre de 2026— y el título se encuentra en proceso administrativo.</p>
+          </div>
+          <div class="education-items">
+            <div><strong>2025 — 2026</strong><span>Máster Universitario en Inteligencia Artificial</span><small>UNIR · promedio final 8/10 · TFM: «Pipeline software reproducible para la clasificación multimodal de intenciones de renovación y negociabilidad mediante fusión temprana de datos tabulares y texto»</small></div>
+            <div><strong>2009 — 2020</strong><span>Ingeniería de Sistemas</span><small>Universidad Técnica de Machala · trabajo de titulación: sistema web de gestión de transporte y seguimiento de carga por GPS (publicado en 2020, ISBN 9786203032277)</small></div>
+            <div><strong>2025 — 2026</strong><span>Formación complementaria</span><small>AWS Machine Learning Foundations (2026) · Programación en Python (2025)</small></div>
+            <div><strong>Certificaciones</strong><span>Java, Spring Boot y Android</span><small>Fundamentos de Java Spring Boot · Programación Orientada a Objetos con Java SE · Firebase para Android · Programación Básica</small></div>
+          </div>
+        </div>
+        <div class="training-strip reveal">
+          <span>ÁREAS DE LA MAESTRÍA</span>
+          <p>Machine Learning no supervisado · Cloud para IA · Gestión de proyectos de IA · NLP · Razonamiento y planificación automática · Redes neuronales y Deep Learning · Técnicas de Machine Learning · Visión Artificial</p>
+          <p class="training-note">Formación continua en Platzi y Coursera.</p>
+        </div>
+      </section>
 
-<section id="contacto" class="section-wrap contact-section">
-  <div class="contact-orb" aria-hidden="true"></div>
-  <div class="section-label reveal"><span>08</span><p>CONTACTO</p></div>
-  <div class="contact-content reveal">
-    <h2>Una trayectoria construida.<br/><em>Ahora, nuevos sistemas.</em></h2>
-    <p>Si buscas a alguien para construir software de producción, automatizar procesos o aplicar IA y agentes a un problema real, escríbeme. También converso con gusto sobre EcuApp y Mnemosine.</p>
-    <div class="contact-cta-row">
-      <a class="button button-primary magnetic" href="mailto:jhonnyminian@gmail.com?subject=Contacto%20profesional">jhonnyminian@gmail.com <span>↗</span></a>
-      <a class="button button-ghost magnetic" href="assets/cv/Jhonny-Minan-CV-ES.pdf" download="Jhonny-Minan-CV-ES.pdf">Descargar CV ES <span>↓</span></a>
-    </div>
-    <div class="contact-cv-row"><span>También disponible en</span><a href="assets/cv/Jhonny-Minan-CV-EN.pdf" download="Jhonny-Minan-CV-EN.pdf">English CV</a></div>
-  </div>
-  <div class="contact-links reveal reveal-delay">
-    <a class="social-contact" href="https://www.linkedin.com/in/jhonnyminian/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
-    <a class="social-contact" href="https://github.com/JhonnyMinian92" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
-    <a class="social-contact" href="https://www.youtube.com/@fullstackecuador" target="_blank" rel="noopener noreferrer">YouTube <span>↗</span></a>
-    <a class="social-contact" href="https://platzi.com/p/JhonnyMinian92/" target="_blank" rel="noopener noreferrer">Platzi <span>↗</span></a>
-  </div>
-</section>
-</main>
+      <section id="contacto" class="section-wrap contact-section">
+        <div class="contact-orb" aria-hidden="true"></div>
+        <div class="section-label reveal">
+          <span>08</span>
+          <p>CONTACTO</p>
+        </div>
+        <div class="contact-content reveal">
+          <h2>Una trayectoria construida.<br /><em>Ahora, nuevos sistemas.</em></h2>
+          <p>Si buscas a alguien para construir software de producción, automatizar procesos o aplicar IA y agentes a un problema real, escríbeme. También converso con gusto sobre EcuApp y Mnemosine.</p>
+          <div class="contact-cta-row">
+            <a class="button button-primary magnetic" href="mailto:jhonnyminian@gmail.com?subject=Contacto%20profesional">jhonnyminian@gmail.com <span>↗</span></a>
+            <a class="button button-ghost magnetic" href="assets/cv/Jhonny-Minan-CV-ES.pdf" download="Jhonny-Minan-CV-ES.pdf">Descargar CV ES <span>↓</span></a>
+          </div>
+          <div class="contact-cv-row"><span>También disponible en</span><a href="assets/cv/Jhonny-Minan-CV-EN.pdf" download="Jhonny-Minan-CV-EN.pdf">English CV</a></div>
+        </div>
+        <div class="contact-links reveal reveal-delay">
+          <a class="social-contact" href="https://www.linkedin.com/in/jhonnyminian/" target="_blank" rel="noopener noreferrer">LinkedIn <span>↗</span></a>
+          <a class="social-contact" href="https://github.com/JhonnyMinian92" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
+          <a class="social-contact" href="https://www.youtube.com/@fullstackecuador" target="_blank" rel="noopener noreferrer">YouTube <span>↗</span></a>
+          <a class="social-contact" href="https://platzi.com/p/JhonnyMinian92/" target="_blank" rel="noopener noreferrer">Platzi <span>↗</span></a>
+        </div>
+      </section>
+    </main>
 
-<footer class="footer section-wrap">
-  <span>© 2026 Jhonny Darwin Miñan Girón</span>
-  <span>Machala, Ecuador · Software + IA</span>
-  <a href="#inicio">Volver arriba ↑</a>
-</footer>
+    <footer class="footer section-wrap">
+      <span>© 2026 Jhonny Miñan</span>
+      <span>Machala, Ecuador · Software + IA</span>
+      <a href="#inicio">Volver arriba ↑</a>
+    </footer>
 
-<script src="index.js" defer></script>
-</body>
+    <script src="index.js" defer></script>
+  </body>
 </html>

@@ -8,7 +8,7 @@ const puppeteer = require('puppeteer-core');
 const OUT_DIR = path.resolve(__dirname, '../../assets/cv');
 const CHROME = process.env.CHROME_PATH || 'C:/Program Files/Google/Chrome/Application/chrome.exe';
 
-const font = file => fs.readFileSync(require.resolve(file)).toString('base64');
+const font = (file) => fs.readFileSync(require.resolve(file)).toString('base64');
 const FONTS = {
   inter: font('@fontsource-variable/inter/files/inter-latin-wght-normal.woff2'),
   interExt: font('@fontsource-variable/inter/files/inter-latin-ext-wght-normal.woff2'),
@@ -43,7 +43,8 @@ const CONTENT = {
     profile: 'Ingeniero de software full stack con 8+ años desarrollando software y Máster en Inteligencia Artificial. Construyo y mantengo sistemas en producción con Java, Spring Boot, PHP y TypeScript; diseño plataformas distribuidas de procesos como AutoLink, con gateway B2B y SDK en TypeScript; y aplico IA, agentes y automatización a problemas reales. Mi base en soporte, redes, servidores y emprendimiento me da una visión completa, de la infraestructura al producto.',
     experience: [
       {
-        org: 'Security Data', period: '2021 — actualidad',
+        org: 'Security Data',
+        period: '2021 — actualidad',
         roles: [
           ['Desarrollador Full Stack · Mid-Level', 'mar 2024 — actualidad'],
           ['Desarrollador Full Stack · Junior', 'dic 2022 — mar 2024'],
@@ -58,7 +59,9 @@ const CONTENT = {
         ],
       },
       {
-        org: 'Codeandolo', period: '2010 — actualidad', role: 'Desarrollador de software independiente',
+        org: 'Codeandolo',
+        period: '2010 — actualidad',
+        role: 'Desarrollador de software independiente',
         bullets: ['Aplicaciones de escritorio y web para clientes y proyectos propios.'],
       },
     ],
@@ -74,24 +77,20 @@ const CONTENT = {
       ['Marcimex', 'Promotor Informático', '2015 — 2016', 'Venta técnica de equipos y gestión de garantías.'],
     ],
     projects: [
-      { name: 'Mnemosine', meta: 'Memoria y contexto para agentes de IA · V1 en pruebas',
-        text: 'Memoria de corto y largo plazo, episódica, semántica y procedimental, con reglas, tareas y skills; entrega a cada proyecto solo el contexto que necesita.' },
-      { name: 'EcuApp', meta: 'Fundador · suite de 10 sistemas en desarrollo',
-        text: 'Gestión empresarial (inventario, facturación electrónica, educación, salud), seguridad (autenticación, firma electrónica de documentos) e IA aplicada (voz a texto, texto a voz, clonación de voz, OCR).',
-        stack: 'Java · Spring Boot, Python, PHP · Laravel' },
-      { name: 'Cúspide', meta: 'Sistema de control educativo · en producción', link: 'operacionadmin.com',
-        text: 'Clases, pagos, estudiantes y docentes, con panel de matrículas, ingresos, gastos y balance.', stack: 'PHP, Twig' },
-      { name: 'Clinical Admin', meta: 'Gestión clínica · en producción', link: 'clinical-admin.xo.je',
-        text: 'Agenda de citas por paciente, médico y especialidad, con estados de atención y confirmaciones por correo y WhatsApp.', stack: 'PHP, MySQL' },
-      { name: 'Multimodal Early Fusion · Green AI', meta: 'Investigación en IA', link: 'github.com/JhonnyMinian92/multimodal-early-fusion-green-ai',
-        text: 'Clasificación multimodal con fusión temprana de datos tabulares y texto, y eficiencia de modelos.', stack: 'Python, scikit-learn, XGBoost' },
+      { name: 'Mnemosine', meta: 'Memoria y contexto para agentes de IA · V1 en pruebas', text: 'Memoria de corto y largo plazo, episódica, semántica y procedimental, con reglas, tareas y skills; entrega a cada proyecto solo el contexto que necesita.' },
+      { name: 'EcuApp', meta: 'Fundador · suite de 10 sistemas en desarrollo', text: 'Gestión empresarial (inventario, facturación electrónica, educación, salud), seguridad (autenticación, firma electrónica de documentos) e IA aplicada (voz a texto, texto a voz, clonación de voz, OCR).', stack: 'Java · Spring Boot, Python, PHP · Laravel' },
+      { name: 'Cúspide', meta: 'Sistema de control educativo · en producción', link: 'operacionadmin.com', text: 'Clases, pagos, estudiantes y docentes, con panel de matrículas, ingresos, gastos y balance.', stack: 'PHP, Twig' },
+      { name: 'Clinical Admin', meta: 'Gestión clínica · en producción', link: 'clinical-admin.xo.je', text: 'Agenda de citas por paciente, médico y especialidad, con estados de atención y confirmaciones por correo y WhatsApp.', stack: 'PHP, MySQL' },
+      { name: 'Multimodal Early Fusion · Green AI', meta: 'Investigación en IA', link: 'github.com/JhonnyMinian92/multimodal-early-fusion-green-ai', text: 'Clasificación multimodal con fusión temprana de datos tabulares y texto, y eficiencia de modelos.', stack: 'Python, scikit-learn, XGBoost' },
     ],
     education: [
-      { degree: 'Máster Universitario en Inteligencia Artificial', school: 'Universidad Internacional de La Rioja (UNIR)', period: '2025 — 2026',
-        lines: ['<b>TFM:</b> Pipeline software reproducible para la clasificación multimodal de intenciones de renovación y negociabilidad mediante fusión temprana de datos tabulares y texto. Calificación media 8/10.',
-          'Machine Learning, Deep Learning, NLP, Visión Artificial, Razonamiento y Planificación Automática, Cloud para IA, Gestión de Proyectos de IA.'] },
-      { degree: 'Ingeniería de Sistemas', school: 'Universidad Técnica de Machala', period: '2009 — 2020',
-        lines: ['<b>Trabajo de titulación:</b> sistema web de gestión de transporte y seguimiento de carga por GPS, publicado en 2020 (ISBN 9786203032277).'] },
+      {
+        degree: 'Máster Universitario en Inteligencia Artificial',
+        school: 'Universidad Internacional de La Rioja (UNIR)',
+        period: '2025 — 2026',
+        lines: ['<b>TFM:</b> Pipeline software reproducible para la clasificación multimodal de intenciones de renovación y negociabilidad mediante fusión temprana de datos tabulares y texto. Calificación media 8/10.', 'Machine Learning, Deep Learning, NLP, Visión Artificial, Razonamiento y Planificación Automática, Cloud para IA, Gestión de Proyectos de IA.'],
+      },
+      { degree: 'Ingeniería de Sistemas', school: 'Universidad Técnica de Machala', period: '2009 — 2020', lines: ['<b>Trabajo de titulación:</b> sistema web de gestión de transporte y seguimiento de carga por GPS, publicado en 2020 (ISBN 9786203032277).'] },
     ],
     certifications: [
       ['AWS Machine Learning Foundations', '2026'],
@@ -127,7 +126,8 @@ const CONTENT = {
     profile: 'Full stack software engineer with 8+ years of software development experience and a Master’s degree in Artificial Intelligence. I build and maintain production systems with Java, Spring Boot, PHP and TypeScript; design distributed process platforms such as AutoLink, with a B2B gateway and a TypeScript SDK; and apply AI, agents and automation to real problems. A background in IT support, networking, servers and entrepreneurship gives me a full view, from infrastructure to product.',
     experience: [
       {
-        org: 'Security Data', period: '2021 — present',
+        org: 'Security Data',
+        period: '2021 — present',
         roles: [
           ['Full Stack Developer · Mid-Level', 'Mar 2024 — present'],
           ['Full Stack Developer · Junior', 'Dec 2022 — Mar 2024'],
@@ -142,7 +142,9 @@ const CONTENT = {
         ],
       },
       {
-        org: 'Codeandolo', period: '2010 — present', role: 'Independent Software Developer',
+        org: 'Codeandolo',
+        period: '2010 — present',
+        role: 'Independent Software Developer',
         bullets: ['Desktop and web applications for clients and own projects.'],
       },
     ],
@@ -158,24 +160,15 @@ const CONTENT = {
       ['Marcimex', 'IT Sales Promoter', '2015 — 2016', 'Technical equipment sales and warranty management.'],
     ],
     projects: [
-      { name: 'Mnemosine', meta: 'Memory and context for AI agents · V1 in testing',
-        text: 'Short- and long-term, episodic, semantic and procedural memory with rules, tasks and skills; delivers each project only the context it needs.' },
-      { name: 'EcuApp', meta: 'Founder · suite of 10 systems in development',
-        text: 'Business management (inventory, electronic invoicing, education, healthcare), security (authentication, electronic document signing) and applied AI (speech-to-text, text-to-speech, voice cloning, OCR).',
-        stack: 'Java · Spring Boot, Python, PHP · Laravel' },
-      { name: 'Cúspide', meta: 'Education management system · in production', link: 'operacionadmin.com',
-        text: 'Classes, payments, students and teachers, with a dashboard for enrollments, income, expenses and balance.', stack: 'PHP, Twig' },
-      { name: 'Clinical Admin', meta: 'Clinic management · in production', link: 'clinical-admin.xo.je',
-        text: 'Appointment scheduling by patient, doctor and specialty, with attendance status and email and WhatsApp confirmations.', stack: 'PHP, MySQL' },
-      { name: 'Multimodal Early Fusion · Green AI', meta: 'AI research', link: 'github.com/JhonnyMinian92/multimodal-early-fusion-green-ai',
-        text: 'Multimodal classification with early fusion of tabular data and text, and model efficiency.', stack: 'Python, scikit-learn, XGBoost' },
+      { name: 'Mnemosine', meta: 'Memory and context for AI agents · V1 in testing', text: 'Short- and long-term, episodic, semantic and procedural memory with rules, tasks and skills; delivers each project only the context it needs.' },
+      { name: 'EcuApp', meta: 'Founder · suite of 10 systems in development', text: 'Business management (inventory, electronic invoicing, education, healthcare), security (authentication, electronic document signing) and applied AI (speech-to-text, text-to-speech, voice cloning, OCR).', stack: 'Java · Spring Boot, Python, PHP · Laravel' },
+      { name: 'Cúspide', meta: 'Education management system · in production', link: 'operacionadmin.com', text: 'Classes, payments, students and teachers, with a dashboard for enrollments, income, expenses and balance.', stack: 'PHP, Twig' },
+      { name: 'Clinical Admin', meta: 'Clinic management · in production', link: 'clinical-admin.xo.je', text: 'Appointment scheduling by patient, doctor and specialty, with attendance status and email and WhatsApp confirmations.', stack: 'PHP, MySQL' },
+      { name: 'Multimodal Early Fusion · Green AI', meta: 'AI research', link: 'github.com/JhonnyMinian92/multimodal-early-fusion-green-ai', text: 'Multimodal classification with early fusion of tabular data and text, and model efficiency.', stack: 'Python, scikit-learn, XGBoost' },
     ],
     education: [
-      { degree: 'Master’s Degree in Artificial Intelligence', school: 'Universidad Internacional de La Rioja (UNIR), Spain', period: '2025 — 2026',
-        lines: ['<b>Thesis:</b> Reproducible software pipeline for multimodal classification of renewal and negotiability intents through early fusion of tabular data and text. Average grade 8/10.',
-          'Machine Learning, Deep Learning, NLP, Computer Vision, Automated Reasoning and Planning, Cloud for AI, AI Project Management.'] },
-      { degree: 'B.Eng. in Systems Engineering', school: 'Universidad Técnica de Machala, Ecuador', period: '2009 — 2020',
-        lines: ['<b>Graduation project:</b> web system for transport management and GPS cargo tracking, published in 2020 (ISBN 9786203032277).'] },
+      { degree: 'Master’s Degree in Artificial Intelligence', school: 'Universidad Internacional de La Rioja (UNIR), Spain', period: '2025 — 2026', lines: ['<b>Thesis:</b> Reproducible software pipeline for multimodal classification of renewal and negotiability intents through early fusion of tabular data and text. Average grade 8/10.', 'Machine Learning, Deep Learning, NLP, Computer Vision, Automated Reasoning and Planning, Cloud for AI, AI Project Management.'] },
+      { degree: 'B.Eng. in Systems Engineering', school: 'Universidad Técnica de Machala, Ecuador', period: '2009 — 2020', lines: ['<b>Graduation project:</b> web system for transport management and GPS cargo tracking, published in 2020 (ISBN 9786203032277).'] },
     ],
     certifications: [
       ['AWS Machine Learning Foundations', '2026'],
@@ -278,27 +271,27 @@ h2::after{content:"";flex:1;height:.6pt;background:var(--line)}
 .page-break{break-before:page}
 `;
 
-const esc = s => s; // content is authored HTML (only <b> and entities)
+const esc = (s) => s; // content is authored HTML (only <b> and entities)
 
 function render(c) {
-  const job = j => `
+  const job = (j) => `
     <article class="job">
       <div class="when">${j.period}</div>
       <div>
         <div class="org">${j.org}</div>
         ${j.role ? `<div class="role">${j.role}</div>` : ''}
         ${j.roles ? `<ul class="roles">${j.roles.map(([r, p]) => `<li><span>${r}</span><span>${p}</span></li>`).join('')}</ul>` : ''}
-        <ul class="bullets">${j.bullets.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
+        <ul class="bullets">${j.bullets.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>
       </div>
     </article>`;
   const row = ([o, r, p, d]) => `<li><span class="when">${p}</span><span class="what"><b>${o}</b> · <i>${r}</i> — ${d}</span></li>`;
-  const project = p => `
+  const project = (p) => `
     <article class="project">
       <div class="pname">${p.name}</div>
       <div>
         <div class="pmeta">${p.meta}</div>
         <p class="ptext">${p.text}</p>
-        ${(p.stack || p.link) ? `<div class="pfoot">${p.stack ? `<span>${p.stack}</span>` : ''}${p.link ? `<a href="https://${p.link}">${p.link}</a>` : ''}</div>` : ''}
+        ${p.stack || p.link ? `<div class="pfoot">${p.stack ? `<span>${p.stack}</span>` : ''}${p.link ? `<a href="https://${p.link}">${p.link}</a>` : ''}</div>` : ''}
       </div>
     </article>`;
 
@@ -332,11 +325,15 @@ function render(c) {
   <section class="page-break"><h2>${c.labels.projects}</h2>${c.projects.map(project).join('')}</section>
 
   <section><h2>${c.labels.education}</h2>
-    ${c.education.map(e => `
+    ${c.education
+      .map(
+        (e) => `
     <article class="edu">
       <div class="when">${e.period}</div>
-      <div><div class="degree">${e.degree}</div><div class="school">${e.school}</div>${e.lines.map(l => `<p>${l}</p>`).join('')}</div>
-    </article>`).join('')}
+      <div><div class="degree">${e.degree}</div><div class="school">${e.school}</div>${e.lines.map((l) => `<p>${l}</p>`).join('')}</div>
+    </article>`,
+      )
+      .join('')}
   </section>
 
   <section><h2>${c.labels.certifications}</h2>
@@ -349,8 +346,8 @@ function render(c) {
 </body></html>`;
 }
 
-const footer = c => `<div style="width:100%;padding:0 15mm;font-family:Arial,sans-serif;font-size:6.5pt;color:#94a3b8;display:flex;justify-content:space-between">
-  <span>Jhonny Darwin Miñan Girón · ${CONTACT.email}</span>
+const footer = (c) => `<div style="width:100%;padding:0 15mm;font-family:Arial,sans-serif;font-size:6.5pt;color:#94a3b8;display:flex;justify-content:space-between">
+  <span>Jhonny Miñan · ${CONTACT.email}</span>
   <span>${c.labels.page} <span class="pageNumber"></span> / <span class="totalPages"></span></span>
 </div>`;
 
@@ -364,9 +361,15 @@ const footer = c => `<div style="width:100%;padding:0 15mm;font-family:Arial,san
     await page.evaluateHandle('document.fonts.ready');
     const out = path.join(OUT_DIR, c.file);
     await page.pdf({
-      path: out, format: 'A4', printBackground: true, preferCSSPageSize: true,
-      displayHeaderFooter: true, headerTemplate: '<span></span>', footerTemplate: footer(c),
-      tagged: true, outline: false,
+      path: out,
+      format: 'A4',
+      printBackground: true,
+      preferCSSPageSize: true,
+      displayHeaderFooter: true,
+      headerTemplate: '<span></span>',
+      footerTemplate: footer(c),
+      tagged: true,
+      outline: false,
     });
     console.log('built', path.relative(process.cwd(), out));
   }
