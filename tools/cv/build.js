@@ -1,5 +1,5 @@
 // Builds the CV PDFs (ES/EN) from the content below.
-// Usage: cd tools/cv && npm install && npm run build
+// Usage: cd tools/cv && npm install && npm run build [-- es|en]
 // Set CHROME_PATH if Chrome is not at the default Windows location.
 const fs = require('fs');
 const path = require('path');
@@ -26,6 +26,11 @@ const CONTACT = {
   github: 'github.com/JhonnyMinian92',
 };
 
+const requestedLanguage = process.argv[2];
+if (requestedLanguage && !['es', 'en'].includes(requestedLanguage)) {
+  throw new Error(`Unsupported CV language "${requestedLanguage}". Use "es" or "en".`);
+}
+
 // ---------------------------------------------------------------- content
 const CONTENT = {
   es: {
@@ -46,16 +51,17 @@ const CONTENT = {
         org: 'Security Data',
         period: '2021 — actualidad',
         roles: [
-          ['Desarrollador Full Stack · Mid-Level', 'mar 2024 — actualidad'],
+          ['Desarrollador Senior Full Stack', 'actualidad'],
+          ['Desarrollador Full Stack · Mid-Level', 'promoción: mar 2024'],
           ['Desarrollador Full Stack · Junior', 'dic 2022 — mar 2024'],
           ['Operador de Registro y Soporte TI', 'jul 2021 — ene 2023'],
         ],
         bullets: [
-          'Sistemas en producción con Java/Spring Boot, PHP y TypeScript: servicios backend, APIs, capas de datos, depuración y refactorización; integración con telefonía Asterisk y agentes de IA.',
-          '<b>AutoLink</b>: evolucionó de extensión de Chrome a plataforma distribuida de continuidad de trámites de firma electrónica. Un enlace cifrado recupera la solicitud, valida identidad (Registro Civil), RUC (SRI) y trámites en curso, reutiliza documentos en renovaciones y lleva al usuario a su siguiente tarea —biometría, vídeo, pago o revisión— sobre procesos orquestados con Camunda.',
-          `Gateway B2B de AutoLink para sistemas externos (sesión, creación y estado por polling) con autenticación HMAC y payloads cifrados, SDK en TypeScript para su integración y buzón de recuperación de solicitudes fallidas. <a class="demo" href="${AUTOLINK_DEMO}">Formulario AutoLink · portal-sd.securitydata.net.ec</a>`,
-          'Extensiones de Chrome <b>SingExtension</b> y <b>EC Google Extension</b> (visor de PDF), y microfrontends con Angular, Nx y Module Federation para gestión documental segura: Manifest V3, CSP estricta, firma digital y cifrado.',
-          '<b>Security Image</b>: gestor de imágenes corporativo con enlaces de expiración configurable, cuotas de almacenamiento por usuario y administración de usuarios.',
+          'Progresión interna de Operador de Registro y Soporte TI a Full Stack Junior, Mid-Level y Senior. Desarrollo y mantenimiento de sistemas en producción con Java/Spring Boot, PHP y TypeScript: servicios backend, APIs, capas de datos, depuración y refactorización; integración con Asterisk y agentes de IA.',
+          '<b>AutoLink</b>: plataforma distribuida para emitir y dar continuidad a trámites de firma electrónica. Desde un enlace cifrado recupera la solicitud, valida identidad, RUC y trámites en curso, reutiliza documentos en renovaciones y guía al usuario hacia biometría, vídeo, pago o revisión mediante procesos orquestados.',
+          `Gateway B2B de AutoLink con autenticación HMAC y payloads cifrados, extensión de Chrome, PWA, SDK en TypeScript para integradores y buzón de recuperación de solicitudes fallidas. <a class="demo" href="${AUTOLINK_DEMO}">Formulario AutoLink · portal-sd.securitydata.net.ec</a>`,
+          'Extensiones <b>SingExtension</b> y <b>EC Google Extension</b> (visor de PDF); microfrontends con Angular, Nx y Module Federation para gestión documental; firma digital, cifrado y políticas estrictas de seguridad.',
+          '<b>Security Image</b>: gestor corporativo de imágenes JPG y PNG con enlaces de expiración configurable, cuotas de almacenamiento por usuario, administración de usuarios, plantillas y registro.',
         ],
       },
       {
@@ -68,19 +74,20 @@ const CONTENT = {
     earlier: [
       ['Explofrap', 'Analista de Sistemas', 'ene 2016 — jul 2017', 'Desarrollo en Visual Basic, servidores y arquitectura de red.'],
       ['Supercompu TIC', 'Fundador y propietario', '2014 — 2017', 'Servicios técnicos y soluciones informáticas.'],
-      ['Grupo Open', 'Jefe Técnico Informático', '2015 — 2016', 'Soporte y mantenimiento en tres agencias regionales.'],
       ['Almacén V&amp;A', 'Analista de Sistemas', '2012 — 2014', 'De técnico auxiliar a jefe del departamento de TI.'],
     ],
     additional: [
-      ['Diners Club del Ecuador', 'Oficial de Crédito', '2017 — 2021', 'Análisis y gestión crediticia de cartera de tarjetas.'],
-      ['Gestiona GTX', 'Gestor Domiciliario', '2017 — 2021', 'Negociación de cartera vencida y prelegal.'],
+      ['Diners Club del Ecuador', 'Oficial de Crédito', '2017 — 2021', 'Análisis y gestión crediticia de cartera de tarjetas; experiencia en procesos, riesgo y atención al cliente.'],
+      ['Gestiona GTX', 'Gestor Domiciliario', '2017 — 2021', 'Negociación y gestión de cartera vencida y prelegal, en paralelo con Diners Club.'],
+      ['Grupo Open', 'Jefe Técnico Informático', '2015 — 2016', 'Mantenimiento correctivo y preventivo en agencias de Huaquillas, Arenillas y Santa Rosa.'],
       ['Marcimex', 'Promotor Informático', '2015 — 2016', 'Venta técnica de equipos y gestión de garantías.'],
     ],
     projects: [
-      { name: 'Mnemosine', meta: 'Memoria y contexto para agentes de IA · V1 en pruebas', text: 'Memoria de corto y largo plazo, episódica, semántica y procedimental, con reglas, tareas y skills; entrega a cada proyecto solo el contexto que necesita.' },
-      { name: 'EcuApp', meta: 'Fundador · suite de 10 sistemas en desarrollo', text: 'Gestión empresarial (inventario, facturación electrónica, educación, salud), seguridad (autenticación, firma electrónica de documentos) e IA aplicada (voz a texto, texto a voz, clonación de voz, OCR).', stack: 'Java · Spring Boot, Python, PHP · Laravel' },
+      { name: 'Mnemosine', meta: 'Memoria y contexto para agentes de IA · V1 en pruebas', text: 'Arquitectura de memoria de corto y largo plazo, episódica, semántica y procedimental, con conocimiento, reglas, tareas y skills. Expone por API el contexto necesario para dar continuidad al trabajo entre sesiones y proyectos.' },
+      { name: 'EcuApp', meta: 'Fundador · suite de 10 sistemas en desarrollo', text: '<b>Gestión:</b> Hefesto (inventario), Mercurio (facturación electrónica), Atenea (educación) y Panacea (salud). <b>Seguridad:</b> Heimdall (autenticación) y Tyr (firma electrónica). <b>IA:</b> Forcis (audio a texto), Poseidon (texto a voz), Loki (clonación de voz) y Thot (OCR de imágenes y PDF).', stack: 'Java · Spring Boot, Python, PHP · Laravel' },
       { name: 'Cúspide', meta: 'Sistema de control educativo · en producción', link: 'operacionadmin.com', text: 'Clases, pagos, estudiantes y docentes, con panel de matrículas, ingresos, gastos y balance.', stack: 'PHP, Twig' },
       { name: 'Clinical Admin', meta: 'Gestión clínica · en producción', link: 'clinical-admin.xo.je', text: 'Agenda de citas por paciente, médico y especialidad, con estados de atención y confirmaciones por correo y WhatsApp.', stack: 'PHP, MySQL' },
+      { name: 'Security Image', meta: 'Gestión corporativa de imágenes · en producción', link: 'portal-sd.securitydata.net.ec/security-image/', text: 'Carga y gestión de imágenes JPG y PNG con enlaces de expiración configurable, cuotas de almacenamiento por usuario, administración, plantillas y registro.' },
       { name: 'Multimodal Early Fusion · Green AI', meta: 'Investigación en IA', link: 'github.com/JhonnyMinian92/multimodal-early-fusion-green-ai', text: 'Clasificación multimodal con fusión temprana de datos tabulares y texto, y eficiencia de modelos.', stack: 'Python, scikit-learn, XGBoost' },
     ],
     education: [
@@ -88,7 +95,7 @@ const CONTENT = {
         degree: 'Máster Universitario en Inteligencia Artificial',
         school: 'Universidad Internacional de La Rioja (UNIR)',
         period: '2025 — 2026',
-        lines: ['<b>TFM:</b> Pipeline software reproducible para la clasificación multimodal de intenciones de renovación y negociabilidad mediante fusión temprana de datos tabulares y texto. Calificación media 8/10.', 'Machine Learning, Deep Learning, NLP, Visión Artificial, Razonamiento y Planificación Automática, Cloud para IA, Gestión de Proyectos de IA.'],
+        lines: ['Máster culminado; TFM defendido en septiembre de 2026 y título en trámite administrativo. Promedio final: 8/10.', '<b>TFM:</b> Pipeline software reproducible para clasificar intenciones de renovación y negociabilidad mediante fusión temprana de datos tabulares y texto.', 'Machine Learning, Deep Learning, NLP, Visión Artificial, Razonamiento y Planificación Automática, Cloud para IA y Gestión de Proyectos de IA.'],
       },
       { degree: 'Ingeniería de Sistemas', school: 'Universidad Técnica de Machala', period: '2009 — 2020', lines: ['<b>Trabajo de titulación:</b> sistema web de gestión de transporte y seguimiento de carga por GPS, publicado en 2020 (ISBN 9786203032277).'] },
     ],
@@ -107,7 +114,7 @@ const CONTENT = {
       ['Datos', 'PostgreSQL, MySQL, MongoDB, Redis'],
       ['IA y ML', 'Machine Learning, NLP, Visión Artificial, Agentes de IA, Prompt Engineering, scikit-learn, XGBoost, PyTorch'],
       ['Integración', 'Camunda (BPM), Gateway B2B, SDKs en TypeScript, HMAC, cifrado de payloads, Asterisk'],
-      ['Herramientas', 'Docker, Git, GitHub, Cursor'],
+      ['Herramientas', 'Git, GitHub, GitLab, Docker, Cursor'],
       ['Prácticas', 'Clean Code, Clean Architecture, Análisis de Sistemas, Documentación técnica'],
     ],
   },
@@ -129,16 +136,17 @@ const CONTENT = {
         org: 'Security Data',
         period: '2021 — present',
         roles: [
-          ['Full Stack Developer · Mid-Level', 'Mar 2024 — present'],
+          ['Senior Full Stack Developer', 'present'],
+          ['Full Stack Developer · Mid-Level', 'promoted Mar 2024'],
           ['Full Stack Developer · Junior', 'Dec 2022 — Mar 2024'],
           ['Registration Operator & IT Support', 'Jul 2021 — Jan 2023'],
         ],
         bullets: [
-          'Production systems with Java/Spring Boot, PHP and TypeScript: backend services, APIs, data layers, debugging and refactoring; integration with Asterisk telephony and AI agents.',
-          '<b>AutoLink</b>: grew from a Chrome extension into a distributed platform for continuing electronic-signature procedures. An encrypted link restores the request, validates identity (Civil Registry), tax ID (SRI) and in-flight procedures, reuses documents on renewals and routes the user to the next task —biometrics, video, payment or review— on Camunda-orchestrated processes.',
-          `AutoLink B2B gateway for external systems (session, create and state polling) with HMAC authentication and encrypted payloads, a TypeScript SDK for integration and a recovery inbox for failed requests. <a class="demo" href="${AUTOLINK_DEMO}">AutoLink form · portal-sd.securitydata.net.ec</a>`,
-          'Chrome extensions <b>SingExtension</b> and <b>EC Google Extension</b> (PDF viewer), plus microfrontends with Angular, Nx and Module Federation for secure document management: Manifest V3, strict CSP, digital signatures and encryption.',
-          '<b>Security Image</b>: corporate image manager with configurable link expiration, per-user storage quotas and user administration.',
+          'Progressed internally from Registration Operator & IT Support to Full Stack Developer (Junior, Mid-Level and Senior). Build and maintain production systems with Java/Spring Boot, PHP and TypeScript: backend services, APIs, data layers, debugging and refactoring; integrations with Asterisk and AI agents.',
+          '<b>AutoLink</b>: a distributed platform for issuing and continuing electronic-signature procedures. An encrypted link restores a request, validates identity, tax ID and in-flight procedures, reuses documents on renewals and guides users to their next task —biometrics, video, payment or review— through orchestrated workflows.',
+          `AutoLink B2B gateway with HMAC authentication and encrypted payloads, a Chrome extension, PWA, TypeScript SDK for integrators and an inbox to recover failed requests. <a class="demo" href="${AUTOLINK_DEMO}">AutoLink form · portal-sd.securitydata.net.ec</a>`,
+          '<b>SingExtension</b> and <b>EC Google Extension</b> (PDF viewer); Angular microfrontends with Nx and Module Federation for document management; digital signatures, encryption and strict security policies.',
+          '<b>Security Image</b>: corporate JPG and PNG image manager with configurable link expiration, per-user storage quotas, user administration, templates and activity logs.',
         ],
       },
       {
@@ -151,23 +159,24 @@ const CONTENT = {
     earlier: [
       ['Explofrap', 'Systems Analyst', 'Jan 2016 — Jul 2017', 'Visual Basic development, servers and network architecture.'],
       ['Supercompu TIC', 'Founder &amp; Owner', '2014 — 2017', 'Technical services and IT solutions company.'],
-      ['Grupo Open', 'IT Technical Lead', '2015 — 2016', 'Support and maintenance across three regional branches.'],
       ['Almacén V&amp;A', 'Systems Analyst', '2012 — 2014', 'From technical assistant to head of the IT department.'],
     ],
     additional: [
-      ['Diners Club del Ecuador', 'Credit Officer', '2017 — 2021', 'Credit analysis and credit card portfolio management.'],
-      ['Gestiona GTX', 'Field Collections Specialist', '2017 — 2021', 'Negotiation of overdue and pre-legal portfolios.'],
+      ['Diners Club del Ecuador', 'Credit Officer', '2017 — 2021', 'Credit analysis and credit card portfolio management; experience with processes, risk and customer service.'],
+      ['Gestiona GTX', 'Field Collections Specialist', '2017 — 2021', 'Negotiation and management of overdue and pre-legal portfolios, alongside the role at Diners Club.'],
+      ['Grupo Open', 'IT Technical Lead', '2015 — 2016', 'Corrective and preventive maintenance across branches in Huaquillas, Arenillas and Santa Rosa.'],
       ['Marcimex', 'IT Sales Promoter', '2015 — 2016', 'Technical equipment sales and warranty management.'],
     ],
     projects: [
-      { name: 'Mnemosine', meta: 'Memory and context for AI agents · V1 in testing', text: 'Short- and long-term, episodic, semantic and procedural memory with rules, tasks and skills; delivers each project only the context it needs.' },
-      { name: 'EcuApp', meta: 'Founder · suite of 10 systems in development', text: 'Business management (inventory, electronic invoicing, education, healthcare), security (authentication, electronic document signing) and applied AI (speech-to-text, text-to-speech, voice cloning, OCR).', stack: 'Java · Spring Boot, Python, PHP · Laravel' },
+      { name: 'Mnemosine', meta: 'Memory and context for AI agents · V1 in testing', text: 'Short- and long-term, episodic, semantic and procedural memory architecture, with knowledge, rules, tasks and skills. An API provides the context each project needs to carry work forward across sessions and projects.' },
+      { name: 'EcuApp', meta: 'Founder · suite of 10 systems in development', text: '<b>Business:</b> Hefesto (inventory), Mercurio (electronic invoicing), Atenea (education) and Panacea (healthcare). <b>Security:</b> Heimdall (authentication) and Tyr (electronic signatures). <b>AI:</b> Forcis (speech-to-text), Poseidon (text-to-speech), Loki (voice cloning) and Thot (image and PDF OCR).', stack: 'Java · Spring Boot, Python, PHP · Laravel' },
       { name: 'Cúspide', meta: 'Education management system · in production', link: 'operacionadmin.com', text: 'Classes, payments, students and teachers, with a dashboard for enrollments, income, expenses and balance.', stack: 'PHP, Twig' },
       { name: 'Clinical Admin', meta: 'Clinic management · in production', link: 'clinical-admin.xo.je', text: 'Appointment scheduling by patient, doctor and specialty, with attendance status and email and WhatsApp confirmations.', stack: 'PHP, MySQL' },
+      { name: 'Security Image', meta: 'Corporate image management · in production', link: 'portal-sd.securitydata.net.ec/security-image/', text: 'JPG and PNG image uploads with configurable link expiration, per-user storage quotas, user administration, templates and activity logs.' },
       { name: 'Multimodal Early Fusion · Green AI', meta: 'AI research', link: 'github.com/JhonnyMinian92/multimodal-early-fusion-green-ai', text: 'Multimodal classification with early fusion of tabular data and text, and model efficiency.', stack: 'Python, scikit-learn, XGBoost' },
     ],
     education: [
-      { degree: 'Master’s Degree in Artificial Intelligence', school: 'Universidad Internacional de La Rioja (UNIR), Spain', period: '2025 — 2026', lines: ['<b>Thesis:</b> Reproducible software pipeline for multimodal classification of renewal and negotiability intents through early fusion of tabular data and text. Average grade 8/10.', 'Machine Learning, Deep Learning, NLP, Computer Vision, Automated Reasoning and Planning, Cloud for AI, AI Project Management.'] },
+      { degree: 'Master’s Degree in Artificial Intelligence', school: 'Universidad Internacional de La Rioja (UNIR), Spain', period: '2025 — 2026', lines: ['Degree completed; thesis defended in September 2026, with the diploma in administrative processing. Final average: 8/10.', '<b>Thesis:</b> Reproducible software pipeline for classifying renewal and negotiability intents through early fusion of tabular data and text.', 'Machine Learning, Deep Learning, NLP, Computer Vision, Automated Reasoning and Planning, Cloud for AI and AI Project Management.'] },
       { degree: 'B.Eng. in Systems Engineering', school: 'Universidad Técnica de Machala, Ecuador', period: '2009 — 2020', lines: ['<b>Graduation project:</b> web system for transport management and GPS cargo tracking, published in 2020 (ISBN 9786203032277).'] },
     ],
     certifications: [
@@ -185,7 +194,7 @@ const CONTENT = {
       ['Data', 'PostgreSQL, MySQL, MongoDB, Redis'],
       ['AI & ML', 'Machine Learning, NLP, Computer Vision, AI Agents, Prompt Engineering, scikit-learn, XGBoost, PyTorch'],
       ['Integration', 'Camunda (BPM), B2B gateways, TypeScript SDKs, HMAC, payload encryption, Asterisk'],
-      ['Tools', 'Docker, Git, GitHub, Cursor'],
+      ['Tools', 'Git, GitHub, GitLab, Docker, Cursor'],
       ['Practices', 'Clean Code, Clean Architecture, Systems Analysis, Technical Documentation'],
     ],
   },
@@ -218,7 +227,7 @@ h1{font-size:24pt;line-height:1;font-weight:700;letter-spacing:-.025em;color:var
 .facts span{display:block;margin-top:.8mm;font-size:7.6pt;line-height:1.35;color:var(--muted)}
 
 section{margin-top:4.6mm}
-h2{display:flex;align-items:center;gap:3mm;margin-bottom:2mm;font-size:7.6pt;font-weight:650;letter-spacing:.09em;text-transform:uppercase;color:var(--accent)}
+h2{display:flex;align-items:center;gap:3mm;margin-bottom:2mm;font-size:7.6pt;font-weight:650;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);break-after:avoid}
 h2::after{content:"";flex:1;height:.6pt;background:var(--line)}
 .profile{font-size:9pt;line-height:1.58;color:var(--text)}
 
@@ -268,7 +277,6 @@ h2::after{content:"";flex:1;height:.6pt;background:var(--line)}
 .skills dt{font-size:8.4pt;font-weight:600;color:var(--ink)}
 .skills dd{font-size:8.6pt}
 
-.page-break{break-before:page}
 `;
 
 const esc = (s) => s; // content is authored HTML (only <b> and entities)
@@ -322,7 +330,7 @@ function render(c) {
     <ul class="compact">${c.additional.map(row).join('')}</ul>
   </section>
 
-  <section class="page-break"><h2>${c.labels.projects}</h2>${c.projects.map(project).join('')}</section>
+  <section><h2>${c.labels.projects}</h2>${c.projects.map(project).join('')}</section>
 
   <section><h2>${c.labels.education}</h2>
     ${c.education
@@ -354,7 +362,8 @@ const footer = (c) => `<div style="width:100%;padding:0 15mm;font-family:Arial,s
 (async () => {
   const browser = await puppeteer.launch({ executablePath: CHROME, headless: true });
   const page = await browser.newPage();
-  for (const c of Object.values(CONTENT)) {
+  const versions = requestedLanguage ? [CONTENT[requestedLanguage]] : Object.values(CONTENT);
+  for (const c of versions) {
     const html = render(c);
     if (process.env.CV_DEBUG) fs.writeFileSync(path.join(__dirname, `cv-${c.lang}.html`), html);
     await page.setContent(html, { waitUntil: 'load' });

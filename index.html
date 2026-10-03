@@ -26,6 +26,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <script>
       document.documentElement.classList.add('js');
+      (() => {
+        let savedLanguage = '';
+        try {
+          savedLanguage = localStorage.getItem('preferred-language') || '';
+        } catch {}
+        const browserLanguage = (navigator.languages?.[0] || navigator.language || 'es').toLowerCase();
+        document.documentElement.lang = ['es', 'en'].includes(savedLanguage)
+          ? savedLanguage
+          : browserLanguage.startsWith('en') ? 'en' : 'es';
+      })();
     </script>
     <link rel="stylesheet" href="properties.css" />
     <link rel="stylesheet" href="index.css" />
@@ -45,7 +55,7 @@
         "image": "https://jhonnyminian92.github.io/assets/me.jpg",
         "jobTitle": "Senior Software Engineer | Full Stack | Artificial Intelligence",
         "address": { "@type": "PostalAddress", "addressLocality": "Machala", "addressCountry": "EC" },
-        "knowsAbout": ["Software Engineering", "Artificial Intelligence", "AI Agents", "Java", "Spring Boot", "PHP", "JavaScript", "TypeScript", "Python", "REST APIs", "Microservices", "Asterisk", "Machine Learning", "Natural Language Processing", "Computer Vision", "Automation", "Software Architecture", "Clean Code", "Systems Analysis", "Networks", "Servers", "Product Engineering"],
+        "knowsAbout": ["Software Engineering", "Artificial Intelligence", "AI Agents", "Java", "Spring Boot", "PHP", "JavaScript", "TypeScript", "Python", "Git", "GitHub", "GitLab", "REST APIs", "Microservices", "Asterisk", "Machine Learning", "Natural Language Processing", "Computer Vision", "Automation", "Software Architecture", "Clean Code", "Systems Analysis", "Networks", "Servers", "Product Engineering"],
         "sameAs": ["https://github.com/JhonnyMinian92", "https://www.linkedin.com/in/jhonnyminian/", "https://www.youtube.com/@fullstackecuador", "https://platzi.com/p/JhonnyMinian92/"]
       }
     </script>
@@ -71,6 +81,10 @@
         <a href="#formacion">Formación</a>
         <a href="#contacto">Contacto</a>
         <span class="nav-separator" aria-hidden="true"></span>
+        <div class="language-switch" role="group" aria-label="Idioma de la página">
+          <button type="button" data-language-switch="es" aria-pressed="true">ES</button>
+          <button type="button" data-language-switch="en" aria-pressed="false">EN</button>
+        </div>
         <details class="cv-selector">
           <summary aria-label="Seleccionar idioma del currículum">
             <span class="cv-selector-label">CV</span>
@@ -256,7 +270,7 @@
             <span class="stack-index">AUTOMATION · INFRASTRUCTURE</span>
             <h3>Automatización e infraestructura</h3>
             <p>Tareas repetitivas convertidas en flujos reproducibles, sobre una base práctica en soporte, redes y servidores.</p>
-            <div class="tech-list"><b>Docker</b><b>REST</b><b>Workflows</b><b>Networks</b><b>Servers</b></div>
+            <div class="tech-list"><b>Git</b><b>GitHub</b><b>GitLab</b><b>Docker</b><b>REST</b><b>Workflows</b><b>Networks</b><b>Servers</b></div>
           </article>
           <article class="stack-card reveal tilt">
             <div class="stack-icon">06</div>

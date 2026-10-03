@@ -31,7 +31,7 @@ La narrativa no debe reducir a Jhonny a "desarrollador web". Su trayectoria es m
 
 # 2. RESUMEN PROFESIONAL
 
-Jhonny mantiene una trayectoria profesional sostenida desde aproximadamente 2010. Como desarrollador de software, Jhonny declara **8+ años de experiencia** (dato corregido por Jhonny el 2026-10-02: no usar "16+ años"; la cifra 16 solo describe el tiempo total desde 2010, que incluye etapas de soporte, infraestructura, negocio y otros cargos no centrados en desarrollo).
+Jhonny mantiene una trayectoria profesional sostenida desde aproximadamente 2010. Como desarrollador de software, Jhonny declara **8+ años de experiencia** (dato corregido por Jhonny el 2026-10-02: no usar "8+ años"; la cifra 16 solo describe el tiempo total desde 2010, que incluye etapas de soporte, infraestructura, negocio y otros cargos no centrados en desarrollo).
 
 La evolución profesional debe entenderse como una trayectoria con etapas parcialmente superpuestas, no como una secuencia de cargos estrictamente excluyentes:
 
@@ -232,7 +232,7 @@ También se documentó el diseño y desarrollo de extensiones de Google Chrome p
 
 ### AutoLink (detalle aportado por Jhonny, 2026-10-02)
 
-AutoLink no es solo una extensión de Chrome: creció hasta convertirse en una plataforma distribuida de automatización y continuidad de trámites de Security Data (emisión y renovación de firma electrónica, con variantes de proceso).
+AutoLink no es solo un formulario de resgitro: creció hasta convertirse en una plataforma distribuida de automatización y continuidad de trámites de Security Data (emisión y renovación de firma electrónica, con variantes de proceso) y extensión de Chrome + PWA.
 
 - Un enlace con identificador cifrado recupera el contexto de la solicitud (frontend Angular/TypeScript; backend Java/Spring).
 - Valida identidad (Registro Civil), RUC (SRI), correo y trámites duplicados en curso; convierte el modelo AutoLink al modelo de solicitud y crea/continúa el trámite.

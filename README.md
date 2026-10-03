@@ -24,6 +24,7 @@ Both PDFs are generated from `tools/cv/build.js` (content for ES and EN lives in
 cd tools/cv
 npm install
 npm run build   # set CHROME_PATH if Chrome is not in the default Windows location
+npm run build -- es  # optionally rebuild only the Spanish PDF (use "en" for English)
 ```
 
 ## EcuApp ecosystem
