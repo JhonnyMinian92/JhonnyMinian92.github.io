@@ -5,7 +5,26 @@ document.addEventListener('DOMContentLoaded', () => {
     'Trayectoria': 'Experience',
     'Proyectos': 'Projects',
     'Formación': 'Education',
+    'Certificados': 'Certificates',
     'Contacto': 'Contact',
+    'CERTIFICADOS · APRENDIZAJE CONTINUO': 'CERTIFICATES · CONTINUOUS LEARNING',
+    'Formación verificable': 'Verified learning',
+    'Aprender, practicar y': 'Learn, practice and',
+    'seguir creciendo.': 'keep growing.',
+    'Explora mis certificados de Platzi, Udemy y formación complementaria. Abre cualquier tarjeta para consultar el PDF.': 'Browse my Platzi, Udemy and additional training certificates. Open any card to view its PDF.',
+    'Todos': 'All',
+    'Otros': 'Other',
+    'Buscar certificados': 'Search certificates',
+    'Buscar por curso o tecnología…': 'Search by course or technology…',
+    'No hay certificados que coincidan con la búsqueda.': 'No certificates match your search.',
+    'Ver certificado': 'View certificate',
+    'Formación complementaria': 'Additional training',
+    'Ver repositorio ↗': 'View repository ↗',
+    'AutoLink · datos básicos': 'AutoLink · basic details',
+    'AutoLink · resumen y pago': 'AutoLink · order and payment summary',
+    'AutoLink · solicitud en revisión': 'AutoLink · request under review',
+    'ECUAPP · ECUADOR': 'ECUAPP · ECUADOR',
+    'Formación continua en Platzi y Udemy.': 'Ongoing learning through Platzi and Udemy.',
     'Seleccionar idioma del currículum': 'Choose CV language',
     'Currículum en español': 'CV in Spanish',
     '8+ AÑOS DESARROLLANDO SOFTWARE': '8+ YEARS BUILDING SOFTWARE',
@@ -195,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'Fundamentos de Java Spring Boot · Programación Orientada a Objetos con Java SE · Firebase para Android · Programación Básica': 'Java Spring Boot Fundamentals · Object-Oriented Programming with Java SE · Firebase for Android · Programming Fundamentals',
     'ÁREAS DE LA MAESTRÍA': 'MASTER’S COURSEWORK',
     'Machine Learning no supervisado · Cloud para IA · Gestión de proyectos de IA · NLP · Razonamiento y planificación automática · Redes neuronales y Deep Learning · Técnicas de Machine Learning · Visión Artificial': 'Unsupervised Machine Learning · Cloud for AI · AI project management · NLP · Automated reasoning and planning · Neural networks and deep learning · Machine learning techniques · Computer vision',
-    'Formación continua en Platzi y Coursera.': 'Ongoing learning through Platzi and Coursera.',
+    'Formación continua en Platzi y Udemy.': 'Ongoing learning through Platzi and Udemy.',
     'CONTACTO': 'CONTACT',
     'Una trayectoria construida.': 'A career built with purpose.',
     'Ahora, nuevos sistemas.': 'Now, building what comes next.',
@@ -204,6 +223,194 @@ document.addEventListener('DOMContentLoaded', () => {
     'También disponible en': 'Also available in',
     'Machala, Ecuador · Software + IA': 'Machala, Ecuador · Software + AI',
     'Volver arriba ↑': 'Back to top ↑',
+  };
+  const certificates = [
+    ['Comunciación eficaz.pdf', 'other'],
+    ['Liderazgo o Gestion.pdf', 'other'],
+    ['Manejo de conflictos y resolución de problema.pdf', 'other'],
+    ['Versionamiento y uso de Git.pdf', 'udemy'],
+    ['diploam-springboot-udemy.pdf', 'udemy'],
+    ['diploma-agentes-ia.pdf', 'platzi'],
+    ['diploma-angular-udemy.pdf', 'udemy'],
+    ['diploma-api-rest.pdf', 'platzi'],
+    ['diploma-arquitectura-alta-concurrencia.pdf', 'platzi'],
+    ['diploma-arquitectura-udemy.pdf', 'udemy'],
+    ['diploma-backend-nodejs-postgres.pdf', 'platzi'],
+    ['diploma-base-vectorial-udemy.pdf', 'udemy'],
+    ['diploma-clean-code-udemy.pdf', 'udemy'],
+    ['diploma-curso-php-laravel.pdf', 'platzi'],
+    ['diploma-dba-udemy.pdf', 'udemy'],
+    ['diploma-despliegue-apps.pdf', 'platzi'],
+    ['diploma-devops-udemy.pdf', 'udemy'],
+    ['diploma-devops.pdf', 'platzi'],
+    ['diploma-escalada-privilegios.pdf', 'platzi'],
+    ['diploma-ethical-hacking.pdf', 'platzi'],
+    ['diploma-git-github.pdf', 'platzi'],
+    ['diploma-gitlab.pdf', 'platzi'],
+    ['diploma-guia-seguridad-informatica.pdf', 'platzi'],
+    ['diploma-hacking-aplicaciones-web-server-side.pdf', 'platzi'],
+    ['diploma-hacking-servicios-red.pdf', 'platzi'],
+    ['diploma-ingenieria2017.pdf', 'platzi'],
+    ['diploma-intro-startups-blockchain.pdf', 'platzi'],
+    ['diploma-introduccion-devops-22.pdf', 'platzi'],
+    ['diploma-java-avanzado.pdf', 'platzi'],
+    ['diploma-java-basico.pdf', 'platzi'],
+    ['diploma-java-funcional.pdf', 'platzi'],
+    ['diploma-java-oop.pdf', 'platzi'],
+    ['diploma-java-persistencia.pdf', 'platzi'],
+    ['diploma-java-spring-security.pdf', 'platzi'],
+    ['diploma-java-spring.pdf', 'platzi'],
+    ['diploma-kotlin-2021.pdf', 'platzi'],
+    ['diploma-metasploit.pdf', 'platzi'],
+    ['diploma-mongodb.pdf', 'platzi'],
+    ['diploma-oop.pdf', 'platzi'],
+    ['diploma-patrones-udemy.pdf', 'udemy'],
+    ['diploma-php-composer.pdf', 'platzi'],
+    ['diploma-php-cookies-sesiones.pdf', 'platzi'],
+    ['diploma-php-poo.pdf', 'platzi'],
+    ['diploma-postgresql-19.pdf', 'platzi'],
+    ['diploma-prompt-engineering-chatgpt.pdf', 'platzi'],
+    ['diploma-pruebas-software.pdf', 'platzi'],
+    ['diploma-python.pdf', 'platzi'],
+    ['diploma-scala.pdf', 'platzi'],
+    ['diploma-solid-udemy.pdf', 'udemy'],
+    ['diploma-spring-boot.pdf', 'platzi'],
+    ['diploma-terminal-21.pdf', 'platzi'],
+    ['diploma-testing-java.pdf', 'platzi'],
+    ['diploma-web-chatgpt.pdf', 'platzi'],
+    ['diploma-web-java.pdf', 'platzi'],
+    ['diploma-web-php.pdf', 'platzi'],
+    ['diploma-webflux-udemy.pdf', 'udemy'],
+  ];
+  const certificateTitleOverrides = {
+    'Comunciación eficaz.pdf': 'Comunicación eficaz',
+    'Liderazgo o Gestion.pdf': 'Liderazgo o gestión',
+    'Manejo de conflictos y resolución de problema.pdf': 'Manejo de conflictos y resolución de problemas',
+    'Versionamiento y uso de Git.pdf': 'Versionamiento y uso de Git',
+    'diploma-arquitectura-udemy.pdf': 'Arquitectura de software',
+    'diploam-springboot-udemy.pdf': 'Spring Boot',
+    'diploma-agentes-ia.pdf': 'Agentes de inteligencia artificial',
+    'diploma-angular-udemy.pdf': 'Angular',
+    'diploma-api-rest.pdf': 'API REST',
+    'diploma-arquitectura-alta-concurrencia.pdf': 'Arquitectura de alta concurrencia',
+    'diploma-backend-nodejs-postgres.pdf': 'Backend con Node.js y PostgreSQL',
+    'diploma-base-vectorial-udemy.pdf': 'Bases de datos vectoriales',
+    'diploma-clean-code-udemy.pdf': 'Clean Code',
+    'diploma-curso-php-laravel.pdf': 'PHP con Laravel',
+    'diploma-dba-udemy.pdf': 'Administración de bases de datos (DBA)',
+    'diploma-despliegue-apps.pdf': 'Despliegue de aplicaciones',
+    'diploma-devops-udemy.pdf': 'DevOps',
+    'diploma-devops.pdf': 'DevOps',
+    'diploma-escalada-privilegios.pdf': 'Escalada de privilegios',
+    'diploma-ethical-hacking.pdf': 'Ethical Hacking',
+    'diploma-git-github.pdf': 'Git y GitHub',
+    'diploma-gitlab.pdf': 'GitLab',
+    'diploma-guia-seguridad-informatica.pdf': 'Guía de seguridad informática',
+    'diploma-hacking-aplicaciones-web-server-side.pdf': 'Hacking de aplicaciones web (server-side)',
+    'diploma-hacking-servicios-red.pdf': 'Hacking de servicios de red',
+    'diploma-ingenieria2017.pdf': 'Ingeniería de software (2017)',
+    'diploma-intro-startups-blockchain.pdf': 'Introducción a startups y blockchain',
+    'diploma-introduccion-devops-22.pdf': 'Introducción a DevOps',
+    'diploma-java-avanzado.pdf': 'Java avanzado',
+    'diploma-java-basico.pdf': 'Java básico',
+    'diploma-java-funcional.pdf': 'Programación funcional con Java',
+    'diploma-java-oop.pdf': 'Programación orientada a objetos con Java',
+    'diploma-java-persistencia.pdf': 'Persistencia con Java',
+    'diploma-java-spring-security.pdf': 'Spring Security con Java',
+    'diploma-java-spring.pdf': 'Java con Spring',
+    'diploma-kotlin-2021.pdf': 'Kotlin',
+    'diploma-metasploit.pdf': 'Metasploit',
+    'diploma-mongodb.pdf': 'MongoDB',
+    'diploma-oop.pdf': 'Programación orientada a objetos',
+    'diploma-patrones-udemy.pdf': 'Patrones de diseño',
+    'diploma-php-composer.pdf': 'Composer con PHP',
+    'diploma-php-cookies-sesiones.pdf': 'Cookies y sesiones con PHP',
+    'diploma-php-poo.pdf': 'Programación orientada a objetos con PHP',
+    'diploma-postgresql-19.pdf': 'PostgreSQL',
+    'diploma-prompt-engineering-chatgpt.pdf': 'Prompt engineering con ChatGPT',
+    'diploma-pruebas-software.pdf': 'Pruebas de software',
+    'diploma-python.pdf': 'Programación con Python',
+    'diploma-scala.pdf': 'Scala',
+    'diploma-solid-udemy.pdf': 'Principios SOLID',
+    'diploma-spring-boot.pdf': 'Spring Boot',
+    'diploma-terminal-21.pdf': 'Terminal y línea de comandos',
+    'diploma-testing-java.pdf': 'Testing con Java',
+    'diploma-web-chatgpt.pdf': 'Desarrollo web con ChatGPT',
+    'diploma-web-java.pdf': 'Desarrollo web con Java',
+    'diploma-web-php.pdf': 'Desarrollo web con PHP',
+    'diploma-webflux-udemy.pdf': 'Spring WebFlux',
+  };
+  const certificateTitle = (file) => certificateTitleOverrides[file] || file
+    .replace(/\.pdf$/i, '')
+    .replace(/^diplo(?:ma|am)-/i, '')
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, (letter) => letter.toLocaleUpperCase('es'));
+  let activeCertificateFilter = 'all';
+  const certificateGrid = document.querySelector('[data-certificate-grid]');
+  const certificateSearch = document.querySelector('[data-certificate-search]');
+  const certificateEmpty = document.querySelector('[data-certificate-empty]');
+  const renderCertificates = (language) => {
+    if (!certificateGrid) return;
+    const isEnglish = language === 'en';
+    const query = certificateSearch?.value.trim().toLocaleLowerCase(language) || '';
+    const visibleCertificates = certificates.filter(([file, platform]) => {
+      const title = certificateTitle(file);
+      const matchesPlatform = activeCertificateFilter === 'all' || activeCertificateFilter === platform;
+      const matchesQuery = !query || `${title} ${file} ${platform}`.toLocaleLowerCase(language).includes(query);
+      return matchesPlatform && matchesQuery;
+    });
+    const counts = certificates.reduce((result, [, platform]) => {
+      result[platform] += 1;
+      result.all += 1;
+      return result;
+    }, { all: 0, platzi: 0, udemy: 0, other: 0 });
+    Object.entries(counts).forEach(([platform, count]) => {
+      const countElement = document.querySelector(`[data-certificate-count="${platform}"]`);
+      if (countElement) countElement.textContent = count;
+    });
+    document.querySelectorAll('[data-certificate-filter]').forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.certificateFilter === activeCertificateFilter));
+    });
+    const fragment = document.createDocumentFragment();
+    visibleCertificates.forEach(([file, platform]) => {
+      const title = certificateTitle(file);
+      const platformName = platform === 'other'
+        ? (isEnglish ? 'Additional training' : 'Formación complementaria')
+        : platform === 'platzi' ? 'Platzi' : 'Udemy';
+      const card = document.createElement('a');
+      card.className = 'certificate-card';
+      card.href = `assets/certificados/${encodeURIComponent(file)}`;
+      card.target = '_blank';
+      card.rel = 'noopener noreferrer';
+      card.setAttribute('aria-label', `${isEnglish ? 'View certificate' : 'Ver certificado'}: ${title} · ${platformName}`);
+
+      const icon = document.createElement('span');
+      icon.className = 'certificate-card-icon';
+      icon.setAttribute('aria-hidden', 'true');
+      icon.textContent = 'PDF';
+      const copy = document.createElement('span');
+      copy.className = 'certificate-card-copy';
+      const heading = document.createElement('strong');
+      heading.textContent = title;
+      const provider = document.createElement('span');
+      provider.className = `certificate-provider certificate-provider-${platform}`;
+      provider.textContent = platformName;
+      copy.append(heading, provider);
+      const action = document.createElement('span');
+      action.className = 'certificate-card-action';
+      action.setAttribute('aria-hidden', 'true');
+      action.textContent = isEnglish ? 'View PDF ↗' : 'Ver PDF ↗';
+      card.append(icon, copy, action);
+      fragment.append(card);
+    });
+    certificateGrid.replaceChildren(fragment);
+    const resultCount = document.querySelector('[data-certificate-results]');
+    if (resultCount) {
+      resultCount.textContent = isEnglish
+        ? `Showing ${visibleCertificates.length} of ${certificates.length} certificates`
+        : `Mostrando ${visibleCertificates.length} de ${certificates.length} certificados`;
+    }
+    if (certificateEmpty) certificateEmpty.hidden = visibleCertificates.length > 0;
   };
   const originalText = new WeakMap();
   const normalize = (text) => text.trim().replace(/\s+/g, ' ');
@@ -225,6 +432,20 @@ document.addEventListener('DOMContentLoaded', () => {
         node.nodeValue = original;
       }
     }
+    renderCertificates(language);
+    document.querySelectorAll('[data-product-repo]').forEach((link) => {
+      const project = link.dataset.repoName;
+      link.setAttribute(
+        'aria-label',
+        isEnglish ? `Open the ${project} GitHub repository` : `Abrir el repositorio de ${project} en GitHub`,
+      );
+    });
+    certificateSearch?.setAttribute('placeholder', isEnglish ? 'Search by course or technology…' : 'Buscar por curso o tecnología…');
+    certificateSearch?.setAttribute('aria-label', isEnglish ? 'Search certificates' : 'Buscar certificados');
+    document.querySelector('.certificate-filters')?.setAttribute(
+      'aria-label',
+      isEnglish ? 'Filter certificates' : 'Filtrar certificados',
+    );
 
     const title = isEnglish
       ? 'Jhonny Miñan | Senior Software Engineer · AI'
@@ -346,6 +567,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const button = event.target.closest('[data-language-switch]');
     if (button) setLanguage(button.dataset.languageSwitch, true);
   });
+  document.querySelectorAll('[data-certificate-filter]').forEach((button) => {
+    button.addEventListener('click', () => {
+      activeCertificateFilter = button.dataset.certificateFilter;
+      renderCertificates(document.documentElement.lang);
+    });
+  });
+  certificateSearch?.addEventListener('input', () => renderCertificates(document.documentElement.lang));
 
   const header = document.querySelector('[data-header]');
   const menu = document.querySelector('#nav');

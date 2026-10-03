@@ -39,7 +39,11 @@ Mnemosine/Mnemonise is the memory/context layer for projects and AI agents; V1 i
 
 ## Stylesheets
 
-Cascade order (linked from `index.html`): `properties.css` → `index.css` → `responsive.css` → `premium-effects.css` → `hero-effects.css` → `site-fixes.css` → `executive-refresh.css` → `refine.css`. `refine.css` is the final layer for typography, the shared container and layout fixes.
+Cascade order (linked from `index.html`): `properties.css` → `index.css` → `responsive.css` → `premium-effects.css` → `hero-effects.css` → `site-fixes.css` → `executive-refresh.css` → `refine.css`. `refine.css` is the final layer for typography, shared layout fixes, the EcuApp mark and certificate filters.
+
+## Certificates
+
+The PDFs in `assets/certificados/` are listed in the Certificates section and can be filtered by provider or searched by course and technology. The Udemy grouping includes files identified as Udemy and `Versionamiento y uso de Git.pdf`; the remaining `diploma-` files are grouped as Platzi. Three additional Spanish-titled files without a confirmed provider are grouped as additional training.
 
 ## Deployment
 

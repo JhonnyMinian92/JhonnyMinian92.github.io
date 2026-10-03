@@ -79,6 +79,7 @@
         <a href="#ecuapp">EcuApp</a>
         <a href="#proyectos">Proyectos</a>
         <a href="#formacion">Formación</a>
+        <a href="#certificados">Certificados</a>
         <a href="#contacto">Contacto</a>
         <span class="nav-separator" aria-hidden="true"></span>
         <div class="language-switch" role="group" aria-label="Idioma de la página">
@@ -310,6 +311,20 @@
                 un enlace cifrado recupera la solicitud, valida identidad, RUC y trámites en curso, reutiliza documentos en renovaciones y lleva al usuario a su siguiente tarea (biometría, vídeo, pago o revisión) sobre procesos orquestados. Posteriormente, incluye un gateway B2B con autenticación HMAC y payloads cifrados, y Posterior maduro como una extensión de Chrome + PWA y un SDK en TypeScript para integradores. También entregué las extensiones SingExtension y EC Google Extension (visor de
                 PDF) y trabajo con arquitectura de microfrontends.
               </p>
+              <div class="timeline-gallery" aria-label="Capturas de la plataforma AutoLink">
+                <a href="assets/projects/autolink.jpg" target="_blank" rel="noopener noreferrer" aria-label="Abrir captura de datos básicos de AutoLink">
+                  <img src="assets/projects/autolink.jpg" alt="AutoLink: pantalla de datos básicos de una renovación de firma electrónica" loading="lazy" />
+                  <span>AutoLink · datos básicos</span>
+                </a>
+                <a href="assets/projects/autolink2.jpg" target="_blank" rel="noopener noreferrer" aria-label="Abrir captura del resumen y pago de AutoLink">
+                  <img src="assets/projects/autolink2.jpg" alt="AutoLink: resumen de la orden de firma electrónica y opciones de pago" loading="lazy" />
+                  <span>AutoLink · resumen y pago</span>
+                </a>
+                <a href="assets/projects/Screenshot_1.jpg" target="_blank" rel="noopener noreferrer" aria-label="Abrir captura del estado de solicitud en revisión">
+                  <img src="assets/projects/Screenshot_1.jpg" alt="Flujo digital: confirmación de una solicitud en revisión" loading="lazy" />
+                  <span>AutoLink · solicitud en revisión</span>
+                </a>
+              </div>
               <div class="timeline-tags"><b>Java</b><b>Spring Boot</b><b>PHP</b><b>TypeScript</b><b>Angular</b><b>React</b><b>Chrome Extensions</b><b>PWA</b><b>B2B Gateway</b><b>TypeScript SDK</b><b>Asterisk</b><b>Agent AI</b></div>
               <a class="timeline-link" href="https://portal-sd.securitydata.net.ec/app-security-data/#/formulario-autolink/RpN6Tsfpd4oHBQPDC6w-a3cs9STBEME5ELmL3JCegd8" target="_blank" rel="noopener noreferrer">Ver formulario AutoLink ↗</a>
             </article>
@@ -380,7 +395,10 @@
         </div>
         <div class="ecuapp-hero reveal">
           <div class="ecuapp-copy">
-            <span class="ecuapp-mark">ECUAPP</span>
+            <div class="ecuapp-brand">
+              <img src="assets/ecuapp.png" alt="Isotipo de EcuApp" width="112" height="112" />
+              <span class="ecuapp-mark">ECUAPP · ECUADOR</span>
+            </div>
             <h2>Una suite de software para negocios, construida alrededor de <em>IA + producto.</em></h2>
             <p>EcuApp es la startup que estoy construyendo: un conjunto de sistemas independientes que resuelven necesidades concretas —inventario, facturación electrónica, educación, salud, autenticación, firma electrónica— y servicios de IA para voz y documentos.</p>
             <p class="ecuapp-note">Cada sistema vive en su propio repositorio dentro de la organización EcuApp en GitHub. La idea es que puedan usarse por separado o combinarse según el cliente.</p>
@@ -419,6 +437,7 @@
               <p>Manejo, venta, control y distribución de inventario para todo tipo de producto.</p>
               <p class="product-why">Transacciones y concurrencia para stock, ventas y distribución, con integración directa a Mercurio.</p>
               <b class="product-stack" data-lang="java">Java · Spring Boot</b>
+              <a class="product-repo" data-product-repo data-repo-name="Hefesto" href="https://github.com/EcuApp/hefesto" target="_blank" rel="noopener noreferrer">Ver repositorio ↗</a>
             </article>
             <article class="product-card" data-group="gestion">
               <span class="product-domain">GESTIÓN · FACTURACIÓN</span>
@@ -426,6 +445,7 @@
               <p>Software de facturación electrónica.</p>
               <p class="product-why">La firma de comprobantes del SRI con certificado .p12 se apoya en las mismas librerías Java que Tyr.</p>
               <b class="product-stack" data-lang="java">Java · Spring Boot</b>
+              <a class="product-repo" data-product-repo data-repo-name="Mercurio" href="https://github.com/EcuApp/mercurio" target="_blank" rel="noopener noreferrer">Ver repositorio ↗</a>
             </article>
             <article class="product-card" data-group="gestion">
               <span class="product-domain">GESTIÓN · EDUCACIÓN</span>
@@ -433,6 +453,7 @@
               <p>Sistema de gestión educativa.</p>
               <p class="product-why">Gestión con mucho formulario, reporte y portal: Laravel acelera el CRUD y abarata el hosting.</p>
               <b class="product-stack" data-lang="php">PHP · Laravel</b>
+              <a class="product-repo" data-product-repo data-repo-name="Atenea" href="https://github.com/EcuApp/atenea" target="_blank" rel="noopener noreferrer">Ver repositorio ↗</a>
             </article>
             <article class="product-card" data-group="gestion">
               <span class="product-domain">GESTIÓN · SALUD</span>
@@ -440,6 +461,7 @@
               <p>Sistema de gestión médica.</p>
               <p class="product-why">Datos clínicos sensibles, auditoría e interoperabilidad HL7 FHIR con HAPI FHIR.</p>
               <b class="product-stack" data-lang="java">Java · Spring Boot</b>
+              <a class="product-repo" data-product-repo data-repo-name="Panacea" href="https://github.com/EcuApp/Panacea" target="_blank" rel="noopener noreferrer">Ver repositorio ↗</a>
             </article>
             <article class="product-card" data-group="seguridad">
               <span class="product-domain">SEGURIDAD · ACCESO</span>
@@ -447,6 +469,7 @@
               <p>Sistema de control de autenticación.</p>
               <p class="product-why">Spring Security y Spring Authorization Server para OAuth 2.0 y OpenID Connect.</p>
               <b class="product-stack" data-lang="java">Java · Spring Boot</b>
+              <a class="product-repo" data-product-repo data-repo-name="Heimdall" href="https://github.com/EcuApp/Heimdall" target="_blank" rel="noopener noreferrer">Ver repositorio ↗</a>
             </article>
             <article class="product-card" data-group="seguridad">
               <span class="product-domain">SEGURIDAD · DOCUMENTOS</span>
@@ -454,6 +477,7 @@
               <p>Firma de documentos con firma electrónica.</p>
               <p class="product-why">Las librerías ecuatorianas de firma con certificados .p12 solo existen en Java.</p>
               <b class="product-stack" data-lang="java">Java · Spring Boot</b>
+              <a class="product-repo" data-product-repo data-repo-name="Tyr" href="https://github.com/EcuApp/tyr" target="_blank" rel="noopener noreferrer">Ver repositorio ↗</a>
             </article>
             <article class="product-card" data-group="ia">
               <span class="product-domain">IA · VOZ</span>
@@ -461,6 +485,7 @@
               <p>Conversión de audio a texto.</p>
               <p class="product-why">Reconocimiento de voz con modelos como Whisper, cuyo ecosistema es Python.</p>
               <b class="product-stack" data-lang="python">Python</b>
+              <a class="product-repo" data-product-repo data-repo-name="Forcis" href="https://github.com/EcuApp/forcis" target="_blank" rel="noopener noreferrer">Ver repositorio ↗</a>
             </article>
             <article class="product-card" data-group="ia">
               <span class="product-domain">IA · VOZ</span>
@@ -468,6 +493,7 @@
               <p>Conversión de texto a voz.</p>
               <p class="product-why">Síntesis de voz con modelos TTS abiertos como Piper, nativos de Python.</p>
               <b class="product-stack" data-lang="python">Python</b>
+              <a class="product-repo" data-product-repo data-repo-name="Poseidón" href="https://github.com/EcuApp/poseidon" target="_blank" rel="noopener noreferrer">Ver repositorio ↗</a>
             </article>
             <article class="product-card" data-group="ia">
               <span class="product-domain">IA · VOZ</span>
@@ -475,6 +501,7 @@
               <p>Clonación de voz a partir de audios de ejemplo.</p>
               <p class="product-why">Modelos de clonación como XTTS u OpenVoice, construidos sobre PyTorch.</p>
               <b class="product-stack" data-lang="python">Python</b>
+              <a class="product-repo" data-product-repo data-repo-name="Loki" href="https://github.com/EcuApp/loki" target="_blank" rel="noopener noreferrer">Ver repositorio ↗</a>
             </article>
             <article class="product-card" data-group="ia">
               <span class="product-domain">IA · DOCUMENTOS</span>
@@ -482,6 +509,7 @@
               <p>OCR de imágenes y archivos PDF.</p>
               <p class="product-why">OCR con Tesseract o PaddleOCR y extracción de PDF con PyMuPDF.</p>
               <b class="product-stack" data-lang="python">Python</b>
+              <a class="product-repo" data-product-repo data-repo-name="Thot" href="https://github.com/EcuApp/thot" target="_blank" rel="noopener noreferrer">Ver repositorio ↗</a>
             </article>
           </div>
         </div>
@@ -583,14 +611,44 @@
         <div class="training-strip reveal">
           <span>ÁREAS DE LA MAESTRÍA</span>
           <p>Machine Learning no supervisado · Cloud para IA · Gestión de proyectos de IA · NLP · Razonamiento y planificación automática · Redes neuronales y Deep Learning · Técnicas de Machine Learning · Visión Artificial</p>
-          <p class="training-note">Formación continua en Platzi y Coursera.</p>
+          <p class="training-note">Formación continua en Platzi y Udemy.</p>
         </div>
+      </section>
+
+      <section id="certificados" class="section-wrap certificates-section">
+        <div class="section-label reveal">
+          <span>08</span>
+          <p>CERTIFICADOS · APRENDIZAJE CONTINUO</p>
+        </div>
+        <div class="certificates-heading reveal">
+          <div>
+            <p class="kicker">Formación verificable</p>
+            <h2>Aprender, practicar y <em>seguir creciendo.</em></h2>
+          </div>
+          <p>Explora mis certificados de Platzi, Udemy y formación complementaria. Abre cualquier tarjeta para consultar el PDF.</p>
+        </div>
+        <div class="certificate-controls reveal">
+          <div class="certificate-filters" role="group" aria-label="Filtrar certificados">
+            <button type="button" data-certificate-filter="all" aria-pressed="true">Todos <span data-certificate-count="all"></span></button>
+            <button type="button" data-certificate-filter="platzi" aria-pressed="false">Platzi <span data-certificate-count="platzi"></span></button>
+            <button type="button" data-certificate-filter="udemy" aria-pressed="false">Udemy <span data-certificate-count="udemy"></span></button>
+            <button type="button" data-certificate-filter="other" aria-pressed="false">Otros <span data-certificate-count="other"></span></button>
+          </div>
+          <label class="certificate-search">
+            <span class="sr-only">Buscar certificados</span>
+            <input type="search" data-certificate-search placeholder="Buscar por curso o tecnología…" autocomplete="off" />
+            <span aria-hidden="true">⌕</span>
+          </label>
+        </div>
+        <p class="certificate-results" data-certificate-results aria-live="polite"></p>
+        <div class="certificate-grid" data-certificate-grid></div>
+        <p class="certificate-empty" data-certificate-empty hidden>No hay certificados que coincidan con la búsqueda.</p>
       </section>
 
       <section id="contacto" class="section-wrap contact-section">
         <div class="contact-orb" aria-hidden="true"></div>
         <div class="section-label reveal">
-          <span>08</span>
+          <span>09</span>
           <p>CONTACTO</p>
         </div>
         <div class="contact-content reveal">
