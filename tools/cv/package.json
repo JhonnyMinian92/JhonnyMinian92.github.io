@@ -1,0 +1,13 @@
+{
+  "name": "jhonny-minan-cv",
+  "private": true,
+  "description": "Builds assets/cv/Jhonny-Minan-CV-ES.pdf and Jhonny-Minan-CV-EN.pdf",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "puppeteer-core": "^23.11.1"
+  }
+}

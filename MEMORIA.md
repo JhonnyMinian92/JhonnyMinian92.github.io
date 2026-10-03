@@ -230,6 +230,21 @@ También se documentó el diseño y desarrollo de extensiones de Google Chrome p
 - Autolink;
 - EC Google Extension (visor de PDF; repositorio ec-google-extension, completado).
 
+### AutoLink (detalle aportado por Jhonny, 2026-10-02)
+
+AutoLink no es solo una extensión de Chrome: creció hasta convertirse en una plataforma distribuida de automatización y continuidad de trámites de Security Data (emisión y renovación de firma electrónica, con variantes de proceso).
+
+- Un enlace con identificador cifrado recupera el contexto de la solicitud (frontend Angular/TypeScript; backend Java/Spring).
+- Valida identidad (Registro Civil), RUC (SRI), correo y trámites duplicados en curso; convierte el modelo AutoLink al modelo de solicitud y crea/continúa el trámite.
+- Reutiliza documentos de trámites anteriores y de portales/transmisores en renovaciones.
+- Consulta el estado del trámite y dirige al usuario a la siguiente tarea: biometría, vídeo, forma de pago, revisión o finalización; procesos orquestados con Camunda.
+- Gateway B2B para sistemas externos (sesión, creación y consulta de estado por polling) con autenticación HMAC y payloads cifrados.
+- Buzón de recuperación para solicitudes fallidas.
+- Tiene un SDK en TypeScript: Jhonny sabe y puede trabajar con SDKs de TypeScript.
+- El CV incluye un enlace de demostración del formulario AutoLink en el portal de Security Data (definido en tools/cv/build.js y en la web).
+
+No publicar nombres de cabeceras, rutas internas de endpoints, operadores internos, claves ni valores de configuración.
+
 La trayectoria dentro de Security Data debe representarse como:
 
 Operador de Registro / Soporte TI → Full Stack Junior → Full Stack Mid-Level → evolución hacia Senior Full Stack / Senior Software Engineer.
@@ -1406,6 +1421,16 @@ Archivos:
 Regla permanente:
 
 Los PDF no se modifican hasta que Jhonny apruebe explícitamente la versión web.
+
+Actualización 2026-10-02: Jhonny aprobó la web y pidió rehacer los PDF. Ahora se generan desde `tools/cv/build.js` (contenido ES/EN en ese archivo, diseño A4 de 2 páginas, Inter + IBM Plex Mono embebidas, texto seleccionable apto para ATS y enlaces activos). Para regenerar: `cd tools/cv && npm install && npm run build` (variable CHROME_PATH si Chrome no está en la ruta por defecto de Windows).
+
+Decisiones de contenido del CV:
+
+- Sin texto explicativo ni "brechas" (se eliminó el apartado de "Desarrollo profesional / DevOps" del CV anterior).
+- Titular: Senior Software Engineer · Full Stack · IA (posicionamiento). En Security Data se listan los cargos formales: Operador de Registro y Soporte TI → Full Stack Junior → Full Stack Mid-Level (ver sección 51).
+- Experiencia técnica previa en filas compactas; Diners Club, Gestiona GTX y Marcimex en "Experiencia complementaria".
+- Sin teléfono ni idiomas (no hay datos confirmados).
+- Mantener el CV consistente con la web: cualquier cambio de trayectoria, proyectos o formación debe aplicarse en index.html y en tools/cv/build.js.
 
 ---
 

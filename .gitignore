@@ -4,3 +4,6 @@
 !.dev.vars.example
 .env*
 !.env.example
+
+# CV build tooling
+node_modules/

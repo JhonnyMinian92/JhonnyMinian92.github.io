@@ -18,6 +18,14 @@ Downloadable PDF versions are available directly from the site:
 - `assets/cv/Jhonny-Minan-CV-ES.pdf`
 - `assets/cv/Jhonny-Minan-CV-EN.pdf`
 
+Both PDFs are generated from `tools/cv/build.js` (content for ES and EN lives in that file):
+
+```bash
+cd tools/cv
+npm install
+npm run build   # set CHROME_PATH if Chrome is not in the default Windows location
+```
+
 ## EcuApp ecosystem
 
 EcuApp is a suite of independent systems, each in its own private repository in the [EcuApp organization](https://github.com/orgs/EcuApp/repositories):

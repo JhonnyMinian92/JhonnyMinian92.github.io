@@ -341,3 +341,7 @@
 @media (max-width: 1100px) and (min-width: 481px) {
   .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
 }
+
+/* Demo link inside the Security Data timeline entry. */
+.timeline-link { display: inline-block; margin-top: 14px; color: var(--rf-cyan); font-size: var(--rf-small); font-weight: 700; border-bottom: 1px solid rgba(105, 232, 201, .35); }
+.timeline-link:hover { border-color: var(--rf-cyan); }
