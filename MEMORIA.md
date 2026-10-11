@@ -226,7 +226,7 @@ Actividades documentadas:
 
 También se documentó el diseño y desarrollo de extensiones de Google Chrome para flujos operativos y productividad interna, entre ellas:
 
-- SingExtension;
+- SingExtension (corrección de Jhonny, 2026-10-11: es un SDK en TypeScript, no una extensión de navegador);
 - Autolink;
 - EC Google Extension (visor de PDF; repositorio ec-google-extension, completado).
 
@@ -574,6 +574,8 @@ Jhonny ha indicado expresamente que realizó cursos en **Platzi** y en **Courser
 
 **Importante:** la lista exacta, curso por curso, de Platzi y Coursera no se encuentra actualmente en los archivos/historiales que puedo recuperar en esta sesión. No se deben inventar nombres, fechas, instructores ni certificados.
 
+Actualización 2026-10-11: la lista completa de cursos con nombre, entidad, fecha y horas se extrajo de los PDF de `assets/certificados/` (Platzi 42, Udemy 11, Santander Open Academy 2, MIU City University Miami 1) y vive en `COURSES_ES` de `tools/cv/build.js`, junto con AWS Machine Learning Foundations, Programación en Python (2025), Firebase para Android y Programación Básica, que provienen de CVs anteriores y no tienen PDF. Los diplomas de Platzi son imágenes sin texto: hay que leerlos renderizándolos. No hay certificados de Coursera en el repositorio.
+
 Cuando esa lista original vuelva a estar disponible, debe incorporarse aquí con esta estructura:
 
 ### Platzi
@@ -651,8 +653,10 @@ Etapa actual:
 
 Dentro de la experiencia profesional reciente se diseñaron y desarrollaron extensiones de Google Chrome, incluyendo:
 
-- SingExtension;
-- Autolink.
+- Autolink;
+- EC Google Extension.
+
+SingExtension, que antes figuraba en esta lista, es un SDK en TypeScript (corrección de Jhonny, 2026-10-11).
 
 También existe un proyecto privado/empresarial de arquitectura de extensión de Chrome para seguridad documental y microfrontends.
 
@@ -1431,6 +1435,16 @@ Decisiones de contenido del CV:
 - Experiencia técnica previa en filas compactas; Diners Club, Gestiona GTX y Marcimex en "Experiencia complementaria".
 - Sin teléfono ni idiomas (no hay datos confirmados).
 - Mantener el CV consistente con la web: cualquier cambio de trayectoria, proyectos o formación debe aplicarse en index.html y en tools/cv/build.js.
+
+Actualización 2026-10-11 — CV ES y EN orientados a empresas de desarrollo de software (pedido por Jhonny):
+
+- Regla de Jhonny: el CV no menciona EcuApp ni sus sistemas. Es una divergencia intencional respecto a la web; no reintroducirla. Mnemosine se mantiene como proyecto personal, sin referencia a EcuApp.
+- Reglas del reclutador: incluir todos los cursos, todos los proyectos (para empresas y personales), todas las habilidades blandas y duras, y una descripción breve de lo aprendido en la ingeniería y en la maestría.
+- Jhonny pidió excluir del CV los proyectos «Portafolio profesional» y «Mujer Bonita».
+- Lleva la foto `assets/jhonny.jpeg`, el teléfono de contacto (`CONTACT` en `tools/cv/build.js`) y, en la cabecera, la banda «Tecnologías que domino»: Java, PHP, Python, C#, TypeScript, Spring Boot, Laravel, Angular, React, PostgreSQL, MySQL, Redis, Docker, GitHub, GitLab y una fila «IA y automatización» (agentes de IA, n8n, LLM, RAG, Machine Learning, Deep Learning, NLP).
+- Datos aportados por Jhonny: AutoLink es un sistema distribuido Angular + Spring Boot + PostgreSQL + Issabel (Asterisk) con PHP 5 + APIs de WhatsApp; SingExtension es un SDK en TypeScript que permite integrar AutoLink en plataformas o apps de otras empresas e instituciones que desean emitir o renovar productos de Security Data; EC Google Extension es una extensión de Google Chrome; crea agentes de IA y automatizaciones con n8n.
+- Python también se cursó en el máster (módulo «Programación en Python», UNIR, nota 8,5/10): tipos y estructuras de datos, funciones y librería estándar, POO, aspectos avanzados, NumPy y pandas, Matplotlib y Seaborn.
+- Orden: perfil, experiencia, experiencia complementaria, formación, proyectos, habilidades técnicas, habilidades blandas y cursos (5 páginas en cada idioma). Los cursos se definen una sola vez, en ES y EN, en `COURSES`.
 
 ---
 
