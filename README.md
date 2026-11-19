@@ -43,7 +43,7 @@ Cascade order (linked from `index.html`): `properties.css` → `index.css` → `
 
 ## Certificates
 
-The PDFs in `assets/certificados/` are listed in the Certificates section and can be filtered by provider or searched by course and technology. The Udemy grouping includes files identified as Udemy and `Versionamiento y uso de Git.pdf`; the remaining `diploma-` files are grouped as Platzi. Three additional Spanish-titled files without a confirmed provider are grouped as additional training.
+The PDFs in `assets/certificados/` are listed in the Certificates section and can be filtered by provider or searched by course and technology. The Udemy grouping includes files identified as Udemy and `Versionamiento y uso de Git.pdf`; the remaining `diploma-` files are grouped as Platzi. The UNIR Python course and three Spanish-titled files without a confirmed provider are grouped as additional training.
 
 ## Deployment
 
